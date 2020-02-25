@@ -13,3 +13,4 @@
 - 使用less-loader前需要现在安装less,作用是识别less语法；
 - url-loader与file-loader的区别：url-loader可以在options里面设置图片的大小限制，当图片小于限制时以base64位方式加载图片，而file-loader会把文件直接移动到对应文件夹；
 - 配置options文件名时使用[name]表示变量名，哈希值默认为32位[hash:16]表示取16位哈希值，[ext]表示文件扩展名；
+- babel-loader可以将es6转为es5语法，使用时依赖babel-core.babel-preset-env为babel升级版，可以取代之前的babel-preset-esXXXX，但需要配置.babelrc文件;
