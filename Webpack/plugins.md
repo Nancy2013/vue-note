@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 09:36:25
- * @LastEditTime: 2020-03-04 15:26:27
+ * @LastEditTime: 2020-03-04 15:49:01
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Webpack\plugins.md
@@ -35,7 +35,8 @@ var webpackConfig ={
 - 在webpack3+版本中配置方式，webpack.optimize.uglifyjsplugin
 
 #### webpack-dev-server
-- 使用node搭建本地服务器
+- 使用node环境下，express提供的http服务器
+- 运行webpack-dev-server时，编译生成的文件保存在内存，并不是本地，可以提高读取文件的速度
 - 在终端运行时默认查找全局插件，配置在package.json里时查找本地文件夹插件
 - 常用参数
 ```javascript

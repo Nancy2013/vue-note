@@ -1,12 +1,13 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-03-03 17:10:57
+ * @LastEditTime: 2020-03-04 17:10:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
  -->
 ## 工作技能
+- 树立自己的工作形象
 
 ## 沟通
 - 确定需求永远比开发早一步
