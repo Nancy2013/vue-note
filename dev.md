@@ -1,13 +1,14 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-03-04 17:10:43
+ * @LastEditTime: 2020-03-05 14:20:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
  -->
 ## 工作技能
 - 树立自己的工作形象
+- 无论如何都需要保持良好的态度
 
 ## 沟通
 - 确定需求永远比开发早一步
@@ -21,3 +22,4 @@
    - 优化处理逻辑
    - 总结同类型项目开发流程
    - issues回归
+- 代码质量的评审标准
