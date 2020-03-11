@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-06 16:37:30
- * @LastEditTime: 2020-03-06 17:50:42
+ * @LastEditTime: 2020-03-11 14:11:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\rem vs vw vs flexible.md
@@ -20,4 +20,5 @@
 - viewport-units-buggyfill
 - postcss-viewport-units
 - css img hack
+![vw-layout](./../img/vw-layout.png)
 
