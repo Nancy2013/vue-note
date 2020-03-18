@@ -1,11 +1,12 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2020-03-04 14:47:31
+ * @LastEditTime: 2020-03-18 14:55:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
  -->
-## 样式
 
-### 优先级
+# 样式
+
+## 优先级

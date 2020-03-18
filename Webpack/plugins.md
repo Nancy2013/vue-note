@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 09:36:25
- * @LastEditTime: 2020-03-04 15:49:01
+ * @LastEditTime: 2020-03-18 15:06:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Webpack\plugins.md
@@ -11,6 +11,7 @@
 ## 常用插件
 
 #### html-webpack-plugin
+
 - 用于自动在output.path路径下，生成html文件。
 - 并在文件中插入script标签，src为output.filename,方便解决编译后哈希命名bundle文件的引用问题
 ```javascript
@@ -39,6 +40,7 @@ var webpackConfig ={
 - 运行webpack-dev-server时，编译生成的文件保存在内存，并不是本地，可以提高读取文件的速度
 - 在终端运行时默认查找全局插件，配置在package.json里时查找本地文件夹插件
 - 常用参数
+
 ```javascript
 module.exports={
    devServer: {
