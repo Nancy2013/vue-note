@@ -17,26 +17,34 @@ $route 为 Object，是当前活跃的路由信息对象，不可以更改可以
 
 ## 路由懒加载
 
-编译后的js文件会比较大，造成加载缓慢问题。使用路由懒加载，可以按需或并行加载js文件
+编译后的 js 文件会比较大，造成加载缓慢问题。使用路由懒加载，可以按需或并行加载 js 文件
 
 - vue 异步路由
+
   - 异步请求路由组件<br/>
 
   ```javascript
-   const App=()=>improt('componentPath/App.vue');
+  const App = () => improt('componentPath/App.vue');
   ```
-  
-- webpack代码分割
-  - webpack会对异步代码进行自动分割
+
+- webpack 代码分割
+
+  - webpack 会对异步代码进行自动分割
 
   ```javascript
-  module.exports={
-    entry:{
+  module.exports = {
+    entry: {
       index: './src/index.js', // 入口文件
     },
-    output:{
+    output: {
       filename: '[name].bundle.js', // 入口文件对应的编译文件
       chunkFilename: '[name].bundle.js', // 异步非入口文件
-    }
-  }
+    },
+  };
   ```
+
+## 导航守卫
+
+- 全局路由守卫
+- 路由独享守卫
+- 组件内部守卫
