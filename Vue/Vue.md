@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-27 09:19:45
- * @LastEditTime: 2020-03-18 15:05:49
+ * @LastEditTime: 2020-03-20 11:06:02
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue.md
@@ -43,6 +43,17 @@
 
 template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 ![vue-render](./../img/vue-render.png)
+
+### 生命周期
+
+- beforeCreate
+- Created，进行数据请求
+- beforeMount
+- Mounted，进行DOM操作
+- beforeUpdate
+- Updated
+- beforeDestroy
+- Destroyed，不能访问this
 
 ### Vue 实例
 

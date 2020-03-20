@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-17 09:32:20
- * @LastEditTime: 2020-03-18 10:22:11
+ * @LastEditTime: 2020-03-20 11:07:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\Vue-router.md
@@ -46,5 +46,12 @@ $route 为 Object，是当前活跃的路由信息对象，不可以更改可以
 ## 导航守卫
 
 - 全局路由守卫
+  - beforeEach
+  - beforeResolve，解析守卫
+  - afterEach
 - 路由独享守卫
+  - beforEnter
 - 组件内部守卫
+  - beforeRouterEnter,不能访问this，next回调在mounted后执行
+  - beforeRouterUpdate，解决组件复用数据更新
+  - beforeRouterLeave
