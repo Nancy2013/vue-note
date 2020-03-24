@@ -43,6 +43,12 @@ $route 为 Object，是当前活跃的路由信息对象，不可以更改可以
   };
   ```
 
+## 渲染
+
+- 后端渲染
+- 前端渲染
+- SPA
+
 ## 导航守卫
 
 - 全局路由守卫
@@ -52,6 +58,6 @@ $route 为 Object，是当前活跃的路由信息对象，不可以更改可以
 - 路由独享守卫
   - beforEnter
 - 组件内部守卫
-  - beforeRouterEnter,不能访问this，next回调在mounted后执行
+  - beforeRouterEnter,不能访问 this，next 回调在 mounted 后执行
   - beforeRouterUpdate，解决组件复用数据更新
   - beforeRouterLeave
