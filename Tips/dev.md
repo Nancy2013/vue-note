@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-03-18 15:08:55
+ * @LastEditTime: 2020-03-25 15:28:19
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -31,5 +31,6 @@
 - 完成项目后，总结很重要
   - 优化处理逻辑
   - 总结同类型项目开发流程
-  - issues回归
+  - issues 回归
+- 提出目前使用框架的缺陷
 - 代码质量的评审标准
