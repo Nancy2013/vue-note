@@ -22,5 +22,7 @@
 ## 编译文件
 
 - app.hash.js:自己开发的业务代码
-- vendor.hash.js：从node_moudles文件夹引入的第三方依赖库
-- manifest.hash.js:从vendor.js分离出的模块管理的初始化代码，主要通过模块id管理模块加载，业务代码发生变化时，重新编译可以提高效率
+- vendor.hash.js：从 node_moudles 文件夹引入的第三方依赖库
+- manifest.hash.js:从 vendor.js 分离出的模块管理的初始化代码，主要通过模块 id 管理模块加载，业务代码发生变化时，重新编译可以提高效率
+
+## 别名
