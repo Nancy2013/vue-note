@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-03-25 15:28:19
+ * @LastEditTime: 2020-03-26 10:17:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -11,6 +11,8 @@
 
 - 树立自己的工作形象
 - 无论如何都需要保持良好的态度
+- 不要在头脑冲动时做决定，冷静时再去找别人沟通
+- 说出想法时自己先确认下，传达对的信息比着急说出更重要
 
 ## 沟通
 

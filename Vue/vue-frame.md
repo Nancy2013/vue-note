@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-05 09:39:51
- * @LastEditTime: 2020-03-17 10:59:22
+ * @LastEditTime: 2020-03-26 10:51:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\vue-frame.md
@@ -26,3 +26,5 @@
 - manifest.hash.js:从 vendor.js 分离出的模块管理的初始化代码，主要通过模块 id 管理模块加载，业务代码发生变化时，重新编译可以提高效率
 
 ## 别名
+
+在 webpack 配置 resolve 别名 alias 后，可以在 js 及 vue 文件中，通过别名方法引入文件，`import 'commonPath/utils`。如果需要在 style 标签内使用别名，可以通过`@import '~stylePath/base.less`的方式。webpack 会把~前缀的路径作为模块引入。
