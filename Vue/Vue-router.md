@@ -72,6 +72,6 @@ SEO：传统搜索引擎只会从 html 中抓取数据，导致前端渲染的�
 - 路由独享守卫
   - beforEnter
 - 组件内部守卫
-  - beforeRouterEnter,不能访问 this，next 回调在 mounted 后执行
+  - beforeRouterEnter，不能访问 this，next 回调在 mounted 后执行
   - beforeRouterUpdate，解决组件复用数据更新
   - beforeRouterLeave
