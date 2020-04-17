@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-04-16 09:40:12
+ * @LastEditTime: 2020-04-17 10:08:29
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -29,6 +29,7 @@
 
 - 不过分焦虑
 - 将精力集中在自己感兴趣的点
+- 心态不稳定，心不在焉，比较着急时，停止工作
 
 ## 总结
 
