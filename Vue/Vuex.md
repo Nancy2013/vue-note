@@ -1,0 +1,6 @@
+# Vuex
+
+## Store
+
+- registerModule
+- unregisterModule
