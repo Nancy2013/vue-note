@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-04-17 10:08:29
+ * @LastEditTime: 2020-04-23 10:29:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -20,6 +20,8 @@
 - 确定需求永远比开发早一步
 - 更好的抛出问题，并能给予建议
 - 复杂问题简单化，为了别人更好理解问题，可采用多种方式，流程图、表格等
+- 不要在对方不在状态时去沟通问题
+- 以别人能接收的方式，表达自己的观点
 
 ## 决策
 
