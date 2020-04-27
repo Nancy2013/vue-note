@@ -6,14 +6,16 @@
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Webpack\plugins.md
  -->
+
 ## Plugin
 
 ## 常用插件
 
 #### html-webpack-plugin
 
-- 用于自动在output.path路径下，生成html文件。
-- 并在文件中插入script标签，src为output.filename,方便解决编译后哈希命名bundle文件的引用问题
+- 用于自动在 output.path 路径下，生成 html 文件。
+- 并在文件中插入 script 标签，src 为 output.filename,方便解决编译后哈希命名 bundle 文件的引用问题
+
 ```javascript
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpackConfig ={
@@ -28,17 +30,19 @@ var webpackConfig ={
   ]
 }
 ```
+
 - 可以通过<%= htmlWebpackPlugin.options.title %>，在静态页面中获得配置参数
 
-
 #### uglifyjs-webpack-plugin
-- 压缩js
-- 在webpack3+版本中配置方式，webpack.optimize.uglifyjsplugin
+
+- 压缩 js
+- 在 webpack3+版本中配置方式，webpack.optimize.uglifyjsplugin
 
 #### webpack-dev-server
-- 使用node环境下，express提供的http服务器
-- 运行webpack-dev-server时，编译生成的文件保存在内存，并不是本地，可以提高读取文件的速度
-- 在终端运行时默认查找全局插件，配置在package.json里时查找本地文件夹插件
+
+- 使用 node 环境下，express 提供的 http 服务器
+- 运行 webpack-dev-server 时，编译生成的文件保存在内存，并不是本地，可以提高读取文件的速度
+- 在终端运行时默认查找全局插件，配置在 package.json 里时查找本地文件夹插件
 - 常用参数
 
 ```javascript
@@ -62,4 +66,3 @@ module.exports={
   }
 }
 ```
- 
