@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-04-23 10:30:14
+ * @LastEditTime: 2020-04-26 15:58:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -22,6 +22,7 @@
 - 复杂问题简单化，为了别人更好理解问题，可采用多种方式，流程图、表格等
 - 不要在对方不在状态时去沟通问题
 - 以别人能接受的方式，表达自己的观点
+- 不要接受别人的情绪
 
 ## 决策
 
