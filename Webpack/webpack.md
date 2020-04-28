@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-26 10:19:49
- * @LastEditTime: 2020-03-30 16:15:32
+ * @LastEditTime: 2020-04-28 14:35:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\webpack.md
@@ -19,7 +19,7 @@
 ### Loader 的使用
 
 - Webpack 需要通过各种 loader 来处理 js、css 和图片文件；
-- css-loader：用来加载 css 文件，style-loader:将 css 文件加载到 DOM 结构，less-loader：将 less 文件编译为 css 文件；
+- less-loader：将 less 文件编译为 css 文件，css-loader：用来加载 css 文件，style-loader:将 css 文件加载到 DOM 结构；
 - Webpack 加载文件的顺序为从右到左；
 - 使用 less-loader 前需要先安装 less,作用是识别 less 语法；
 - url-loader 与 file-loader 的区别：url-loader 可以在 options 里面设置图片的大小限制，当图片小于限制时以 base64 位方式加载图片，而 file-loader 会把文件直接移动到对应文件夹；
