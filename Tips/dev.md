@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-04-26 15:58:57
+ * @LastEditTime: 2020-04-29 16:45:27
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -33,6 +33,7 @@
 - 不过分焦虑
 - 将精力集中在自己感兴趣的点
 - 心态不稳定，心不在焉，比较着急时，停止工作
+- 欲速则不达，遇到问题不要着急，精力应该放在寻找最优解决方案上
 
 ## 总结
 
