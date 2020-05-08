@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-05-08 17:24:03
+ * @LastEditTime: 2020-05-08 17:45:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -15,6 +15,7 @@
 - 说出想法时自己先确认下，传达对的信息比着急说出更重要
 - 按节点报告，事事有回应
 - 项目开始前要进行功能和效果确认
+- 功能修改需要事先沟通
 - 结束掉的项目需要有对应的文档
 
 ## 沟通
@@ -26,6 +27,7 @@
 - 以别人能接受的方式，表达自己的观点
 - 不要接受别人的情绪
 - 向别人讲授时要保持心态谦虚，信心满满
+- 如果是自己的工作失误，要勇于承认
 
 ## 决策
 
