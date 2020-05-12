@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-05-08 17:45:56
+ * @LastEditTime: 2020-05-12 16:16:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -17,6 +17,7 @@
 - 项目开始前要进行功能和效果确认
 - 功能修改需要事先沟通
 - 结束掉的项目需要有对应的文档
+- 兜底，预测可能的风险并及时告知，给别人关键的提醒
 
 ## 沟通
 
