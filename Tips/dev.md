@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-05-12 16:16:55
+ * @LastEditTime: 2020-05-13 17:15:21
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -29,6 +29,7 @@
 - 不要接受别人的情绪
 - 向别人讲授时要保持心态谦虚，信心满满
 - 如果是自己的工作失误，要勇于承认
+- 没有时间处理紧急问题时，首先的态度是，先让对方把问题描述清楚
 
 ## 决策
 
