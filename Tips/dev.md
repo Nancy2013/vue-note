@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-05-14 18:00:41
+ * @LastEditTime: 2020-05-20 14:38:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -18,6 +18,7 @@
 - 功能修改需要事先沟通
 - 结束掉的项目需要有对应的文档
 - 兜底，预测可能的风险并及时告知，给别人关键的提醒
+- 工作量比较多时，要学会分解，化整为零
 
 ## 沟通
 
