@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-05-21 17:29:27
+ * @LastEditTime: 2020-05-22 10:33:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -37,6 +37,7 @@
 ## 决策
 
 - 尽量减少项目对别人的依赖
+- 任何功能不清楚的问题，都要让对方给明确的文档，或其他可记录的方式
 
 ## 心态
 
