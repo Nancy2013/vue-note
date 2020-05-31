@@ -29,6 +29,13 @@ req.model=require(`./../models/${moduleName}`);
 next();
 },router);
 
+## 建立关联模型
+
+const user=mongoose.Schema({
+name:{type: String},
+parent:{type:mongoose.SchemaTypes.objectId,ref:'User'}
+});
+
 ## 使用
 
 router.get('/',(req,res)=>{
