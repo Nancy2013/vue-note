@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-05-22 10:33:57
+ * @LastEditTime: 2020-06-01 10:37:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -33,6 +33,8 @@
 - 没有时间处理紧急问题时，首先的态度是，先让对方把问题描述清楚
 - 与别人一起处理问题时，是否也能从对方的角度考虑问题
 - 进行工作前，不懂就要问清楚
+- 每天给别人提供一定的准备时间
+- 当别人询问问题时，如果自己不在状态，就尽量让对方多表达，自己提供参考意见
 
 ## 决策
 
