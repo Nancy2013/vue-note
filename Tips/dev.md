@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-06-01 10:37:16
+ * @LastEditTime: 2020-06-02 17:20:48
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -35,6 +35,7 @@
 - 进行工作前，不懂就要问清楚
 - 每天给别人提供一定的准备时间
 - 当别人询问问题时，如果自己不在状态，就尽量让对方多表达，自己提供参考意见
+- 关键时刻，一句对不起，可以起很大的作用，不要羞于承认错误
 
 ## 决策
 
