@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-06-05 09:44:15
+ * @LastEditTime: 2020-06-05 15:26:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -37,6 +37,7 @@
 - 当别人询问问题时，如果自己不在状态，就尽量让对方多表达，自己提供参考意见
 - 关键时刻，一句对不起，可以起很大的作用，不要羞于承认错误
 - 遇事先处理情绪，再处理问题，不要迎风而上
+- 当别人提出不合理要求时，善于指出问题关键，并暴露给对方
 
 ## 决策
 
