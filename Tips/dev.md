@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-06-05 15:26:59
+ * @LastEditTime: 2020-06-10 10:38:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -38,6 +38,7 @@
 - 关键时刻，一句对不起，可以起很大的作用，不要羞于承认错误
 - 遇事先处理情绪，再处理问题，不要迎风而上
 - 当别人提出不合理要求时，善于指出问题关键，并暴露给对方
+- 面对需求不要急于拒绝，先大致分析下工作量，困难点，给对方一个预估时间点
 
 ## 决策
 
