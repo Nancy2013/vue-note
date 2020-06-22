@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-25 10:53:46
- * @LastEditTime: 2020-03-20 10:55:31
+ * @LastEditTime: 2020-06-22 15:23:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\组件.md
@@ -26,8 +26,8 @@
 
 ## 组件缓存
 
-使用keep-alive组件可以缓存不活跃的路由组件，而不是销毁它们，从而避免重新渲染。
+使用 keep-alive 组件可以缓存不活跃的路由组件，而不是销毁它们，从而避免重新渲染。
 
 - 使用后被缓存的组件会多出来两个生命钩子
-  - activated：组件被激活时调用，调用顺序组件mounted -> activated -> beforeRouterEnter的next回调
-  - deactivated：组件被停用是调用，此时组件没有beforDestroy及destroyed钩子
+  - activated：组件被激活时调用，调用顺序组件 mounted -> activated -> beforeRouterEnter 的 next 回调
+  - deactivated：组件被停用时调用，此时组件没有 beforDestroy 及 destroyed 钩子
