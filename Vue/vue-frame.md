@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-05 09:39:51
- * @LastEditTime: 2020-03-26 10:58:05
+ * @LastEditTime: 2020-06-22 15:55:46
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\vue-frame.md
@@ -27,4 +27,4 @@
 
 ## 别名
 
-webpack 配置 resolve 别名 alias 后，可以在 js 及 vue 文件中，通过别名方法引入文件，`import 'commonPath/utils`。如果需要在 style 标签内使用别名，可以通过`@import '~stylePath/base.less`的方式。webpack 会把~前缀的路径作为依赖模块引入。
+webpack 配置 resolve 别名 alias 后，可以在 js 及 vue 文件中，通过别名方法引入文件，`import 'commonPath/utils'`。如果需要在 style 标签内使用别名，可以通过`@import '~stylePath/base.less'`的方式。webpack 会把~前缀的路径作为依赖模块引入。
