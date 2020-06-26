@@ -31,3 +31,7 @@
 ## http-assert
 
 服务器请求提示
+
+## require-all
+
+引用所有 model
