@@ -14,3 +14,9 @@
 ## position
 
 sticky
+
+## ellipsis
+
+文字不换行，超出部分显示省略号
+
+`.text-ellipsis{ display：inline-block； overflow：hidden； text-overflow：ellipsis； white-space：no-wrap; }`
