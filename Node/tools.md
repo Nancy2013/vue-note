@@ -35,3 +35,7 @@
 ## require-all
 
 引用所有 model
+
+## npm n
+
+## npm pm2
