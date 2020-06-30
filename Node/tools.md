@@ -39,3 +39,7 @@
 ## npm n
 
 ## npm pm2
+
+## remote-ssh
+
+Nginx 配置插件
