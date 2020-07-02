@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-06-19 15:26:02
+ * @LastEditTime: 2020-07-02 13:56:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -21,6 +21,7 @@
 - 工作量比较多时，要学会分解，化整为零
 - 及时很忙但是对方不知道，应该看清楚别人的需求再回复，显示出自己的专业
 - 沉着的分析，能更好的解决问题
+- 自己失误时，勇于承认并及时改正，损失才最小
 
 ## 沟通
 
