@@ -35,3 +35,11 @@
 ## require-all
 
 引用所有 model
+
+## npm n
+
+## npm pm2
+
+## remote-ssh
+
+Nginx 配置插件
