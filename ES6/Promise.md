@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-18 09:35:34
- * @LastEditTime: 2020-03-24 11:11:49
+ * @LastEditTime: 2020-07-06 16:53:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\Promise.md
@@ -21,7 +21,7 @@ Promise 不是一种新的语法，只是为了解决异步请求的地狱回调
 ## 简单使用
 
 ```javascript
- const promise = new Promise((relove,reject)=>{
+ const promise = new Promise((resolve,reject)=>{
    if(success){
     //  成功
      resolve({data:{result:1});
@@ -31,7 +31,7 @@ Promise 不是一种新的语法，只是为了解决异步请求的地狱回调
    }
  })
  promise.then((result)=>{
-  //  promise 的回调 then 方法有两个参数，成功回调 success 以及失败回调 fail，这个两个参数必须是函数，否则 promise 返回的数据会一直向下传递
+  //  promise 的回调 then 方法有两个参数，成功回调 success 以及失败回调 fail，这两个参数必须是函数，否则 promise 返回的数据会一直向下传递
  },err=>{
 
  });
