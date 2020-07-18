@@ -31,3 +31,7 @@
 - 使用后被缓存的组件会多出来两个生命钩子
   - activated：组件被激活时调用，调用顺序组件 mounted -> activated -> beforeRouterEnter 的 next 回调
   - deactivated：组件被停用时调用，此时组件没有 beforDestroy 及 destroyed 钩子
+
+## 依赖注入
+
+provide inject
