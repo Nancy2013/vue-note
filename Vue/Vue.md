@@ -31,7 +31,7 @@
   ```javascript
   new Vue({
     el: '#app',
-    render: h => h(App),
+    render: (h) => h(App),
   });
   ```
 
@@ -44,16 +44,25 @@
 template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 ![vue-render](./../img/vue-render.png)
 
+### 响应式原理
+
+![响应式](./../img/response.png)
+
+- 将对象作为 Vue 实例的 data 对象的 property
+- Object.defineProperty 遍历 data 属性，生成对应的 getter/setter 方法
+- 每个组件对应一个 watcher,渲染时会生成每个 property 的记录依赖
+- 当 property 进行 getter/setter 操作时，会进行通知变更，通知组件重新渲染
+
 ### 生命周期
 
 - beforeCreate
 - Created，进行数据请求
 - beforeMount
-- Mounted，进行DOM操作
+- Mounted，进行 DOM 操作
 - beforeUpdate
 - Updated
 - beforeDestroy
-- Destroyed，不能访问this
+- Destroyed，不能访问 this
 
 ### Vue 实例
 
