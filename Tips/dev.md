@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-07-02 13:56:14
+ * @LastEditTime: 2020-07-22 17:15:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -42,6 +42,9 @@
 - 遇事先处理情绪，再处理问题，不要迎风而上
 - 当别人提出不合理要求时，善于指出问题关键，并暴露给对方
 - 面对需求不要急于拒绝，先大致分析下工作量，困难点，给对方一个预估时间点
+- 生气时不要做决定
+- 愤怒不能解决问题，被情绪控制时，气势上已经输了
+- 首先确认别人的话，说话前经过思考，不要打断别人的话，是对对方最基本的尊重
 
 ## 决策
 
