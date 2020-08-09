@@ -66,3 +66,7 @@ module.exports={
   }
 }
 ```
+
+#### eslint-plugin-vue vs eslint-loader
+
+#### [prettier](https://github.com/prettier/eslint-config-prettier)
