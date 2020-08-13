@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-07-24 10:49:32
+ * @LastEditTime: 2020-08-13 10:06:12
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -47,6 +47,7 @@
 - 愤怒不能解决问题，被情绪控制时，气势上已经输了
 - 首先确认别人的话，说话前经过思考，不要打断别人的话，是对对方最基本的尊重
 - 听对方表述完想法，真正了解之后，再做回答
+- 遇事沉稳
 
 ## 决策
 
