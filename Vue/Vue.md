@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-27 09:19:45
- * @LastEditTime: 2020-08-26 16:18:20
+ * @LastEditTime: 2020-08-27 16:24:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue.md
@@ -71,3 +71,5 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
   - 使用 template 会把 el 挂载的 id 树结构直接替换掉；
 
 ### Vue 原型链
+
+[![javascript原型链](./../img/proto.png)](https://segmentfault.com/a/1190000021232132)
