@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-24 15:11:35
- * @LastEditTime: 2020-03-24 17:01:47
+ * @LastEditTime: 2020-08-31 15:16:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Tools\Git.md
@@ -52,3 +52,38 @@ git 中工作区(workplace)、暂存区(stage)、本地仓库(repository)、远�
 - 忽略.js 结尾，但是 a.js 除外，!a.js
 - 忽略根目录下的 build 文件，/build
 - 忽略 node_module 下的所有文件，node_module/
+
+## git CI/CD
+
+### What
+
+支持持续集成与持续交付的在线工具
+
+- stages 自定义还是固定的
+- script 相对路径
+
+### Why
+
+可以构建并测试代码，编译完成后支持自动部署，能够提高效率，减少 bug 保证代码质量。
+
+### How
+
+配置.gitlab-ci.yml 文件
+
+- stages 场景阶段
+  - build
+  - test
+  - deploy
+- job 任务
+
+  ```javascript
+  job_name:
+    stage:build // 场景阶段,默认为test
+    script: npm install, // 执行的脚本,必须，其他参数均是非必须
+    only: master, // 执行的分支,master分支push时触发
+    except:dev, // 不执行分支
+    tags:'V1.0', // 执行标签,打tags的分支push时触发
+    allow_failure: true // 是否容错，上面任务失败，下面任务不执行
+  ```
+
+相同 stage 名任务，并行执行；不同 stage 名顺序依次执行，前面任务失败后停止执行
