@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-08-13 10:06:12
+ * @LastEditTime: 2020-09-04 10:32:31
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -23,6 +23,7 @@
 - 沉着的分析，能更好的解决问题
 - 自己失误时，勇于承认并及时改正，损失才最小
 - 输出阶段性成果
+- 对于不熟悉的业务，要确认功能是否为客户需求
 
 ## 沟通
 
