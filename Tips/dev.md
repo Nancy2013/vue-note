@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-03 17:03:31
- * @LastEditTime: 2020-09-04 10:32:31
+ * @LastEditTime: 2020-09-10 16:39:13
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\dev.md
@@ -49,6 +49,7 @@
 - 首先确认别人的话，说话前经过思考，不要打断别人的话，是对对方最基本的尊重
 - 听对方表述完想法，真正了解之后，再做回答
 - 遇事沉稳
+- 与别人讲话时，需要放正心态，不要阴阳怪气
 
 ## 决策
 
