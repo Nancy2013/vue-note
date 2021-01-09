@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2020-12-10 11:28:59
+ * @LastEditTime: 2021-01-08 11:34:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
@@ -80,4 +80,29 @@ repeat: repeat:重复，round:平铺，stretch:拉伸(默认)
 
 ```css
 border-image: url() <slice> / <width> / <repeat>;
+```
+
+## Grid
+
+```css
+.father {
+  display: grid;
+  grid-template-columns: 100px auto 100px; /* 显示网格 */
+  grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+  grid-auto-columns: 100px; /* 隐式网格 */
+  grid-auto-rows: 50px;
+  grid-gap: 10px 20px; /* rows columns */
+  grid-auto-flow: row dense;
+  justify-content: center; /* father container */
+  align-content: center;
+  justify-items: center; /* child item */
+  align-items: center;
+}
+
+.child {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
 ```
