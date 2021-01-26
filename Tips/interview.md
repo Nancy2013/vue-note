@@ -135,6 +135,7 @@
 ## 网络
 
 - 跨域请求的解决方案
+
   - 本地 webpack 配置 proxy
   - 发布 jsonp 只能做 get 请求
   - CORS
