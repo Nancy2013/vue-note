@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-25 10:53:46
- * @LastEditTime: 2020-06-22 15:23:24
+ * @LastEditTime: 2021-02-19 17:10:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\组件.md
@@ -34,4 +34,7 @@
 
 ## 依赖注入
 
-provide inject
+子组件共享父组件属性
+
+provide：父组件提供
+inject：子组件使用

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-11 15:14:36
- * @LastEditTime: 2020-11-11 15:16:19
+ * @LastEditTime: 2021-02-19 17:11:06
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\diff.md
@@ -11,7 +11,7 @@
 
 ## 单向绑定 vs 双向绑定
 
-> MVVM 模型型，View 视图更新，Model 数据改变，Model 数据改变，View 视图更新
+> MVVM 模型，View 视图更新，Model 数据改变，Model 数据改变，View 视图更新
 >
 > angularjs 双向绑定(脏值检查)
 >
