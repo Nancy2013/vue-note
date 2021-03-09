@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-02-19 09:27:50
- * @LastEditTime: 2021-03-03 10:43:34
+ * @LastEditTime: 2021-03-09 10:41:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\issues.md
@@ -20,3 +20,7 @@
 - 数字样式中，有上下间距
 
 ## 响应式计算和侦听
+
+## 响应式
+
+toRefs 与 reactive 的区别
