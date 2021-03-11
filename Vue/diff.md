@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-11 15:14:36
- * @LastEditTime: 2021-02-19 17:11:06
+ * @LastEditTime: 2021-03-11 16:11:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\diff.md
@@ -28,3 +28,7 @@
 > react 单向数据流
 >
 > vue 单向数据流
+
+## Vue VS React
+
+composition api 与 hooks 区别
