@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 09:36:25
- * @LastEditTime: 2020-03-18 15:06:28
+ * @LastEditTime: 2021-03-12 16:27:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Webpack\plugins.md
@@ -62,7 +62,7 @@ module.exports={
       changeOrigin: true
     }],
     publicPath:'', // 可以直接访问的目录
-    stats: 'errors-only', // 控制显示bundle信息
+    status: 'errors-only', // 控制显示bundle信息
   }
 }
 ```
