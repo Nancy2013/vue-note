@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2021-02-26 16:42:07
+ * @LastEditTime: 2021-03-26 11:32:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
@@ -112,4 +112,15 @@ border-image: url() <slice> / <width> / <repeat>;
   grid-row-start: 1;
   grid-row-end: 2;
 }
+```
+
+## style in react
+
+[教程](https://css-tricks.com/a-complete-guide-to-calc-in-css/)
+
+```js
+const statusHeight = 20;
+const fixedStyle = {
+  top: `calc(1.2rem + ${statusHeight}px)`,
+};
 ```

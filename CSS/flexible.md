@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-19 14:26:27
- * @LastEditTime: 2021-03-23 14:42:27
+ * @LastEditTime: 2021-03-26 15:16:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit#
  * @FilePath: \vue-note\CSS\flexible.md
@@ -25,5 +25,7 @@ div {
 
 }
 ```
+
+![方案](./../img/刘海屏适配.png)
 
 ### 虚拟键盘
