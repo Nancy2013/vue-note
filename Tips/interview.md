@@ -1,5 +1,7 @@
 ## Vue
 
+- 全家桶
+
 - 生命周期
 
   - create/beforeCreate
