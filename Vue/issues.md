@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-02-19 09:27:50
- * @LastEditTime: 2021-04-20 10:59:42
+ * @LastEditTime: 2021-05-11 16:33:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\issues.md
@@ -32,3 +32,5 @@ toRefs 与 reactive 的区别
 ## vue/cli vs vite
 
 ## 穿透滚动
+
+## vue3 引用全局样式
