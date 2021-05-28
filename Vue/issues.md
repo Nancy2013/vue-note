@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-02-19 09:27:50
- * @LastEditTime: 2021-05-13 11:24:34
+ * @LastEditTime: 2021-05-28 16:59:01
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\issues.md
@@ -36,3 +36,5 @@ toRefs 与 reactive 的区别
 ## vue3 引用全局样式
 
 ## vue3 挂载全局属性和插件
+
+## $attrs 和$listeners 作用
