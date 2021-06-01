@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-27 09:19:45
- * @LastEditTime: 2020-08-27 16:24:00
+ * @LastEditTime: 2021-06-01 14:58:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue.md
@@ -73,3 +73,21 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 ### Vue 原型链
 
 [![javascript原型链](./../img/proto.png)](https://segmentfault.com/a/1190000021232132)
+
+### Vue 中使用了哪些模式
+
+- 工厂模式 通过参数创建实例
+- 单例模式 整个程序只有一个实例
+- 发布/订阅模式 响应式数据原理
+- 观察者模式
+- 装饰模式
+- 策略模式
+
+### Vue 性能优化
+
+- data 层级不要太深
+- 区别使用 v-if 和 v-show
+- 区别使用 computed 和 watch
+- v-for 与 v-if 不同时使用
+- 使用 keep-alive 缓存
+- 路由懒加载
