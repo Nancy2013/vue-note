@@ -2,6 +2,12 @@
 
 - 全家桶
 
+  - vue
+  - vue-router
+  - vuex
+  - axiso
+  - element ui/ antv
+
 - 生命周期
 
   - create/beforeCreate
@@ -13,6 +19,7 @@
 
   - 发布者-订阅者模式
   - Object.defineProperty data get/set
+  - 劫持数据
   - 通知订阅者
 
 - MVVM 框架
@@ -62,17 +69,19 @@
 
   - 父传子 props
   - 子传父 \$emit
+  - provide/inject
   - 组件间 bus 总线
   - vuex
 
 * Vuex
 
-  - 状态共享池
+  - 单一状态树，状态共享池
   - 需要在多个组件间共享信息时才使用
   - state 状态
   - mutation 修改 state
   - action 异步请求
   - getter 读取 state
+  - module
 
 * Computed vs Watch vs Methods
   - computed

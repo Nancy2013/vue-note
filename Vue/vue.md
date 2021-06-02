@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-27 09:19:45
- * @LastEditTime: 2021-06-01 14:58:24
+ * @LastEditTime: 2021-06-02 14:40:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue.md
@@ -91,3 +91,8 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 - v-for 与 v-if 不同时使用
 - 使用 keep-alive 缓存
 - 路由懒加载
+
+### nextTick 应用及原理
+
+nextTick 回调函数推迟到下次 DOM 更新完成后执行，在回调函数中可以得到更新后的数据。
+原理为：使用异步执行回调函数
