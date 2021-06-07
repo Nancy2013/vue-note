@@ -1,11 +1,32 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-19 14:26:27
- * @LastEditTime: 2021-03-26 15:16:20
+ * @LastEditTime: 2021-06-04 16:35:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit#
  * @FilePath: \vue-note\CSS\flexible.md
 -->
+
+# 概念
+
+## 像素
+
+- 分辨率
+  - CSS 分辨率
+  - 1080P 纵向分辨率
+  - 1920K 横向分辨率
+  - 2048K 2K 屏
+  - 4096K 4K 屏
+- 设备像素 （物理像素）750\*1334
+- 设备独立像素 375\*667
+- PPI 每英寸的像素
+- DPI 设备像素/独立像素
+
+## 视口
+
+    - 布局视口
+    - 视觉视口
+    - 理想视口
 
 # flexible
 
