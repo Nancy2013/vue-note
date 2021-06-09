@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2021-03-26 11:32:40
+ * @LastEditTime: 2021-06-09 15:30:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
@@ -124,3 +124,36 @@ const fixedStyle = {
   top: `calc(1.2rem + ${statusHeight}px)`,
 };
 ```
+
+## CSS 盒模型
+
+CSS 盒模型由 content、padding、border、margin 组成，标准盒模型与怪异盒模型的区别是 width 的计算方式不同
+
+- ![W3C 标准盒模型](./../img/w3c.png)
+  width=content
+
+  ```css
+  box-sizing: content-box;
+  ```
+
+- ![IE 怪异盒模型](./../img/ie.png)
+  width=content+padding+border
+
+  ```css
+  box-sizing: border-box;
+  ```
+
+## BFC
+
+块级格式上下文，独立的块级渲染区域，内部有一套渲染规格约束内容布局，且不受外面区域影响
+
+- position 为 absolute 或 fixed
+- float 为 left 或 right
+- display 为 flex 或 inline-block
+- overflow 为 hidden
+
+应用场景
+
+- 布局
+- 清除浮动
+- 解决边距 margin 重叠

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:57:32
- * @LastEditTime: 2021-06-08 15:54:55
+ * @LastEditTime: 2021-06-09 11:06:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\网络\http.md
@@ -31,13 +31,22 @@
 - 浏览器语法解析，生成 dom 数据结构树
 - 浏览器渲染页面
 
+### iframe 的缺点
+
+- 搜索引擎不能解析 iframe，不利于 SEO
+- iframe 页面会阻塞主页面加载
+- 与主页面共享数据池，浏览器有相同域访问限制
+
 ### 网站性能优化方法
 
 - content 方面
-  - 减少 http 请求：文件合并、使用雪碧图；
+  - 减少 http 请求：文件合并、使用雪碧图、base64 编码图片；
   - JS 放在页面底部；
   - CSS 放在页面顶部，不使用 CSS 表达式，使用 link 标签；
   - JS 和 CSS 文件压缩
+  - 页面空着的 href 和 src 会阻塞下载进程
+  - 不使用 iframe
+  - 减少数据操作和磁盘读取
 - Server 方面
   - DNS 缓存
   - CDN 托管
