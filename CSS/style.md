@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2021-06-09 15:30:41
+ * @LastEditTime: 2021-06-10 17:20:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
@@ -157,3 +157,114 @@ CSS 盒模型由 content、padding、border、margin 组成，标准盒模型与
 - 布局
 - 清除浮动
 - 解决边距 margin 重叠
+
+## 单冒号与双冒号的区别
+
+单冒号‘,’用来表示伪类，表示标签的特殊状态或者某一行
+
+```css
+a:hover {
+}
+p:first-child {
+}
+```
+
+双冒号‘:’，像是添加了新的 Html 元素
+
+```css
+div::before {
+}
+div::after {
+}
+```
+
+CSS3 中向上兼容，同时也支持单冒号的伪元素
+
+## opacity vs rgba
+
+- opacity 作用的元素及元素内的所有内容都会透明，可继承
+- rgba 作用于元素颜色或背景色，不可继承
+
+## 提升 CSS 性能的方法
+
+- 文件合并，减少 http 请求
+- 使用 link 方式引入，把代码放在 head 里面
+- 减少使用表达式
+- css 文件压缩
+- 使用雪碧图
+- 属性值 0 时，省略单位，属性值小数时，省略 0
+- 使用合理的选择器
+
+## ![line-height](./../img/line-height.png) 取值
+
+line-height=font-size+行距,指文本基线之间的距离,文本没有 height 属性时，line-height 撑开行距
+
+line-height 取值：normal|number|length|%|inherit
+
+| element | font-size | line-height | 计算    |
+| ------- | --------- | ----------- | ------- |
+| body    | 16        | normal      | 16\*1.2 |
+| h1      | 32        |             | 32\*1.2 |
+
+| element | font-size | line-height | 计算    |
+| ------- | --------- | ----------- | ------- |
+| body    | 16        | 1.5         | 16\*1.5 |
+| h1      | 32        |             | 32\*1.5 |
+
+| element | font-size | line-height | 计算 |
+| ------- | --------- | ----------- | ---- |
+| body    | 16        | 16px        | 16px |
+| h1      | 32        |             | 16px |
+
+| element | font-size | line-height | 计算     |
+| ------- | --------- | ----------- | -------- |
+| body    | 16        | 150%        | 16\*150% |
+| h1      | 32        |             | 16\*150% |
+
+| element | font-size | line-height | 计算    |
+| ------- | --------- | ----------- | ------- |
+| body    | 16        | normal      | 16\*1.2 |
+| h1      | 32        | inherit     | 32\*1.2 |
+
+父元素 line-height 设备百分比，子元素不设置时，子元素行高为父元素的行高计算值。一般建议行高设置为 number
+
+## 4 种 box
+
+- 行内框：行内元素的外框，鼠标选中文字的区域
+- 行框：一行的虚拟矩形框
+- 内容框：font+padding
+- 容器框:包含行内元素及块元素的
+
+## Box 上下布局
+
+上面 box 固定为 100px,下面占满剩下屏幕
+
+```css
+/* 方案一 */
+.bottom {
+  height: calc(100%-100px);
+}
+```
+
+```css
+/* 方案二 */
+.container {
+  position:relative;
+}
+.bottom {
+  position：absolute;
+  top:100px;
+  bottom:0;
+}
+```
+
+```css
+/* 方案三 */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.bottom {
+  flex: 1;
+}
+```
