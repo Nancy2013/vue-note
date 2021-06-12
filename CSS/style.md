@@ -199,22 +199,27 @@ CSS3 中向上兼容，同时也支持单冒号的伪元素
 
 line-height=font-size+行距,指文本基线之间的距离,文本没有 height 属性时，line-height 撑开行距
 
-line-height 取值：normal|number|length|%|inherit
+line-height 取值：normal|length|number|em|%|inherit
 
 | element | font-size | line-height | 计算    |
 | ------- | --------- | ----------- | ------- |
 | body    | 16        | normal      | 16\*1.2 |
 | h1      | 32        |             | 32\*1.2 |
 
+| element | font-size | line-height | 计算 |
+| ------- | --------- | ----------- | ---- |
+| body    | 16        | 16px        | 16px |
+| h1      | 32        |             | 16px |
+
 | element | font-size | line-height | 计算    |
 | ------- | --------- | ----------- | ------- |
 | body    | 16        | 1.5         | 16\*1.5 |
 | h1      | 32        |             | 32\*1.5 |
 
-| element | font-size | line-height | 计算 |
-| ------- | --------- | ----------- | ---- |
-| body    | 16        | 16px        | 16px |
-| h1      | 32        |             | 16px |
+| element | font-size | line-height | 计算    |
+| ------- | --------- | ----------- | ------- |
+| body    | 16        | 1.5em       | 16\*1.5 |
+| h1      | 32        |             | 32\*1.5 |
 
 | element | font-size | line-height | 计算     |
 | ------- | --------- | ----------- | -------- |
