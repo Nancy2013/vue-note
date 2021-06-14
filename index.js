@@ -16,14 +16,24 @@
 // a++
 // console.log('1', a) 
 
-console.log('script start');
+// console.log('script start');
 
-setTimeout(function() {
-    console.log('setTimeout');
-}, 0);
+// setTimeout(function() {
+//     console.log('setTimeout');
+// }, 0);
 
-Promise.resolve().then(function() {
-    console.log('queueMicrotask');
-});
+// Promise.resolve().then(function() {
+//     console.log('queueMicrotask');
+// });
 
-console.log('script end');
+// console.log('script end');
+
+b() // call b second
+
+function b() {
+    console.log('call b fist')
+}
+function b() {
+    console.log('call b second')
+}
+var b = 'Hello world'
