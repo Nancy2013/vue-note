@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-20 09:55:46
- * @LastEditTime: 2021-02-20 15:20:00
+ * @LastEditTime: 2021-06-15 16:32:40
  * @LastEditors: Please set LastEditors
  * @Description: 测试文件
  * @FilePath: \vue-note\index.js
@@ -14,7 +14,7 @@
 // }
 // b()
 // a++
-// console.log('1', a) 
+// console.log('1', a)
 
 // console.log('script start');
 
@@ -28,12 +28,18 @@
 
 // console.log('script end');
 
-b() // call b second
-
-function b() {
-    console.log('call b fist')
+let a = {
+  name: 'Julia',
+  age: 20,
+};
+function change(o) {
+  o.age = 24;
+  o = {
+    name: 'Kath',
+    age: 30,
+  };
+  return o;
 }
-function b() {
-    console.log('call b second')
-}
-var b = 'Hello world'
+let b = change(a); // 注意这里没有new，后面new相关会有专门文章讲解
+console.log(b); // 第一个console
+console.log(a); // 第二个console

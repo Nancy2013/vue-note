@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-11 10:52:55
- * @LastEditTime: 2021-06-11 15:53:05
+ * @LastEditTime: 2021-06-15 17:59:06
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\base.md
@@ -45,3 +45,57 @@ instance._proto_=instance.constructor.prototype
 - 代码压缩，减少 HTTP 请求
 - 变量声明，setTimeout 参数为函数，少用闭包
 - 减少重绘和重排(回流)
+
+## ![this](./../img/this.png)
+
+- new 创建对象时,绑定到新创建的对象
+
+```js
+function fun() {
+  console.log(this);
+}
+var fun1 = new fun();
+```
+
+- 对象调用时,绑定到调用的对象
+
+```js
+function fun() {
+  console.log(this);
+}
+var obj.fun=fun;
+obj.fun();
+```
+
+- bind,call,apply,严格模式下,绑定到第一个参数;非严格模式下,null 或 undefined 指向全局对象
+
+```js
+const obj = {};
+function fun() {
+  console.log(this);
+}
+var funObj = fun.bind(obj);
+funObj();
+```
+
+- 普通函数调用,严格模式指向 undefined,非严格模式指向 window
+
+```js
+function fun() {
+  console.log(this);
+}
+fun();
+```
+
+- 箭头函数本身没有 this,继承自外层最近的函数 this,即定义时绑定
+
+```js
+const obj = {
+  name: 'test',
+  fun() {
+    return () => {
+      console.log(this);
+    };
+  },
+};
+```
