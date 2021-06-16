@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-11 15:14:36
- * @LastEditTime: 2021-03-11 16:11:50
+ * @LastEditTime: 2021-06-16 17:49:29
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\diff.md
@@ -32,3 +32,18 @@
 ## Vue VS React
 
 composition api 与 hooks 区别
+
+## Vue2.0 vs Vue3.0
+
+- 重构响应系统，使用 Proxy 替换 Obje.defineProperty;
+
+  - 可以监测到数组的变化,最多有 13 种拦截方法;
+  - 监测的目标是对象本身,不是对象的属性,不需要遍历每个属性;
+  - 可直接实现对象的增加/删除
+
+- 新增 Composition Api 接口,更好的逻辑复用和代码组织;
+- 重构 Visual Dom
+  - 模板编译优化,将静态节点编译成常量;
+  - slot 优化,将 slot 编译为 lazy 函数,将 slot 渲染的决定权交给组件;
+- 代码结构调整,更便于 Tree shaking, 体积更小;
+- 使用 Typescript 替换 Flow;

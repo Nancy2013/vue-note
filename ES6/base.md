@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-11 10:52:55
- * @LastEditTime: 2021-06-15 17:59:06
+ * @LastEditTime: 2021-06-16 10:21:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\base.md
@@ -87,7 +87,7 @@ function fun() {
 fun();
 ```
 
-- 箭头函数本身没有 this,继承自外层最近的函数 this,即定义时绑定
+- 箭头函数本身没有 this,继承自外层最近的父函数 this,前面几种都是动态绑定，箭头函数是静态的即声明时绑定
 
 ```js
 const obj = {
