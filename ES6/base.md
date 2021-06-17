@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-11 10:52:55
- * @LastEditTime: 2021-06-16 10:21:43
+ * @LastEditTime: 2021-06-17 10:57:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\base.md
@@ -37,14 +37,6 @@ instance._proto_=instance.constructor.prototype
 - setTimeout 方法的第一个参数是字符串,而不是参数
 
 垃圾回收机制：垃圾回收器会定期扫描对象，并计算被引用的其他对象个数，当被引用次数为 0，会回收该对象内存
-
-## 如何编写高性能 JS
-
-- 使用严格编码格式，‘use strict’
-- js 在文档最后加载，使用异步加载
-- 代码压缩，减少 HTTP 请求
-- 变量声明，setTimeout 参数为函数，少用闭包
-- 减少重绘和重排(回流)
 
 ## ![this](./../img/this.png)
 
@@ -99,3 +91,14 @@ const obj = {
   },
 };
 ```
+
+## var vs let vs const
+
+相同点：作用都是声明变量
+不同点：
+
+- var 存在变量提升,可以在声明之前调用,let、const 不可以
+- var 全局作用域下声明的变量挂载在 window 下,let、const 不会
+- let、const 声明的变量存在作用域,const 声明变量后不能重新赋值
+
+引申：提升指把声明的函数及变量提升到作用域顶部,函数会提升整个函数,变量只会提升声明,相同变量名时函数会覆盖变量
