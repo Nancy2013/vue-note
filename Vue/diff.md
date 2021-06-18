@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-11 15:14:36
- * @LastEditTime: 2021-06-16 17:49:29
+ * @LastEditTime: 2021-06-18 16:04:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\diff.md
@@ -45,5 +45,6 @@ composition api 与 hooks 区别
 - 重构 Visual Dom
   - 模板编译优化,将静态节点编译成常量;
   - slot 优化,将 slot 编译为 lazy 函数,将 slot 渲染的决定权交给组件;
+- 支持 Fragment(多个根节点)，支持 Protal(在 dom 其他部分渲染组件内容)
 - 代码结构调整,更便于 Tree shaking, 体积更小;
 - 使用 Typescript 替换 Flow;

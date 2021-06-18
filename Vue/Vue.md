@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-27 09:19:45
- * @LastEditTime: 2021-06-02 14:40:51
+ * @LastEditTime: 2021-06-18 16:40:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue.md
@@ -90,7 +90,7 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 - 区别使用 computed 和 watch
 - v-for 与 v-if 不同时使用
 - 使用 keep-alive 缓存
-- 路由懒加载
+- 图片懒加载、路由懒加载
 
 ### nextTick 应用及原理
 
