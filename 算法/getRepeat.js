@@ -1,4 +1,3 @@
-
 const checkArray = (arr) => Array.isArray(arr);
 
 const data = [1,2,1,2,3];
@@ -16,11 +15,10 @@ function getRepeat(arr){
       }
   };
   const keys = Object.keys(res);
-  console.log(res);
+
   for(let j=0;j<keys.length;j++){
     if(res[keys[j]] === count){
-      console.log(keys[j]);
-      num.push(keys[j]);
+      num.push(parseInt(keys[j]));
     }
     
     if(res[keys[j]] > count){
@@ -37,5 +35,3 @@ function getRepeat(arr){
 
 const {count,num}=getRepeat(data)
 console.log('Number: ' + num + ' Count: ' + count);
-
-

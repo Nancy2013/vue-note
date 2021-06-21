@@ -95,7 +95,7 @@ border-image: url() <slice> / <width> / <repeat>;
 .father {
   display: grid;
   grid-template-columns: 100px auto 100px; /* 显示网格 */
-  grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+  grid-template-rows: repeat(auto-fill, minnum(50px, 1fr));
   grid-auto-columns: 100px; /* 隐式网格 */
   grid-auto-rows: 50px;
   grid-gap: 10px 20px; /* rows columns */
