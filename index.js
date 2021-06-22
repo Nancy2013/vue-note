@@ -1,41 +1,28 @@
-
-const checkArray = (arr) => Array.isArray(arr);
-
-const data = [1,2,1,2,3];
-
-function getRepeat(arr){
-  if (!checkArray(arr)) return;
-  const res = {};
-  let count=0;
-  let num=[];
-  for (let i = 0; i < arr.length; i++) {
-      if(!res[arr[i]]){
-          res[arr[i]] = 1;
-      }else{
-          res[arr[i]] ++;
-      }
-  };
-  const keys = Object.keys(res);
-  console.log(res);
-  for(let j=0;j<keys.length;j++){
-    if(res[keys[j]] === count){
-      console.log(keys[j]);
-      num.push(keys[j]);
-    }
-    
-    if(res[keys[j]] > count){
-      num=[];
-      count = res[keys[j]]
-      num.push(parseInt(keys[j]));
-    }
-  }
-  return{
-    count,
-    num,
-  }
-}   
-
-const {count,num}=getRepeat(data)
-console.log('Number: ' + num + ' Count: ' + count);
-
-
+/*
+ * @Author: your name
+ * @Date: 2021-06-22 09:54:35
+ * @LastEditTime: 2021-06-22 15:38:05
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \vue-note\index.js
+ */
+async function async1() {
+  console.log('async1 start');
+  await async2();
+  console.log('async1 end');
+}
+async function async2() {
+  console.log('async2');
+}
+console.log('script start');
+setTimeout(function () {
+  console.log('setTimeout');
+}, 0);
+async1();
+new Promise(function (resolve) {
+  console.log('promise1');
+  resolve();
+}).then(function () {
+  console.log('promise2');
+});
+console.log('script end');
