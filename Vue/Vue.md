@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-27 09:19:45
- * @LastEditTime: 2021-06-18 16:40:49
+ * @LastEditTime: 2021-06-24 11:11:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue.md
@@ -89,8 +89,16 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 - 区别使用 v-if 和 v-show
 - 区别使用 computed 和 watch
 - v-for 与 v-if 不同时使用
+- 使用 v-for 时，添加 key
 - 使用 keep-alive 缓存
 - 图片懒加载、路由懒加载
+- 第三方插件按需引入
+
+Webpack 层面：
+
+- 代码分块，公共代码提取(CommonsChunkPlugin)
+- js、css 文件提取
+- 构建结果输出分析，可视化分析工具(webpack-bundle-analyzer)
 
 ### nextTick 应用及原理
 

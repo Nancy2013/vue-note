@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-11 15:14:36
- * @LastEditTime: 2021-06-18 16:04:56
+ * @LastEditTime: 2021-06-24 10:48:29
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\diff.md
@@ -29,9 +29,14 @@
 >
 > vue 单向数据流
 
-## Vue VS React
+## React VS Vue
 
-composition api 与 hooks 区别
+> 数据检测方式
+>
+> > react:pull
+> > vue:push+pull
+>
+> > composition api 与 hooks 区别
 
 ## Vue2.0 vs Vue3.0
 
