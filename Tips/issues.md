@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-23 16:28:33
- * @LastEditTime: 2021-06-24 10:38:53
+ * @LastEditTime: 2021-06-24 17:41:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Tips\issues.md
@@ -36,5 +36,5 @@ function looseBody() {
 ## Vue 优化
 
 - 无法检测数组的动态变化
-- 使用多个 mixins 时，容易混乱
+- 使用多个 mixin 时，容易混乱
 - 组件内部，不支持手动禁止重新渲染的生命周期，例如 react 中的 shouldComponentUpdate

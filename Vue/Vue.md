@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-27 09:19:45
- * @LastEditTime: 2021-06-24 11:11:51
+ * @LastEditTime: 2021-06-24 14:26:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue.md
@@ -52,6 +52,22 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 - Object.defineProperty 遍历 data 属性，生成对应的 getter/setter 方法
 - 每个组件对应一个 watcher,渲染时会生成每个 property 的记录依赖
 - 当 property 进行 getter/setter 操作时，会进行通知变更，通知组件重新渲染
+
+### 编译原理
+
+将 template 编译成 render 函数的过程
+
+> parse:编译模板
+>
+> > 首先通过正则表达式，将 html 编译成 AST 抽象语法树
+>
+> optimize:优化抽象树
+>
+> > vue 是响应式，其中一些节点渲染后不会再变化，可以将静态节点标记出来，虚拟 DOM diff 过程可以直接跳过
+>
+> generate:生成代码
+>
+> > 把 AST 抽象语法树编译成函数
 
 ### 生命周期
 
@@ -104,3 +120,7 @@ Webpack 层面：
 
 nextTick 回调函数推迟到下次 DOM 更新完成后执行，在回调函数中可以得到更新后的数据。
 原理为：使用异步执行回调函数
+
+### key 值的作用
+
+key 作为节点的唯一 id,主要使用在 vue 虚拟 DOM 新旧节点 diff 中,用来查找节点。使用 key,使 diff 操作更准确和迅速。不使用 key,vue 会使用最大限度减少动态元素，就地修改或复用相同类型组件的算法。
