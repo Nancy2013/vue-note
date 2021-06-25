@@ -1,13 +1,21 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-27 09:19:45
- * @LastEditTime: 2021-06-24 14:26:00
+ * @LastEditTime: 2021-06-25 16:00:27
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue.md
  -->
 
 ## Vue
+
+### vue 全家桶
+
+> vue
+> vue-router
+> vuex
+> and design vue | element UI |vant
+> axiso
 
 ### 版本介绍
 
