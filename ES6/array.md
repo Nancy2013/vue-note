@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-28 09:39:46
- * @LastEditTime: 2020-07-06 16:33:14
+ * @LastEditTime: 2021-06-28 17:12:29
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\Array.md
@@ -41,3 +41,13 @@ Array.slice(start,end);
 ```
 
 输出结果：`[0, 1]`
+
+## 判断是否为数组
+
+```js
+let obj=[1,2,3];
+obj instansof Array
+obj.constructor===Array;
+Object.prototype.toString.call(obj)='[Object Array]'
+Array.isArray(obj);
+```
