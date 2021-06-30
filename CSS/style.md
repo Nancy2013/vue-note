@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2021-06-10 17:20:49
+ * @LastEditTime: 2021-06-30 11:33:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
@@ -29,6 +29,29 @@ sticky
 ```
 
 ## flex
+
+```css
+/* flex 属性 */
+.container {
+  display: flex;
+  /* 设置主轴方向，交叉轴垂直于主轴 */
+  flex-direction: row | row-reverse | column | column-reverse;
+  /* 换行 */
+  flex-wrap: nowrap | wrap;
+  /*顺序为flex-grow|flex-shrink|flex-basis
+    可用空间:元素占据的以外空间
+    flex-grow:可用空间的分配比例
+    flex-shrink:超出父元素的缩小比例
+    flex-basis:元素的空间大小
+    */
+  flex: 1 1 auto;
+  /* 主轴方向上的对齐方式 */
+  justify-content: stretch | flex-start | flex-end | center | space-around |
+    space-between;
+  /* 交叉轴上的对齐方式 */
+  align-items: stretch | flex-start | flex-end;
+}
+```
 
 文字居中显示
 
@@ -157,6 +180,32 @@ CSS 盒模型由 content、padding、border、margin 组成，标准盒模型与
 - 布局
 - 清除浮动
 - 解决边距 margin 重叠
+
+## 设置元素浮动
+
+元素设置浮动后，display 为 block
+
+## 清除浮动的方法
+
+```css
+/* 父元素设置高度 */
+.fatherBox {
+  height: 100px;
+}
+/* 父元素设置zoom */
+.fatherBox:after {
+  z-index: 1;
+}
+/* 父元素设置overflow */
+.fatherBox {
+  overflow: hidden;
+  overflow: auto;
+}
+/* 浮动元素后面的元素设置清除 */
+.footer {
+  clear: both;
+}
+```
 
 ## 单冒号与双冒号的区别
 

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-28 09:39:46
- * @LastEditTime: 2021-06-28 17:12:29
+ * @LastEditTime: 2021-06-30 10:20:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\Array.md
@@ -46,7 +46,7 @@ Array.slice(start,end);
 
 ```js
 let obj=[1,2,3];
-obj instansof Array
+obj instanceof Array
 obj.constructor===Array;
 Object.prototype.toString.call(obj)='[Object Array]'
 Array.isArray(obj);

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-21 09:44:20
- * @LastEditTime: 2021-06-22 15:56:57
+ * @LastEditTime: 2021-06-30 09:40:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Tips\实战\新奥.md
@@ -9,9 +9,9 @@
 
 # 实战
 
-## 新奥
+## XinAo
 
-### js(弱,网上整理题库)
+## js(弱,网上整理题库)
 
 - 判断对象为空
 
@@ -61,7 +61,7 @@ function deepEqual(obj1, obj2) {
 - promise.then 与 setTimeout 的执行顺序
 - eventLoop
 
-### css(网上整理题库)
+## css(网上整理题库)
 
 - flex 垂直居中
 
@@ -77,12 +77,12 @@ function deepEqual(obj1, obj2) {
 
 - 字体适配方案
 
-### 网络(最基础)
+## 网络(最基础)
 
 - webSocket
 - http 错误码
 
-### 框架(引导,深入)
+## 框架(引导,深入)
 
 - 双向绑定
 - 响应式原理
@@ -90,7 +90,7 @@ function deepEqual(obj1, obj2) {
 - vuex
 - 动态路由
 
-### 笔试
+## 笔试
 
 - 遇到的问题，以及解决过程
 - 查找数组重复最多次的数值
