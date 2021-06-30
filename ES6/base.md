@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-11 10:52:55
- * @LastEditTime: 2021-06-17 10:57:57
+ * @LastEditTime: 2021-06-30 17:13:31
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\base.md
@@ -102,3 +102,19 @@ const obj = {
 - let、const 声明的变量存在作用域,const 声明变量后不能重新赋值
 
 引申：提升指把声明的函数及变量提升到作用域顶部,函数会提升整个函数,变量只会提升声明,相同变量名时函数会覆盖变量
+
+## for in vs for of
+
+for...in 是 es5 语法，for...of 是 es6 语法，修复了遍历出原型链上属性的问题
+
+> for... in 循环遍历 keys
+>
+> for...in 遍历可枚举的属性，包括原型链上的属性
+>
+> 去除原型链上的属性，使用 hasOwnProperty
+
+> for...of 循环遍历 values
+>
+> for...of 遍历可迭代的属性
+>
+> for...of 不能用于遍历对象

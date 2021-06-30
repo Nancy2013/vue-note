@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2021-06-30 11:33:22
+ * @LastEditTime: 2021-06-30 15:52:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
@@ -36,20 +36,34 @@ sticky
   display: flex;
   /* 设置主轴方向，交叉轴垂直于主轴 */
   flex-direction: row | row-reverse | column | column-reverse;
-  /* 换行 */
-  flex-wrap: nowrap | wrap;
-  /*顺序为flex-grow|flex-shrink|flex-basis
-    可用空间:元素占据的以外空间
-    flex-grow:可用空间的分配比例
-    flex-shrink:超出父元素的缩小比例
-    flex-basis:元素的空间大小
+  /* 换行
+  wrap-reverse:从下到上折行排列
+   */
+  flex-wrap: nowrap(default) | wrap | wrap-reverse;
+  /* 主轴方向上的item对齐方式 
+  space-between:起止item与父元素相邻，可用空间在item之间平均分配
+  space-around:item两边的空间大小相等，item之间的空间是两个单位的间距，起止item与父元素间是一个单位间距
+  space-evenly:item之间的间距以及item与父亲之间的间距相等
+  */
+  justify-content: stretch | flex-start | flex-end | center | space-between |
+    space-around | space-evenly;
+  /* 交叉轴上单行内item的对齐方式 */
+  align-items: stretch | flex-start | flex-end | center | baseline;
+  /* 交叉轴上多行之间的对齐方式 */
+  align-content: stretch | flex-start | flex-end | center | space-between |
+    space-around | space-evenly;
+}
+.childBox {
+  /* 顺序为flex-grow | flex-shrink | flex-basis
+    可用空间: 元素占据完以外的空间
+    flex-grow: 可用空间的分配比例
+    flex-shrink: 超出父元素的缩小比例
+    flex-basis: 元素的空间大小
+    flex:1; 相当于flex:1 1 0;
     */
   flex: 1 1 auto;
-  /* 主轴方向上的对齐方式 */
-  justify-content: stretch | flex-start | flex-end | center | space-around |
-    space-between;
-  /* 交叉轴上的对齐方式 */
-  align-items: stretch | flex-start | flex-end;
+  order: 2;
+  align-self: stretch | flex-start | flex-end | center | auto;
 }
 ```
 

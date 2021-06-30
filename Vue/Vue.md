@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-27 09:19:45
- * @LastEditTime: 2021-06-25 16:00:27
+ * @LastEditTime: 2021-06-30 17:40:13
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue.md
@@ -58,7 +58,7 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 
 - 将对象作为 Vue 实例的 data 对象的 property
 - Object.defineProperty 遍历 data 属性，生成对应的 getter/setter 方法
-- 每个组件对应一个 watcher,渲染时会生成每个 property 的记录依赖
+- 每个组件实例对应一个 watcher,渲染时会生成每个 property 的记录依赖
 - 当 property 进行 getter/setter 操作时，会进行通知变更，通知组件重新渲染
 
 ### 编译原理
@@ -123,6 +123,11 @@ Webpack 层面：
 - 代码分块，公共代码提取(CommonsChunkPlugin)
 - js、css 文件提取
 - 构建结果输出分析，可视化分析工具(webpack-bundle-analyzer)
+
+## $set 解决的问题及原理
+
+JavaScript 对象赋值给 data 后，初始化实例时，Object.defineProperty 会遍历属性，并转换为 get/set 方法。对于 data 中不存在的属性，没有这个过程因此无法检测到。
+$set 是通过手动方式，将属性转换为响应式数据。
 
 ### nextTick 应用及原理
 

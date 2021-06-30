@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-22 09:54:35
- * @LastEditTime: 2021-06-28 17:46:05
+ * @LastEditTime: 2021-06-30 16:55:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\index.js
@@ -52,10 +52,10 @@
 // });
 // console.log(5);
 var array = [1, 3, 5];
-var obj = { name: 'cc' };
-var sReturn = array.forEach(function (value, index, array) {
-  array[index] = value;
-  console.log(this); // cc被打印了三次, this指向obj
-}, obj);
+// var obj = { name: 'cc' };
+// var sReturn = array.forEach(function (value, index, array) {
+//   array[index] = value;
+//   console.log(this); // cc被打印了三次, this指向obj
+// }, obj);
 
-console.log(array.toString());
+console.log(Object.keys(array));
