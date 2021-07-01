@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2021-06-30 15:52:14
+ * @LastEditTime: 2021-07-01 17:25:04
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
@@ -195,6 +195,13 @@ CSS 盒模型由 content、padding、border、margin 组成，标准盒模型与
 - 清除浮动
 - 解决边距 margin 重叠
 
+## link 与@import 的区别
+
+- link 支持动态引入，@import 不行
+- link 标签可以添加其他属性，@import 只能引入 css
+- 浏览器解析到 link 标签，会同步加载 css 文件，@import 是等到文档解析完成后加载
+- @import 兼容性不如 link 便签
+
 ## 设置元素浮动
 
 元素设置浮动后，display 为 block
@@ -242,6 +249,20 @@ div::after {
 ```
 
 CSS3 中向上兼容，同时也支持单冒号的伪元素
+
+## 选择器
+
+> !important
+> id 选择器
+> 类选择器
+> 子代选择器
+> 兄弟选择器
+> 伪类选择器
+> 伪元素选择器
+> 标签选择器
+> 通配选择器
+
+!important 级别比内联样式高
 
 ## opacity vs rgba
 
