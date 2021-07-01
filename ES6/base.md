@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-11 10:52:55
- * @LastEditTime: 2021-06-30 17:13:31
+ * @LastEditTime: 2021-07-01 16:17:08
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\base.md
@@ -91,6 +91,18 @@ const obj = {
   },
 };
 ```
+
+## addEventListener 的第三个参数
+
+true:表示捕获 false:表示冒泡，针对的是 safari 浏览器，禁止/开启滚动时会用到
+
+## DOM 事件流
+
+事件在 dom 节点之前会按特定的顺序传播，这个传播的过程叫做 DOM 事件流
+
+捕获阶段：从 window 发出，自上而下
+目标阶段：真正的目标阶段是处理事件的阶段
+冒泡阶段：自下而上，冒泡到 window
 
 ## var vs let vs const
 
