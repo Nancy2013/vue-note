@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2021-07-01 17:25:04
+ * @LastEditTime: 2021-07-02 16:17:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
@@ -25,6 +25,15 @@ sticky
   overflow：hidden；
   text-overflow：ellipsis；
   white-space：no-wrap;
+}
+
+/* 多行文字 */
+.ellipsis {
+  width: 200px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 ```
 
@@ -357,3 +366,45 @@ line-height 取值：normal|length|number|em|%|inherit
   flex: 1;
 }
 ```
+
+## a 标签的伪类状态顺序
+
+LVHA
+
+```css
+a:link {
+}
+a:visited {
+}
+a:hover {
+}
+a:active {
+}
+```
+
+## position 属性
+
+> static: 默认值；
+> relative: 相对于元素正常文档流位置定位，会预留空间；
+> absolute: 相对于最近非 static 祖先元素定位，脱离文档流；
+> fixed: 相对于浏览器窗口定位，脱离文档流；
+
+备注：谷歌/火狐浏览器下，父元素添加 transform 属性值不为 none，position:fixed 属性是相对于父元素
+
+## 重绘和回流
+
+> 重绘
+>
+> > DOM 的修改导致元素的样式变化，如 color
+> > 界面不用重新经过生成布局树，构建图层树的过程，开销小
+
+> 回流
+>
+> > DOM 的修改元素的几何属性变化，width|height|padding，或者 DOM 节点的增加和删除
+> > 使界面重新经过样式计算，生成布局树，构建图层树，再重新绘制界面，开销很大
+
+> 避免回流
+>
+> > 减少频繁使用 style，改为使用 class
+> > 对 DOM 的操作，合并使用批量操作
+> > 减少频繁读取引起回流的属性，使用缓存
