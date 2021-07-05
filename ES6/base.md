@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-11 10:52:55
- * @LastEditTime: 2021-07-01 16:17:08
+ * @LastEditTime: 2021-07-05 11:20:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\base.md
@@ -91,6 +91,22 @@ const obj = {
   },
 };
 ```
+
+## 判断数据类型
+
+> typeof
+>
+> > 能准确判断基本数据类型，null 会显示 object
+> > function 能正确显示，其他对象都显示 object
+
+> instanceof
+>
+> > 对象能正确显示
+> > 基本类型不能显示
+
+> Object.prototype.toString.call
+>
+> > 基本类型和对象都能正确显示
 
 ## addEventListener 的第三个参数
 
