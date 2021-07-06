@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-11 10:52:55
- * @LastEditTime: 2021-07-05 11:20:57
+ * @LastEditTime: 2021-07-06 14:29:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\base.md
@@ -9,7 +9,7 @@
 
 # 基础点
 
-数据类型、运算、对象、Function、继承、闭包、作用域、原型链、事件、RegExp、JSON、Ajax、DOM、BOM、内存泄漏、跨域、异步装载、模板引擎、前端 MVC、路由、模块化、Canvas、ECMAScript
+数据类型、运算、对象、Function、继承、闭包、this、作用域、原型链、事件、RegExp、JSON、Ajax、DOM、BOM、内存泄漏、跨域、异步装载、模板引擎、前端 MVC、路由、模块化、Canvas、ECMAScript
 
 ## ![JavaScript 原型](./../img/proto.png)
 
@@ -34,7 +34,7 @@ instance._proto_=instance.constructor.prototype
 - 使用闭包
 - 两个对象互相引用
 - 没有使用 var 定义全局变量
-- setTimeout 方法的第一个参数是字符串,而不是参数
+- setTimeout 方法的第一个参数是字符串,而不是函数
 
 垃圾回收机制：垃圾回收器会定期扫描对象，并计算被引用的其他对象个数，当被引用次数为 0，会回收该对象内存
 
@@ -114,7 +114,7 @@ true:表示捕获 false:表示冒泡，针对的是 safari 浏览器，禁止/�
 
 ## DOM 事件流
 
-事件在 dom 节点之前会按特定的顺序传播，这个传播的过程叫做 DOM 事件流
+事件在 dom 节点之间会按特定的顺序传播，这个传播的过程叫做 DOM 事件流
 
 捕获阶段：从 window 发出，自上而下
 目标阶段：真正的目标阶段是处理事件的阶段
@@ -146,3 +146,16 @@ for...in 是 es5 语法，for...of 是 es6 语法，修复了遍历出原型链�
 > for...of 遍历可迭代的属性
 >
 > for...of 不能用于遍历对象
+
+## ES6 新语法
+
+- let、const 声明变量
+- 扩展运算符
+- 解构赋值
+- 箭头函数
+- 字符串模板
+- for...of
+
+## Symbol 的作用
+
+可以用来表示独一无二的变量，防止命名冲突
