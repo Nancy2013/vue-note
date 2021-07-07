@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-25 10:53:46
- * @LastEditTime: 2021-06-07 11:11:47
+ * @LastEditTime: 2021-07-07 15:01:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\组件.md
@@ -23,6 +23,8 @@
 - slot 结构插槽，v-slot:default="{data}";
 - slot 语法糖，#,eg:#default、#header、#footer;
 - 动态参数名，v-slot:[dynamicAttribute]，真正属性名为 dynamicAttribute 的值；
+
+## 插槽和作用域插槽
 
 ## 组件缓存
 

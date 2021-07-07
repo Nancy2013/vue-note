@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-27 09:19:45
- * @LastEditTime: 2021-06-30 17:40:13
+ * @LastEditTime: 2021-07-07 15:01:04
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue.md
@@ -143,3 +143,11 @@ key 作为节点的唯一 id,主要使用在 vue 虚拟 DOM 新旧节点 diff �
 - 获取 dom 元素
 - 获取子元素的属性
 - 获取子元素的方法
+
+### Vue 的特点
+
+- 简洁
+- 数据驱动:computed 和 watch
+- 代码量小
+- 组件
+- 模板

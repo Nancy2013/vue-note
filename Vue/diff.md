@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-11 15:14:36
- * @LastEditTime: 2021-06-24 10:48:29
+ * @LastEditTime: 2021-07-07 15:27:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\diff.md
@@ -31,12 +31,18 @@
 
 ## React VS Vue
 
-> 数据检测方式
+> 相同点
 >
-> > react:pull
-> > vue:push+pull
+> > virtual dom
+> > props
+> > 组件化
+
+> 不同点
 >
-> > composition api 与 hooks 区别
+> > 模板编写：React 是 JSX 语法，Vue 近似于 Html
+> > virtual dom 的检测方式不同:Vue 做了颗粒度控制，在组件级别使用 watcher 监听 push 的监测方式，组件内使用 virtual dom 的 pull 监测方式。react 使用的是 pull
+> > react 使用 setState 修改数据状态，vue 可以直接修改
+> > react 监听数据变化必须手动，vue 提供了 computed 和 watch
 
 ## Vue2.0 vs Vue3.0
 
