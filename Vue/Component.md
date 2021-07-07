@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-25 10:53:46
- * @LastEditTime: 2021-07-07 15:01:55
+ * @LastEditTime: 2021-07-07 17:30:45
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\组件.md
@@ -25,6 +25,28 @@
 - 动态参数名，v-slot:[dynamicAttribute]，真正属性名为 dynamicAttribute 的值；
 
 ## 插槽和作用域插槽
+
+插槽的作用域是父级作用域，作用域插槽的作用域是当前子组件；
+
+```html
+<!-- todo 普通插槽 -->
+<div>
+  <slot></slot>
+</div>
+
+<Todo> 普通插槽 </Todo>
+```
+
+```html
+<!-- todo 作用域插槽 -->
+<div>
+  <slot v-for="item in items">{{item}}</slot>
+</div>
+
+<Todo>
+  <template v-slot:default="slotProps"> {{slotProps.item}} </template>
+</Todo>
+```
 
 ## 组件缓存
 
