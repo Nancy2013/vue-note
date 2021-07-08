@@ -1,19 +1,13 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2021-07-02 16:17:10
+ * @LastEditTime: 2021-07-08 09:34:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
  -->
 
 # 样式
-
-## 优先级
-
-## position
-
-sticky
 
 ## ellipsis
 
