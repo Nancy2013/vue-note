@@ -6,6 +6,7 @@
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\Vuex.md
  -->
+
 # Vuex
 
 ## Store
