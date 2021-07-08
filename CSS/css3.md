@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-01 17:30:10
- * @LastEditTime: 2021-07-02 17:17:17
+ * @LastEditTime: 2021-07-08 14:50:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\css3.md
@@ -14,6 +14,7 @@
 - 圆角
 - 渐变
 - 阴影
+- 动画
 - border-image
 - rgba
 - transform
@@ -114,10 +115,4 @@ body {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
 }
-```
-
-##
-
-```css
-
 ```

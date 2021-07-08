@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-23 09:26:01
- * @LastEditTime: 2021-02-22 17:00:40
+ * @LastEditTime: 2021-07-08 14:28:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\CSS-box-shadow.md
@@ -11,9 +11,9 @@
 
 ## box-shadow
 
-box-shadow: offSetX(X 偏移) offSetY(Y 偏移) blur(模糊度) spread(半径) color position
+box-shadow: offSetX(X 偏移) offSetY(Y 偏移) blur(模糊度) spread(半径) color
 
-- offSetX，向下为正，向上为负
+- offSetX，向右为正，向左为负
 - offSetY，向下为正，向上为负
 - blur，越大越模糊，0 为全部显示
 - spread，越大越宽，负数向内

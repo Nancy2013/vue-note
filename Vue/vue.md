@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-27 09:19:45
- * @LastEditTime: 2021-07-07 15:01:04
+ * @LastEditTime: 2021-07-08 16:26:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue.md
@@ -123,6 +123,13 @@ Webpack 层面：
 - 代码分块，公共代码提取(CommonsChunkPlugin)
 - js、css 文件提取
 - 构建结果输出分析，可视化分析工具(webpack-bundle-analyzer)
+
+其他:
+
+- DNS 预解析，缓存
+- CDN 文件缓存
+- 图片懒加载，雪碧图，图片格式
+- js,css 文件压缩，引入位置，懒加载
 
 ## $set 解决的问题及原理
 

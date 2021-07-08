@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2021-07-08 09:34:20
+ * @LastEditTime: 2021-07-08 16:25:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
@@ -402,3 +402,5 @@ a:active {
 > > 减少频繁使用 style，改为使用 class
 > > 对 DOM 的操作，合并使用批量操作
 > > 减少频繁读取引起回流的属性，使用缓存
+> > 使用 visibility:none 代替 display:none,前者是重绘，后者是回流
+> > 不使用 table 布局
