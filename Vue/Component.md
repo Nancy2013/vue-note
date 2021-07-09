@@ -20,7 +20,7 @@
 - slot 分为默认插槽和具名插槽，v-slot:default、v-slot:header,独占默认插槽时可以省略 default；
 - v-slot 需要在 template 标签上使用，只有出现独占默认插槽时，才可以将 v-slot 直接添加在其他标签上；
 - slot 作用域插槽，可以将插槽数据传递到父组件使用,v-slot:default="data"，要在父组件中使用 data.name；
-- slot 结构插槽，v-slot:default="{data}";
+- slot 解构插槽，v-slot:default="{data}";
 - slot 语法糖，#,eg:#default、#header、#footer;
 - 动态参数名，v-slot:[dynamicAttribute]，真正属性名为 dynamicAttribute 的值；
 
