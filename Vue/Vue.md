@@ -133,13 +133,23 @@ Webpack 层面：
 
 ## $set 解决的问题及原理
 
-JavaScript 对象赋值给 data 后，初始化实例时，Object.defineProperty 会遍历属性，并转换为 get/set 方法。对于 data 中不存在的属性，没有这个过程因此无法检测到。
-$set 是通过手动方式，将属性转换为响应式数据。
+问题：两种情况下修改 Vue 数据不会触发视图更新
+1、Vue 实例创建后，给实例新增属性；
+2、通过数组下标直接修改数组值；
+JavaScript 对象赋值给 data 后，初始化实例时，Object.defineProperty 会遍历属性，并转换为 get/set 方法。对于 data 中不存在的属性，没有这个过程因此无法检测到，数据不是响应式的。
+
+原理：
+1、当添加不存在的属性时，先对属性进行响应式追踪，会触发 Observer 的 dep 收集的 watcher 去更新
+2、数组是通过 splice 方法更新数组。
 
 ### nextTick 应用及原理
 
 nextTick 回调函数推迟到下次 DOM 更新完成后执行，在回调函数中可以得到更新后的数据。
 原理为：使用异步执行回调函数
+
+### Vue.extend 的原理
+
+extend 是子类构造器，参数是包含组件选项的对象，也是 Vue 组件的核心 Api，实现思路是通过原型继承返回 Vue 子类，并通过 mergeOptions 方法把传入的 options 和父类的 options 合并
 
 ### key 值的作用
 
