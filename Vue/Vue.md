@@ -151,6 +151,20 @@ nextTick 回调函数推迟到下次 DOM 更新完成后执行，在回调函数
 
 extend 是子类构造器，参数是包含组件选项的对象，也是 Vue 组件的核心 Api，实现思路是通过原型继承返回 Vue 子类，并通过 mergeOptions 方法把传入的 options 和父类的 options 合并
 
+### Vue router 模式及原理
+
+> hash
+>
+> > hash 指#后面的内容，hash 值改变不会重新 http 请求
+> > 通过 hashChange 方法可以监听 hash 变化，并在浏览器的访问历史中添加记录，通过 hash 的这个特性实现更新视图不重新请求界面
+> > 兼容性好，但不美观
+
+> history
+>
+> > 利用了 Html5 的新接口，pushState 和 replaceState
+> > 可以修改浏览器访问历史记录的参数，达到更新视图不进行需要 http 请求
+> > URL 美观，但是需要后端服务器配合，防止出现 404；
+
 ### key 值的作用
 
 key 作为节点的唯一 id,主要使用在 vue 虚拟 DOM 新旧节点 diff 中,用来查找节点。使用 key,使 diff 操作更准确和迅速。不使用 key,vue 会使用最大限度减少动态元素，就地修改或复用相同类型组件的算法。
