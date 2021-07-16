@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-15 15:53:33
- * @LastEditTime: 2021-07-15 15:57:00
+ * @LastEditTime: 2021-07-16 16:23:33
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Tips\实战\BMW.md
@@ -12,6 +12,8 @@
 ## JS
 
 - null 与 undefined 的区别
+  声明变量没有赋初始值时为 undefined，最原始的状态值。null 给数据赋值为空对象
+  数值类型转换：Number(null) = 0; Number(undefined) = NaN
 
 ## Webpack
 

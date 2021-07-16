@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:57:32
- * @LastEditTime: 2021-06-22 17:36:49
+ * @LastEditTime: 2021-07-16 17:52:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\网络\http.md
@@ -86,3 +86,5 @@
 ### Websocket
 
 是一种网络传输协议，可以在单个 TCP 连接上进行全双工通信，建立在 OSI 模型的应用层
+
+### get vs post vs delete
