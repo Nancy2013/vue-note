@@ -1,17 +1,28 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 09:36:25
- * @LastEditTime: 2021-03-12 16:27:00
+ * @LastEditTime: 2021-07-17 15:57:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Webpack\plugins.md
  -->
 
-## Plugin
+# Plugin
 
-## 常用插件
+## 常用的 plugin
 
-#### html-webpack-plugin
+- html-webpack-plugin 创建 html 文件，并进入 js 文件
+- uglifyjs-webpack-plugin 压缩文件
+- mini-css-extract-plugin 分离 css 文件，讲 css 文件提取为独立文件，支持按需加载
+- clean-webpack-plugin 清理目录
+- webpack-bundle-analyzer 可视化输出文件的体积
+
+## 提高效率的 plugin
+
+- webpack-merge 重复代码合并
+- HotModuleReplacementPlugin 模块热重载
+
+### html-webpack-plugin
 
 - 用于自动在 output.path 路径下，生成 html 文件。
 - 并在文件中插入 script 标签，src 为 output.filename,方便解决编译后哈希命名 bundle 文件的引用问题
@@ -33,12 +44,12 @@ var webpackConfig ={
 
 - 可以通过<%= htmlWebpackPlugin.options.title %>，在静态页面中获得配置参数
 
-#### uglifyjs-webpack-plugin
+### uglifyjs-webpack-plugin
 
 - 压缩 js
 - 在 webpack3+版本中配置方式，webpack.optimize.uglifyjsplugin
 
-#### webpack-dev-server
+### webpack-dev-server
 
 - 使用 node 环境下，express 提供的 http 服务器
 - 运行 webpack-dev-server 时，编译生成的文件保存在内存，并不是本地，可以提高读取文件的速度
@@ -67,6 +78,6 @@ module.exports={
 }
 ```
 
-#### eslint-plugin-vue vs eslint-loader
+### eslint-plugin-vue vs eslint-loader
 
-#### [prettier](https://github.com/prettier/eslint-config-prettier)
+### [prettier](https://github.com/prettier/eslint-config-prettier)

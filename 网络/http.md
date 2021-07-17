@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:57:32
- * @LastEditTime: 2021-07-16 17:52:54
+ * @LastEditTime: 2021-07-17 14:31:08
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\网络\http.md
@@ -87,4 +87,19 @@
 
 是一种网络传输协议，可以在单个 TCP 连接上进行全双工通信，建立在 OSI 模型的应用层
 
-### get vs post vs delete
+### get vs put vs post vs delete
+
+> get 和 post 都可以查询数据
+>
+> - get 查询的参数是添加到 action 属性的的 url 后面，服务器通过 Request.QueryString 获得
+> - post 的参数是添加到 Head 里面，发送到 action 属性的 url，用户看不到这个过程，服务器通过 Request.Form 获得
+> - get 大小有限制，post 没有限制，post 比 get 更安全
+
+> get 查询数据，不改变数据库数据
+> put 查询数据，可以修改数据库数据，不修改数据种类，类似于 update
+> post 可以修改数据库数据和数据种类，执行类似于 insert
+> delete 是删除数据库数据，类型与数据库的 delete 操作
+
+### options
+
+options 是 预检请求，看服务器是否支持跨域，得到服务器确认允许后再发送真正的请求(复杂请求才会触发)
