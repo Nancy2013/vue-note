@@ -72,3 +72,5 @@
 - react hook 每次更新都会执行，vue setup 只执行一次
 - react hook 更新时，需要调用 hook 的赋值函数，vue 可以直接赋值
 - react hook 只能在顶层调用，不能放在条件语句，react hook 是按照声明顺序调用链式结构存储，vue 可以放在条件语句无调用顺序要求
+
+## Vue3 响应式原理
