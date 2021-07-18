@@ -49,13 +49,26 @@
 - 重构响应系统，使用 Proxy 替换 Obje.defineProperty;
 
   - 可以监测到数组的变化,最多有 13 种拦截方法;
-  - 监测的目标是对象本身,不是对象的属性,不需要遍历每个属性;
+  - 懒执行，监测的目标是对象本身,不是对象的属性,不需要遍历每个属性;
   - 可直接实现对象的增加/删除
 
 - 新增 Composition Api 接口,更好的逻辑复用和代码组织;
-- 重构 Visual Dom
-  - 模板编译优化,将静态节点编译成常量;
-  - slot 优化,将 slot 编译为 lazy 函数,将 slot 渲染的决定权交给组件;
+  - setup 没有 this,返回 props 和 context，props 是父组件传递的响应式数据，context 非响应式包括 attr、slot、emit
+  - setup 通过 getCurrentInstance 获得实例，有生命周期 api，onMounted
+  - 可以通过 ref、reactive 方法把基本数据类型和对象转换成响应式
+  - 还可以通过 watch、computed api 监听数据
+- 重构 Virtual Dom，性能优化
+  - 静态标记 模板编译优化,标记静态节点，virtual dom diff 过程会跳过这些节点
+  - 静态提升 函数中的静态变量提升到函数外面，再次调用函数时不会重新声明
+  - 事件缓存 默认情况下事件被认为是动态变量，但是正常情况下视图更新前后的事件没有发生变化，不需要追踪它的变化，vue3 做了这方面的优化
 - 支持 Fragment(多个根节点)，支持 Protal(在 dom 其他部分渲染组件内容)
-- 代码结构调整,更便于 Tree shaking, 体积更小;
+- 代码结构调整,更便于 Tree shaking, 没有使用到的模块都不会被打包，体积更小;
 - 使用 Typescript 替换 Flow;
+- v-model 指令
+- v-if 优先级高于 v-for
+
+## Vue hook vs React hook
+
+- react hook 每次更新都会执行，vue setup 只执行一次
+- react hook 更新时，需要调用 hook 的赋值函数，vue 可以直接赋值
+- react hook 只能在顶层调用，不能放在条件语句，react hook 是按照声明顺序调用链式结构存储，vue 可以放在条件语句无调用顺序要求
