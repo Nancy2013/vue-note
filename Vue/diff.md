@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-11 15:14:36
- * @LastEditTime: 2021-07-07 15:27:51
+ * @LastEditTime: 2021-07-19 10:55:19
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\diff.md
@@ -67,6 +67,19 @@
 - v-model 指令
 - v-if 优先级高于 v-for
 
+## options Api vs Composition Api
+
+> options api
+>
+> > 是组件选项(data,methods,props)的对象 options
+> > 开发复杂组件，会把一个功能拆分到不同的组件选项
+> > 多个组件存在相同逻辑，会提取到 mixin，存在的问题是命令冲突和数据来源不清晰
+
+> Composition Api
+>
+> > 是 vue3 新的 api,基于函数的 api,有更好的的逻辑复用和代码组织
+> > 解决了 options api,不好拆分和复用的问题
+
 ## Vue hook vs React hook
 
 - react hook 每次更新都会执行，vue setup 只执行一次
@@ -74,3 +87,7 @@
 - react hook 只能在顶层调用，不能放在条件语句，react hook 是按照声明顺序调用链式结构存储，vue 可以放在条件语句无调用顺序要求
 
 ## Vue3 响应式原理
+
+- reactive 设置数据为响应式对象(Proxy 是包含一个对象或者函数，并可以对其进行拦截)
+- 跟踪修改它的函数 通过 Proxy 中的 getter，effect，参数是函数访问响应式数据时收集依赖
+- 更新数值成最新的值 通过 Proxy 中的 setter 操作，触发 trigger
