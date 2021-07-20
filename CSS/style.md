@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2021-07-08 16:25:50
+ * @LastEditTime: 2021-07-19 16:16:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
@@ -233,7 +233,7 @@ CSS 盒模型由 content、padding、border、margin 组成，标准盒模型与
 
 ## 单冒号与双冒号的区别
 
-单冒号‘,’用来表示伪类，表示标签的特殊状态或者某一行
+单冒号‘:’用来表示伪类，表示标签的特殊状态或者某一行
 
 ```css
 a:hover {
@@ -242,7 +242,7 @@ p:first-child {
 }
 ```
 
-双冒号‘:’，像是添加了新的 Html 元素
+双冒号‘::’，像是添加了新的 Html 元素
 
 ```css
 div::before {
