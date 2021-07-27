@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-19 14:26:27
- * @LastEditTime: 2021-07-08 15:16:34
+ * @LastEditTime: 2021-07-27 11:07:12
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit#
  * @FilePath: \vue-note\CSS\flexible.md
@@ -35,7 +35,7 @@
 ```js
 <meta
   name="viewport"
-  content="width=device-width, initial-scale=1, numimum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
+  content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
 />
 ```
 

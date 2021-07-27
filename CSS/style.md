@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2021-07-19 16:16:24
+ * @LastEditTime: 2021-07-27 10:51:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
@@ -318,7 +318,7 @@ line-height 取值：normal|length|number|em|%|inherit
 | body    | 16        | normal      | 16\*1.2 |
 | h1      | 32        | inherit     | 32\*1.2 |
 
-父元素 line-height 设备百分比，子元素不设置时，子元素行高为父元素的行高计算值。一般建议行高设置为 number
+父元素 line-height 设置百分比，子元素不设置时，子元素行高为父元素的行高计算值。一般建议行高设置为 number
 
 ## 4 种 box
 
