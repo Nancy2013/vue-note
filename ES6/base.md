@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-11 10:52:55
- * @LastEditTime: 2021-07-08 16:27:21
+ * @LastEditTime: 2021-07-27 14:56:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\base.md
@@ -29,7 +29,7 @@ instance._proto_=instance.constructor.prototype
 
 当访问对象的属性不存在时，会根据 _proto_ 查找 对象原型 prototype 是否存在，如果还不存在会继续查找 prototype 的 prototype 是否存在，直到找到或为 undefined，就是所说的原型链
 
-## 导致内容泄露
+## 导致内存泄露
 
 - 使用闭包
 - 两个对象互相引用

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-04-28 11:13:34
- * @LastEditTime: 2021-07-01 15:12:35
+ * @LastEditTime: 2021-07-27 14:11:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Html\Html.md
@@ -23,7 +23,7 @@
 
 > 不同点
 > defer:浏览器指示脚本异步加载后不会立即执行，在文档解析后执行
-> async:脚本异步加载后会立即执行，script 不是按顺序执行的，不适用与存在依赖的脚本
+> async:脚本异步加载后会立即执行，script 不是按顺序执行的，不适用于存在依赖的脚本
 
 ## 语义化
 
