@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-01 17:30:10
- * @LastEditTime: 2021-07-08 14:50:47
+ * @LastEditTime: 2021-07-27 11:18:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\css3.md
@@ -18,7 +18,6 @@
 - border-image
 - rgba
 - transform
-- translate
 - box-sizing
 - 媒体查询
 - rem 属性
@@ -58,8 +57,6 @@
 > p:only-child 选择父元素唯一的 p 元素
 > p:nth-child(n) 选择父元素第 n 个 p 元素(2n+1:n 必须放在前面)
 > p:first-of-type 选择父元素的首个 p 元素(last/only)
-> :after
-> :before
 > :enabled
 > :disabled 表单禁用状态
 > :checked 单选框或多选框选中状态
