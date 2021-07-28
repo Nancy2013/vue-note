@@ -1,15 +1,15 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-27 09:19:45
- * @LastEditTime: 2021-07-17 14:36:45
+ * @LastEditTime: 2021-07-28 11:09:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue.md
  -->
 
-## Vue
+# Vue
 
-### vue 全家桶
+## vue 全家桶
 
 > vue
 > vue-router
@@ -17,7 +17,7 @@
 > and design vue | element UI |vant
 > axiso
 
-### 版本介绍
+## 版本介绍
 
 - runtime-only 与 runtime-compile 版本的区别
 
@@ -47,12 +47,12 @@ new Vue({
 
 - 在 webpack 中默认引用的为 runtime-only ,使用 vue-loader 可以把.vue 文件编译为 JavaScript 文件，同时需要 vue-template-compiler 将.vue 中的 template 标签 编译为 render 函数。也可以通过在 webpack 中配置 vue\$加载 vue.esm.js 完整版本
 
-### Vue 渲染过程
+## Vue 渲染过程
 
 template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 ![vue-render](./../img/vue-render.png)
 
-### 响应式原理
+## 响应式原理
 
 ![响应式](./../img/response.png)
 
@@ -61,7 +61,7 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 - 每个组件实例对应一个 watcher,渲染时会生成每个 property 的记录依赖
 - 当 property 进行 getter/setter 操作时，会进行通知变更，通知组件重新渲染
 
-### 编译原理
+## 编译原理
 
 将 template 编译成 render 函数的过程
 
@@ -77,7 +77,7 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 >
 > > 把 AST 抽象语法树编译成函数
 
-### 生命周期
+## 生命周期
 
 - beforeCreate
 - Created，进行数据请求
@@ -88,17 +88,17 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 - beforeDestroy
 - Destroyed，不能访问 this
 
-### Vue 实例
+## Vue 实例
 
 - el 与 template 属性的区别
   - el 与 template 都可以将 Vue 实例挂载到 Dom;
   - 使用 template 会把 el 挂载的 id 树结构直接替换掉；
 
-### Vue 原型链
+## Vue 原型链
 
 [![javascript原型链](./../img/proto.png)](https://segmentfault.com/a/1190000021232132)
 
-### Vue 中使用了哪些模式
+## Vue 中使用了哪些模式
 
 - 工厂模式 通过参数创建实例
 - 单例模式 整个程序只有一个实例
@@ -107,7 +107,7 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 - 装饰模式
 - 策略模式
 
-### Vue 性能优化
+## Vue 性能优化
 
 - data 层级不要太深
 - 区别使用 v-if 和 v-show
@@ -142,40 +142,26 @@ JavaScript 对象赋值给 data 后，初始化实例时，Object.defineProperty
 1、当添加不存在的属性时，先对属性进行响应式追踪，会触发 Observer 的 dep 收集的 watcher 去更新
 2、数组是通过 splice 方法更新数组。
 
-### nextTick 应用及原理
+## nextTick 应用及原理
 
 nextTick 回调函数推迟到下次 DOM 更新完成后执行，在回调函数中可以得到更新后的数据。
 原理为：使用异步执行回调函数
 
-### Vue.extend 的原理
+## Vue.extend 的原理
 
 extend 是子类构造器，参数是包含组件选项的对象，也是 Vue 组件的核心 Api，实现思路是通过原型继承返回 Vue 子类，并通过 mergeOptions 方法把传入的 options 和父类的 options 合并
 
-### Vue router 模式及原理
-
-> hash
->
-> > hash 指#后面的内容，hash 值改变不会重新 http 请求
-> > 通过 hashChange 方法可以监听 hash 变化，并在浏览器的访问历史中添加记录，通过 hash 的这个特性实现更新视图不重新请求界面
-> > 兼容性好，但不美观
-
-> history
->
-> > 利用了 Html5 的新接口，pushState 和 replaceState
-> > 可以修改浏览器访问历史记录的参数，达到更新视图不进行需要 http 请求
-> > URL 美观，但是需要后端服务器配合，防止出现 404；
-
-### key 值的作用
+## key 值的作用
 
 key 作为节点的唯一 id,主要使用在 vue 虚拟 DOM 新旧节点 diff 中,用来查找节点。使用 key,使 diff 操作更准确和迅速。不使用 key,vue 会使用最大限度减少动态元素，就地修改或复用相同类型组件的算法。
 
-### ref 的作用
+## ref 的作用
 
 - 获取 dom 元素
 - 获取子元素的属性
 - 获取子元素的方法
 
-### Vue 的特点
+## Vue 的特点
 
 - 简洁
 - 数据驱动:computed 和 watch
@@ -183,7 +169,7 @@ key 作为节点的唯一 id,主要使用在 vue 虚拟 DOM 新旧节点 diff �
 - 组件
 - 模板
 
-### delete 与 Vue.delete
+## delete 与 Vue.delete
 
 - delete 删除的值变成了 empty/undefined，其他数据键值不变
 - Vue.delete 直接删除值，其他数据键值变化

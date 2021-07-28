@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-17 09:32:20
- * @LastEditTime: 2020-07-06 11:28:43
+ * @LastEditTime: 2021-07-28 11:09:13
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\Vue-router.md
@@ -72,6 +72,21 @@ SEO：传统搜索引擎只会从 html 中抓取数据，导致前端渲染的�
 - 路由独享守卫
   - beforEnter
 - 组件内部守卫
+
   - beforeRouterEnter，不能访问 this，next 回调在 mounted 后执行
   - beforeRouterUpdate，解决组件复用数据更新
   - beforeRouterLeave
+
+## Vue router 模式及原理
+
+> hash
+>
+> > hash 指#后面的内容，hash 值改变不会重新 http 请求
+> > 通过 hashChange 方法可以监听 hash 变化，并在浏览器的访问历史中添加记录，通过 hash 的这个特性实现更新视图不重新请求界面
+> > 兼容性好，但不美观
+
+> history
+>
+> > 利用了 Html5 的新接口，pushState 和 replaceState
+> > 可以修改浏览器访问历史记录的参数，达到更新视图不进行需要 http 请求
+> > URL 美观，但是需要后端服务器配合，防止出现 404；
