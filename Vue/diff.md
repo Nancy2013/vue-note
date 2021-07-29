@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-11 15:14:36
- * @LastEditTime: 2021-07-19 10:55:19
+ * @LastEditTime: 2021-07-28 14:18:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\diff.md
@@ -89,5 +89,5 @@
 ## Vue3 响应式原理
 
 - reactive 设置数据为响应式对象(Proxy 是包含一个对象或者函数，并可以对其进行拦截)
-- 跟踪修改它的函数 通过 Proxy 中的 getter，effect，参数是函数访问响应式数据时收集依赖
+- 跟踪修改它的函数 通过 Proxy 中的 getter，effect 参数是函数访问响应式数据时收集依赖
 - 更新数值成最新的值 通过 Proxy 中的 setter 操作，触发 trigger
