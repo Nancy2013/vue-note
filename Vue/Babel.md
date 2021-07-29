@@ -1,19 +1,19 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-05 13:59:29
- * @LastEditTime: 2021-03-11 09:47:52
+ * @LastEditTime: 2021-07-29 11:10:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\Babel.md
  -->
 
-## Babel
+# Babel
 
-### 功能
+## 功能
 
 - JavaScript 编译器，用来编译 JavaScript 新的语法糖，以支持大多数浏览器的兼容性
 
-### 配置
+## 配置
 
 - presets(预设)
   - 可以理解为插件的集合，不需要我们在 plugins 中一个个的引入插件
