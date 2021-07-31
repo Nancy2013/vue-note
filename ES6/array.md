@@ -40,14 +40,63 @@ Array.slice(start,end);
 [0, 1, 2, 3].slice(0, 2);
 ```
 
+## find
+
+<!-- 返回数组 -->
+
+Arr.find(e=>e.value>10);
+
+## includes
+
+<!-- 返回true|false，优化了indexOf返回的-1 -->
+
+Arr.includes(val);
+
 输出结果：`[0, 1]`
+
+## copyWithin
+
+<!-- 复制数组的一部分到制定位置，不改变数组长度 -->
+
+Arr.copyWithin(val,start,end)
+
+## flat
+
+<!-- 扁平化与数组空项,deep可选默认为1 -->
+
+Arr.flat(deep)
+
+```js
+const arr = [1, 2, [3, 4]];
+arr.flat();
+// [1,2,3,4]
+
+const arr2 = [1, 2, [3, 4, [5, 6]]];
+arr2.flat();
+// [1,2,3,4,[5,6]]
+
+arr2.flat(2);
+// [1,2,3,4,5,6]
+```
 
 ## 判断是否为数组
 
 ```js
-let obj=[1,2,3];
-obj instanceof Array
-obj.constructor===Array;
-Object.prototype.toString.call(obj)='[Object Array]'
+let obj = [1, 2, 3];
+obj instanceof Array;
+obj.constructor === Array;
+Object.prototype.toString.call(obj) = '[Object Array]';
 Array.isArray(obj);
 ```
+
+## Set vs WeakSet Map vs WeakMap
+
+> Set vs WeakSet
+>
+> > set 类似于数组，元素可以为任意值，可以去重
+> > WeakSet 数组元素必须为对象，可以垃圾回收不会导致内存泄漏
+
+> Map vs WeakMap
+>
+> > 类似于对象的键值对，键名可以为任意值
+> > WeakMap,键名必须为对象(null 除外)，键值可以是任意值，可以垃圾回收
