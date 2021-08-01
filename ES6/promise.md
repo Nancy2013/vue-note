@@ -18,6 +18,8 @@ JavaScript 是单线程，即一个任务完成后才能进行另外的任务。
 
 Promise 不是一种新的语法，只是为了解决异步请求的地狱回调问题，通过使用链式调用，可以提高可读性使代码更优雅。
 
+Promise 状态：pending、fullfilled、rejected、settled(调用 resolve 或者 reject)
+
 ## 简单使用
 
 ```javascript
