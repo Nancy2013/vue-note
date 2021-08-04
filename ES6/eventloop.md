@@ -42,3 +42,48 @@
 > 4. 执行 promise 回调，输出 promise1,产生新的微任务并压入 microtask 队列;
 > 5. 继续执行微任务，执行 promise 回调，输出 promise2;(nextTick 早于其他所有微任务)
 > 6. 微任务全部执行完毕，有 UI 渲染时会执行更新，然后开始新一轮宏任务执行 setTimeout 回调;
+
+```js
+async function async1() {
+  console.log('async1 start');
+  await async2();
+  console.log('async1 end');
+}
+
+async function async2() {
+  console.log('async2');
+}
+
+console.log('script start');
+
+setTimeout(() => {
+  console.log('setTimeout');
+}, 0);
+
+async1();
+
+new Promise((resolve) => {
+  console.log('Promise1');
+  resolve();
+}).then(() => {
+  console.log('Promise2');
+});
+
+console.log('script end');
+
+// 执行顺序
+// script start
+// async1 start
+// async2
+// Promise1
+// script end
+// async1 end
+// Promise2
+// setTimeout
+```
+
+## Promise vs async/await
+
+- setTimeout 不是立即放到队列，由设置的定时器时间决定，所以 setTimeout 的时间不是精确的
+- promise 本身是同步函数，会放到主线程直接执行，回调 then 为异步，会先放到微任务队列，promise 状态不是 pending 时放回到主线程
+- async 内部没有 await 时如同普通函数，会返回 promise 对象，await 是等待右侧内容执行完，当内部出现 await 并执行到 await 时，会让出主线程，阻塞 async 内后续代码的执行，先执行 async 外部函数，然后再继续执行 await 函数后面的部分

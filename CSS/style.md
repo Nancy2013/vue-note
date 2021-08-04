@@ -67,6 +67,7 @@
   flex: 1 1 auto;
   order: 2;
   align-self: stretch | flex-start | flex-end | center | auto;
+  padding: 32px;
 }
 ```
 

@@ -51,11 +51,10 @@
 //   console.log(4);
 // });
 // console.log(5);
-var array = [1, 3, 5];
+// var array = [1, 3, 5];
 // var obj = { name: 'cc' };
 // var sReturn = array.forEach(function (value, index, array) {
 //   array[index] = value;
 //   console.log(this); // cc被打印了三次, this指向obj
 // }, obj);
 
-console.log(Object.keys(array));
