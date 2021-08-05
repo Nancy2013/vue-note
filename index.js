@@ -58,3 +58,15 @@
 //   console.log(this); // cc被打印了三次, this指向obj
 // }, obj);
 
+let ary = [1, [2, [3, [4, 5]]], 6];// -> [1, 2, 3, 4, 5, 6]
+// let str = JSON.stringify(ary);
+
+// ary = str.replace(/\[|\]/g, '').split(',')
+
+while (ary.some(Array.isArray)) {
+    console.log(ary);
+    ary = [].concat(...ary);
+    
+}
+
+console.log(...ary);
