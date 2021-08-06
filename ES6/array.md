@@ -9,6 +9,13 @@
 
 # Array
 
+## array
+
+```js
+Array(3); // [empty,empty,empty]
+Array(3, 4); // [3,4]
+```
+
 ## fill
 
 Array.fill(val,start,end)

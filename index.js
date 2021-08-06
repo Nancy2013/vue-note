@@ -63,10 +63,11 @@ let ary = [1, [2, [3, [4, 5]]], 6];// -> [1, 2, 3, 4, 5, 6]
 
 // ary = str.replace(/\[|\]/g, '').split(',')
 
-while (ary.some(Array.isArray)) {
-    console.log(ary);
-    ary = [].concat(...ary);
-    
+const flat = function(ary) {
+    const array=ary.toString().split(',');
+    console.log('[array]',array);
+    return array.map(item => +item )
 }
 
-console.log(...ary);
+console.log(flat(ary));
+console.log('1');
