@@ -86,6 +86,58 @@ arr2.flat(2);
 // [1,2,3,4,5,6]
 ```
 
+## 数组扁平化
+
+```js
+let ary = [1, [2, [3, [4, 5]]], 6]; // -> [1, 2, 3, 4, 5, 6]
+
+// 方法一 replace+split
+let str = ary.toString();
+ary.replace(/(\[|\])/g).split(',');
+
+// 方法二 replace+parse
+let str = ary.toString();
+JSON.parse(ary.replace(/(\[|\])/g));
+
+// 方法三 扩展运算符+contact
+while (ary.some(Array.isArray)) {
+  ary = [].contact(...ary);
+}
+
+//  方法四 flat
+ary.flat(2;
+
+// 方法五 stringfy
+let str=JSON.stringfu(ary);
+ary=ary.split(',').map(item=>+item);
+```
+
+## 数组中的高阶函数
+
+参数为函数，或者返回值为函数
+
+- map
+- reduce
+
+```js
+// 函数参数依次为：累积值，当前值，当前下标，数组
+// 第二个参数是初始值，不设置时默认为ary[0],从第二个元素累积
+ary.reduce(function (pre, cur, index, ary) {}, 0);
+```
+
+- filter
+- sort
+
+```js
+// sort 不传函数参数时，默认把数组元素转换为字符串，根据Unicode升序排序
+// 两个值比较，返回1代表前后调换位置，返回-1代表不调换
+ary.sort((a, b) => {
+  if (a > b) return 1;
+  if (a === b) return 0;
+  if (a < b) return -1;
+});
+```
+
 ## 判断是否为数组
 
 ```js

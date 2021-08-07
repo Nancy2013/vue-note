@@ -58,16 +58,11 @@
 //   console.log(this); // cc被打印了三次, this指向obj
 // }, obj);
 
-let ary = [1, [2, [3, [4, 5]]], 6];// -> [1, 2, 3, 4, 5, 6]
-// let str = JSON.stringify(ary);
-
-// ary = str.replace(/\[|\]/g, '').split(',')
-
-const flat = function(ary) {
-    const array=ary.toString().split(',');
-    console.log('[array]',array);
-    return array.map(item => +item )
-}
-
-console.log(flat(ary));
-console.log('1');
+let nums = [2, 3, 1];
+//两个比较的元素分别为a, bs
+nums.sort(function(a, b) {
+  if(b> a) return -1;
+  else if(b < a) return 1;
+  else if(a == b) return 0;
+})
+console.log(nums);
