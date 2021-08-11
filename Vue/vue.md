@@ -85,6 +85,8 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 - Mounted，进行 DOM 操作
 - beforeUpdate
 - Updated
+- activited : keep-alive 组件专属，组件激活时调用
+- deadctivated : keep-alive 组件专属，组件销毁时调用
 - beforeDestroy
 - Destroyed，不能访问 this
 
@@ -173,3 +175,11 @@ key 作为节点的唯一 id,主要使用在 vue 虚拟 DOM 新旧节点 diff �
 
 - delete 删除的值变成了 empty/undefined，其他数据键值不变
 - Vue.delete 直接删除值，其他数据键值变化
+
+## 样式穿透
+
+当 style 添加 scoped 标签时，表示样式只对当前组件生效，想修改其他组件样式的方法
+
+- 原生样式使用 .a >>> .b 选择元素
+- 使用 less,sass 预处理器的以上方法不生效，可以通过 .a /deep/ .b 选择元素
+- vue-cli3 下，以上方法都不生效，可以通过.a ::v-deep .b 选择元素
