@@ -9,6 +9,18 @@
 
 # 样式
 
+## 单位
+
+width 的取值单位
+
+- px
+- %
+- em & rem
+- vw & vh ：视图宽度或高度的 1/100
+- vmin: vw 与 vh 中的最小值，vmax: vw 与 vh 中的最大值
+- ch:一个 font-family 字体的宽度
+- ex：x-height，一个小写 x 的高度,等于 em 的一半
+
 ## ellipsis
 
 文字不换行，超出部分显示省略号

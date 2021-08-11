@@ -27,7 +27,40 @@
 - translate 转移
 - scale 缩放
 - skew 倾斜
+  - skew(a,b),元素 x 方向逆时针倾斜角度 a,元素 y 方向顺时针倾斜角度 b
+  - 必须以 deg 表示单位，负数表示相反方向
 - rotate 旋转
+- matrix 矩阵
+
+备注：transform-origin 默认为 center，可以设置变形的基点 transform-origin：top left;
+
+```css
+.box {
+  /* 
+  可以是1-3个值,其中value相对于左上角
+  offX: left center right  | value
+  offY: top  center bottom | value
+  offZ: value
+  浏览器兼容前缀
+  -webkit：Chrome & Safari
+  -moz: 火狐
+  -o: 欧朋
+  -ms: IE
+  无: w3c标准
+   */
+  transform-origin: center;
+  transform-origin: offX offY offZ;
+}
+```
+
+## transition
+
+```css
+.transition {
+  /* 属性 | 持续时间 | 过渡函数 | 延迟时间*/
+  transition: margin-right 4s ease-in-out 1s;
+}
+```
 
 ## 动画
 
@@ -51,6 +84,25 @@
   }
 } ;
 ```
+
+## transition vs animation
+
+> transform
+>
+> > 转换，是静态的，表示元素的 width,position 等
+> > 加上时间属性后变成动态过程，构成动画
+
+> transition
+>
+> > 过渡，定义元素在不同状态间切换的过渡效果，
+> > 只有开始和结束两个状态
+> > 需要事件触发，如:hover 到:active 变化,或者通过 JavaScript 事件实现的状态切换
+
+> animation
+>
+> > 动画
+> > 可以设置多个关键帧
+> > 不需要事件触发，可以自动执行
 
 ## CSS3 新增伪类
 
@@ -111,5 +163,21 @@ body {
   border-bottom: 10px solid transparent;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
+}
+```
+
+## clac 使用
+
+```css
+.div {
+  /* 
+  + & - 符号两边必须有空格
+  * & / 符号后面必须是数字
+  除号后面不能是0
+   */
+  width: calc(100% - 10px);
+  width: calc(10% + 10em);
+  width: calc(10% * 10);
+  width: calc(100% / 6);
 }
 ```
