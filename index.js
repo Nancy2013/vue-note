@@ -57,8 +57,13 @@
 //   array[index] = value;
 //   console.log(this); // cc被打印了三次, this指向obj
 // }, obj);
-let ary = [1, [[2, [[3, [4, 5]]], 0], 0], 6];
-let str = ary.toString();
-let ary2 = str.replace(/(\[|\])/g).split(',');
-
-console.log(ary2);
+var a = 0
+var b = async () => {
+  a = a + await 10
+  console.log('2', a) // -> '2' 10
+  a = (await 10) + a
+  console.log('3', a) // -> '3' 20
+}
+b()
+a++
+console.log('1', a) // -> '1' 1

@@ -91,25 +91,19 @@ arr2.flat(2);
 ```js
 let ary = [1, [2, [3, [4, 5]]], 6]; // -> [1, 2, 3, 4, 5, 6]
 
-// 方法一 replace+split
+// 方法一 stringfy
 let str = ary.toString();
-ary.replace(/(\[|\])/g).split(',');
+ary=ary.split(',').map(item=>+item);
 
-// 方法二 replace+parse
-let str = ary.toString();
-JSON.parse(ary.replace(/(\[|\])/g));
-
-// 方法三 扩展运算符+contact
+// 方法二 扩展运算符+contact
 while (ary.some(Array.isArray)) {
   ary = [].contact(...ary);
 }
 
-//  方法四 flat
+//  方法三 flat
 ary.flat(2;
 
-// 方法五 stringfy
-let str=JSON.stringfu(ary);
-ary=ary.split(',').map(item=>+item);
+
 ```
 
 ## 数组中的高阶函数
