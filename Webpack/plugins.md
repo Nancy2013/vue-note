@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 09:36:25
- * @LastEditTime: 2021-07-17 15:57:54
+ * @LastEditTime: 2021-08-18 17:51:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Webpack\plugins.md
@@ -11,9 +11,9 @@
 
 ## 常用的 plugin
 
-- html-webpack-plugin 创建 html 文件，并进入 js 文件
+- html-webpack-plugin 创建 html 文件，并引入 js 文件
 - uglifyjs-webpack-plugin 压缩文件
-- mini-css-extract-plugin 分离 css 文件，讲 css 文件提取为独立文件，支持按需加载
+- mini-css-extract-plugin 分离 css 文件，将 css 文件提取为独立文件，支持按需加载
 - clean-webpack-plugin 清理目录
 - webpack-bundle-analyzer 可视化输出文件的体积
 

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-18 09:35:34
- * @LastEditTime: 2020-07-06 16:53:22
+ * @LastEditTime: 2021-08-19 17:13:35
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\Promise.md
@@ -36,5 +36,5 @@ Promise 状态：pending、fullfilled、rejected、settled(调用 resolve 或者
   //  promise 的回调 then 方法有两个参数，成功回调 success 以及失败回调 fail，这两个参数必须是函数，否则 promise 返回的数据会一直向下传递
  },err=>{
 
- });
+ }).catch(e=>console.error(e));
 ```

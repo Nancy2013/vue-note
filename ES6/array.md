@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-28 09:39:46
- * @LastEditTime: 2021-06-30 10:20:24
+ * @LastEditTime: 2021-08-19 16:52:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\Array.md
@@ -38,13 +38,15 @@ Array.slice(start,end);
 ```javascript
 // 复制数组
 [0, 1, 2, 3].slice(0);
-```
 
-输出结果：`[0, 1, 2, 3]`
+// 输出结果：[0, 1, 2, 3]
+```
 
 ```javascript
 // 截取数组
 [0, 1, 2, 3].slice(0, 2);
+
+// 输出结果：[0, 1]
 ```
 
 ## find
@@ -58,8 +60,6 @@ Arr.find(e=>e.value>10);
 <!-- 返回true|false，优化了indexOf返回的-1 -->
 
 Arr.includes(val);
-
-输出结果：`[0, 1]`
 
 ## copyWithin
 
@@ -91,25 +91,17 @@ arr2.flat(2);
 ```js
 let ary = [1, [2, [3, [4, 5]]], 6]; // -> [1, 2, 3, 4, 5, 6]
 
-// 方法一 replace+split
+// 方法一 toString+split
 let str = ary.toString();
-ary.replace(/(\[|\])/g).split(',');
+let ary2 = str.split(',').map((item) => +item);
 
-// 方法二 replace+parse
-let str = ary.toString();
-JSON.parse(ary.replace(/(\[|\])/g));
-
-// 方法三 扩展运算符+contact
+// 方法二 扩展运算符+contact
 while (ary.some(Array.isArray)) {
-  ary = [].contact(...ary);
+  ary = [].concat(...ary);
 }
 
-//  方法四 flat
-ary.flat(2;
-
-// 方法五 stringfy
-let str=JSON.stringfu(ary);
-ary=ary.split(',').map(item=>+item);
+//  方法三 flat
+ary.flat(2);
 ```
 
 ## 数组中的高阶函数

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-22 09:54:35
- * @LastEditTime: 2021-06-30 16:55:54
+ * @LastEditTime: 2021-08-19 16:50:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\index.js
@@ -57,12 +57,8 @@
 //   array[index] = value;
 //   console.log(this); // cc被打印了三次, this指向obj
 // }, obj);
+let ary = [1, [[2, [[3, [4, 5]]], 0], 0], 6];
+let str = ary.toString();
+let ary2 = str.replace(/(\[|\])/g).split(',');
 
-let nums = [2, 3, 1];
-//两个比较的元素分别为a, bs
-nums.sort(function(a, b) {
-  if(b> a) return -1;
-  else if(b < a) return 1;
-  else if(a == b) return 0;
-})
-console.log(nums);
+console.log(ary2);

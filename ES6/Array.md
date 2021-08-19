@@ -1,13 +1,20 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-28 09:39:46
- * @LastEditTime: 2021-06-30 10:20:24
+ * @LastEditTime: 2021-08-19 16:52:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\Array.md
 -->
 
 # Array
+
+## array
+
+```js
+Array(3); // [empty,empty,empty]
+Array(3, 4); // [3,4]
+```
 
 ## fill
 
@@ -31,13 +38,15 @@ Array.slice(start,end);
 ```javascript
 // 复制数组
 [0, 1, 2, 3].slice(0);
-```
 
-输出结果：`[0, 1, 2, 3]`
+// 输出结果：[0, 1, 2, 3]
+```
 
 ```javascript
 // 截取数组
 [0, 1, 2, 3].slice(0, 2);
+
+// 输出结果：[0, 1]
 ```
 
 ## find
@@ -51,8 +60,6 @@ Arr.find(e=>e.value>10);
 <!-- 返回true|false，优化了indexOf返回的-1 -->
 
 Arr.includes(val);
-
-输出结果：`[0, 1]`
 
 ## copyWithin
 
@@ -77,6 +84,50 @@ arr2.flat();
 
 arr2.flat(2);
 // [1,2,3,4,5,6]
+```
+
+## 数组扁平化
+
+```js
+let ary = [1, [2, [3, [4, 5]]], 6]; // -> [1, 2, 3, 4, 5, 6]
+
+// 方法一 toString+split
+let str = ary.toString();
+let ary2 = str.split(',').map((item) => +item);
+
+// 方法二 扩展运算符+contact
+while (ary.some(Array.isArray)) {
+  ary = [].concat(...ary);
+}
+
+//  方法三 flat
+ary.flat(2);
+```
+
+## 数组中的高阶函数
+
+参数为函数，或者返回值为函数
+
+- map
+- reduce
+
+```js
+// 函数参数依次为：累积值，当前值，当前下标，数组
+// 第二个参数是初始值，不设置时默认为ary[0],从第二个元素累积
+ary.reduce(function (pre, cur, index, ary) {}, 0);
+```
+
+- filter
+- sort
+
+```js
+// sort 不传函数参数时，默认把数组元素转换为字符串，根据Unicode升序排序
+// 两个值比较，返回1代表前后调换位置，返回-1代表不调换
+ary.sort((a, b) => {
+  if (a > b) return 1;
+  if (a === b) return 0;
+  if (a < b) return -1;
+});
 ```
 
 ## 判断是否为数组

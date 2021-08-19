@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-18 09:35:34
- * @LastEditTime: 2020-07-06 16:53:22
+ * @LastEditTime: 2021-08-19 17:13:35
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\Promise.md
@@ -17,6 +17,8 @@ JavaScript 是单线程，即一个任务完成后才能进行另外的任务。
 - 异步模式(async)，任务执行后会去执行已经请求完数据的回调，而不是下个任务。任务不是等上个任务执行完再执行，可能会同时执行，这样任务执行顺序与任务排列顺序可能是不一致的，代表性应用如 Ajax。
 
 Promise 不是一种新的语法，只是为了解决异步请求的地狱回调问题，通过使用链式调用，可以提高可读性使代码更优雅。
+
+Promise 状态：pending、fullfilled、rejected、settled(调用 resolve 或者 reject)
 
 ## 简单使用
 
@@ -34,5 +36,5 @@ Promise 不是一种新的语法，只是为了解决异步请求的地狱回调
   //  promise 的回调 then 方法有两个参数，成功回调 success 以及失败回调 fail，这两个参数必须是函数，否则 promise 返回的数据会一直向下传递
  },err=>{
 
- });
+ }).catch(e=>console.error(e));
 ```

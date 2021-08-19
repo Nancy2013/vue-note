@@ -7,15 +7,30 @@
  * @FilePath: \vue-note\组件.md
  -->
 
-## 组件
+# 组件
 
-### 父子组件通信
+## 组件通信
+
+### 父子组件
+
+- props & $emit
+- bus 组件
+- vuex
+- inject & provide
+- $parent & $children
+- $root
+
+### 兄弟组件
+
+- $attr
+- $ref
+- $listeners
 
 - 父组件通过 props 向子组件传递；
 - 子组件通过\$emit 事件传递，父组件上监听事件时需要用'-'连接词，事件可以不添加参数，会自动传递；
 - $root属性拿到的是Vue实例，$parent 属性返回的是 Vue 实例或 Component 组件；
 
-### 高阶组件
+## 高阶组件
 
 - slot 分为默认插槽和具名插槽，v-slot:default、v-slot:header,独占默认插槽时可以省略 default；
 - v-slot 需要在 template 标签上使用，只有出现独占默认插槽时，才可以将 v-slot 直接添加在其他标签上；
@@ -55,6 +70,7 @@
 - 使用后被缓存的组件会多出来两个生命钩子
   - activated：组件被激活时调用，调用顺序组件 mounted -> activated -> beforeRouterEnter 的 next 回调
   - deactivated：组件被停用时调用，此时组件没有 beforDestroy 及 destroyed 钩子
+  - 常用的两个属性 include/exclude
 
 ## 依赖注入
 
