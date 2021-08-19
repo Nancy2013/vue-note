@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2021-07-27 10:51:47
+ * @LastEditTime: 2021-08-18 16:06:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
@@ -114,7 +114,7 @@ padding 不能设置负值，margin 可以
 <color pos>: red 0%, green 100%, // red 到 green 渐变，50%为中间点
 <color pos pos>: red 0% 10%, green 100%  // 0-10% 持续显示 red，10-100%渐变
 <color pos>, <pos>, <color pos>: red 0%, 30%, green 100%  // 30%为渐变中间点
-<color pos>,<color pos>,<color,pos>: red 0%, red 10%, green 10%, // red 与 green 之间有一条硬线，red 到 green， 10-100%渐变，
+<color pos>,<color pos>,<color,pos>: red 0%, red 10%, green 10%, // 0-10% red 持续显示， red 与 green 之间有一条硬线，10-100% green持续显示，
  */
  {
   background-color: #f07575; /* 不支持渐变的浏览器回退方案 */
@@ -235,8 +235,7 @@ CSS 盒模型由 content、padding、border、margin 组成，标准盒模型与
 }
 /* 父元素设置overflow */
 .fatherBox {
-  overflow: hidden;
-  overflow: auto;
+  overflow: hidden | auto;
 }
 /* 浮动元素后面的元素设置清除 */
 .footer {
@@ -255,7 +254,7 @@ p:first-child {
 }
 ```
 
-双冒号‘::’，像是添加了新的 Html 元素
+双冒号‘::’，表示伪元素，像是添加了新的 Html 元素
 
 ```css
 div::before {
@@ -371,6 +370,59 @@ line-height 取值：normal|length|number|em|%|inherit
 }
 .bottom {
   flex: 1;
+}
+```
+
+## div 水平垂直居中
+
+```css
+/* 方案一 position */
+.father {
+  position: relative;
+}
+/* 不设置宽高度，会铺满父元素 */
+.center {
+  width: 100px;
+  height: 100px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* 方案二 position+transform */
+.father {
+  position: relative;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 方案三 flex */
+.father {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center {
+  width: 100px;
+  height: 100px;
+}
+```
+
+## div 内容居中
+
+```css
+.center {
+  /* 行元素 */
+  text-align: center;
+  line-height: 元素高度;
 }
 ```
 

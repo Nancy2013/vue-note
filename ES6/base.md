@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-11 10:52:55
- * @LastEditTime: 2021-07-27 14:56:50
+ * @LastEditTime: 2021-08-19 15:14:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\base.md
@@ -36,7 +36,7 @@ const p=new Parent();
 构造函数.prototype=原型
 instance.\_proto_=instance.constructor.prototype
 
-当访问对象的属性不存在时，会根据 _proto_ 查找 对象原型 prototype 是否存在，如果还不存在会继续查找 prototype 的 prototype 是否存在，直到找到或找到 Object 为止，形成一个原型指向的链条，就是所说的原型链
+当访问对象的属性不存在时，会根据 _proto_ 查找 对象原型 prototype 是否存在，如果还不存在会继续查找 prototype 的 prototype 是否存在，直到找到属性或找到 Object 为止，形成一个原型指向的链条，就是所说的原型链
 
 ## 导致内存泄露
 
