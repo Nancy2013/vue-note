@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-27 09:19:45
- * @LastEditTime: 2021-07-28 11:09:00
+ * @LastEditTime: 2021-08-20 10:14:32
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue.md
@@ -85,10 +85,10 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 - Mounted，进行 DOM 操作
 - beforeUpdate
 - Updated
-- activited : keep-alive 组件专属，组件激活时调用
-- deadctivated : keep-alive 组件专属，组件销毁时调用
 - beforeDestroy
 - Destroyed，不能访问 this
+- activited : keep-alive 组件专属，组件激活时调用
+- deadctivated : keep-alive 组件专属，组件销毁时调用
 
 ## Vue 实例
 
