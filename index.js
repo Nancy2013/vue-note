@@ -57,13 +57,11 @@
 //   array[index] = value;
 //   console.log(this); // cc被打印了三次, this指向obj
 // }, obj);
-var a = 0
-var b = async () => {
-  a = a + await 10
-  console.log('2', a) // -> '2' 10
-  a = (await 10) + a
-  console.log('3', a) // -> '3' 20
-}
-b()
-a++
-console.log('1', a) // -> '1' 1
+// main.js
+var incCounter = require('./lib').incCounter;
+var counter = require('./lib').counter;
+
+incCounter();
+console.log(counter);  // 3
+
+console.log(counter); // 3
