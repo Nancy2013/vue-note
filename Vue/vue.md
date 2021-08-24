@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-27 09:19:45
- * @LastEditTime: 2021-07-28 11:09:00
+ * @LastEditTime: 2021-08-24 14:59:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue.md
@@ -85,10 +85,10 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 - Mounted，进行 DOM 操作
 - beforeUpdate
 - Updated
-- activited : keep-alive 组件专属，组件激活时调用
-- deadctivated : keep-alive 组件专属，组件销毁时调用
 - beforeDestroy
 - Destroyed，不能访问 this
+- activited : keep-alive 组件专属，组件激活时调用
+- deadctivated : keep-alive 组件专属，组件销毁时调用
 
 ## Vue 实例
 
@@ -122,8 +122,8 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 
 Webpack 层面：
 
-- 代码分块，公共代码提取(CommonsChunkPlugin)
-- js、css 文件提取
+- 代码分割，公共代码提取(CommonsChunkPlugin)
+- js、css 文件提取及压缩(Uglifyjs-webpack-plugin)
 - 构建结果输出分析，可视化分析工具(webpack-bundle-analyzer)
 
 其他:

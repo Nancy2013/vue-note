@@ -72,6 +72,9 @@
   - provide/inject
   - 组件间 bus 总线
   - vuex
+    -$parent & $children
+  - $root
+  - $ref
 
 * Vuex
 
@@ -117,7 +120,7 @@
     - 第七种数据类型（Number/String/undefined/null/boolean/Object）
   - await
   - set 给数组去重
-  - Map 类似于 Object，但是键值可以不是字符串
+  - Map 类似于 Object，但是键名可以不是字符串
 
 - 闭包
 
