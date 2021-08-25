@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-21 16:32:29
- * @LastEditTime: 2021-08-23 17:19:27
+ * @LastEditTime: 2021-08-25 11:08:23
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\算法\throttle.js
@@ -23,7 +23,3 @@ const _throttle = (func, wait = 50) => {
     }
   };
 };
-
-setInterval(() => {
-  _throttle(() => {}, 100);
-}, 1);
