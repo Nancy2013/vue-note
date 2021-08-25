@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-22 09:54:35
- * @LastEditTime: 2021-08-25 10:39:15
+ * @LastEditTime: 2021-08-25 14:51:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\index.js
@@ -58,16 +58,6 @@
 //   console.log(this); // cc被打印了三次, this指向obj
 // }, obj);
 // main.js
-const _throttle = (func, wait = 50) => {
-  let lasttime = 0;
+const arr = ['1', '2'];
 
-  return function (...args) {
-    const now = new Date();
-    // 将当前时间和上一次执行函数时间对比
-    // 如果差值大于设置的等待时间就执行函数
-    if (now - lasttime > wait) {
-      lasttime = now;
-      func.apply(this, args);
-    }
-  };
-};
+console.log(4 + ['1', '2']);
