@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-25 10:53:46
- * @LastEditTime: 2021-07-07 17:30:45
+ * @LastEditTime: 2021-08-26 16:57:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\组件.md
@@ -14,8 +14,7 @@
 ### 父子组件
 
 - props & $emit
-- bus 组件
-- vuex
+- v-model
 - inject & provide
 - $parent & $children
 - $root
@@ -25,6 +24,11 @@
 - $attr
 - $ref
 - $listeners
+
+### 通用
+
+- bus 组件
+- vuex
 
 - 父组件通过 props 向子组件传递；
 - 子组件通过\$emit 事件传递，父组件上监听事件时需要用'-'连接词，事件可以不添加参数，会自动传递；

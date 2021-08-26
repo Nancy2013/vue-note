@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-17 09:32:20
- * @LastEditTime: 2021-07-28 11:09:13
+ * @LastEditTime: 2021-08-26 16:45:27
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\Vue-router.md
@@ -88,5 +88,5 @@ SEO：传统搜索引擎只会从 html 中抓取数据，导致前端渲染的�
 > history
 >
 > > 利用了 Html5 的新接口，pushState 和 replaceState
-> > 可以修改浏览器访问历史记录的参数，达到更新视图不进行需要 http 请求
-> > URL 美观，但是需要后端服务器配合，防止出现 404；
+> > 可以通过 api 设置同源 url, 添加任意类型的数据到历史记录，达到更新视图不需要 http 请求
+> > URL 美观，但是需要后端服务器配合配置 index.html，防止出现 404；

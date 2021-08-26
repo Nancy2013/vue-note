@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-07 10:53:18
- * @LastEditTime: 2021-06-25 16:33:37
+ * @LastEditTime: 2021-08-26 17:52:48
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\vue-directive.md
@@ -25,7 +25,7 @@
 >
 > > v-if
 
-- 惰性，条件首次为真时显示；
+- 惰性加载，条件首次为真时显示；
 - 切换渲染性能消耗大;
 - 一般切换少时使用;
 
