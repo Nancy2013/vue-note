@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2021-08-18 16:06:47
+ * @LastEditTime: 2021-08-27 16:26:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
@@ -469,3 +469,39 @@ a:active {
 > > 减少频繁读取引起回流的属性，使用缓存
 > > 使用 visibility:none 代替 display:none,前者是重绘，后者是回流
 > > 不使用 table 布局
+
+## hacks
+
+```css
+/* 不同浏览器的样式不同 */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 谷歌浏览器不能显示12px以下字体 */
+body {
+  -webkit-text-adjust: none;
+  font-size: 12px;
+  -webkit-transform: scale(0.8);
+}
+
+/* 超链接点击完之后，样式不再显示，定义样式顺序 LVHA*/
+a:link {
+}
+a:visited {
+}
+a:hover {
+}
+a:active {
+}
+
+/* ios input标签不能输入 */
+input {
+  -webkit-user-select: auto;
+}
+
+/* ios下字体变清晰变细 */
+p {
+  -webkit-font-smoothing: antialiased;
+}
+```
