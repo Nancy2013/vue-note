@@ -268,16 +268,48 @@ CSS3 中向上兼容，同时也支持单冒号的伪元素
 ## 选择器
 
 > !important
-> id 选择器
-> 类选择器
-> 子代选择器
-> 兄弟选择器
-> 伪类选择器
-> 伪元素选择器
-> 标签选择器
-> 通配选择器
+> id 选择器(#)
+> 类选择器(.)
+> 子代选择器(ul>li)
+> 兄弟选择器(div+p)
+> 伪类选择器(a:hover)
+> 伪元素选择器(div:before)
+> 标签选择器(div)
+> 通配选择器(\*)
 
-!important 级别比内联样式高
+!important > 元素行内内联样式高 > id 选择器 > 类选择器 > 标签选择器
+
+## 可继承属性
+
+字体相关
+
+- font
+- font-size
+- font-family
+- font-weight
+
+文本相关
+
+- text-indent
+- word-spacing
+- letter-spacing
+
+可见性
+
+- visibility
+
+## visibility
+
+```css
+/* 
+visible: 元素正常可见
+hidden: 元素隐藏，仍在文档流中其他元素位置不变，只是元素透明，给子元素设置visibility：visible，子元素可见，重绘
+collapse: 普通元素效果如hidden，table标签效果如display: none(不存在文档流中，回流)
+ */
+div {
+  visibility: visible | hidden | collapse;
+}
+```
 
 ## opacity vs rgba
 
@@ -376,7 +408,22 @@ line-height 取值：normal|length|number|em|%|inherit
 ## div 水平垂直居中
 
 ```css
-/* 方案一 position */
+/* 方案一 absolute + 负margin */
+.father {
+  position: relative;
+}
+.center {
+  width: 100px;
+  height: 100px;
+
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  margin-left: -50px;
+  margin-right: -50px;
+}
+
+/* 方案二 absolute + margin auto*/
 .father {
   position: relative;
 }
@@ -393,7 +440,7 @@ line-height 取值：normal|length|number|em|%|inherit
   margin: auto;
 }
 
-/* 方案二 position+transform */
+/* 方案三 absolute+transform */
 .father {
   position: relative;
 }
@@ -404,7 +451,7 @@ line-height 取值：normal|length|number|em|%|inherit
   transform: translate(-50%, -50%);
 }
 
-/* 方案三 flex */
+/* 方案四 flex */
 .father {
   display: flex;
   justify-content: center;
