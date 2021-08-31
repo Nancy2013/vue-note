@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2021-08-27 16:26:42
+ * @LastEditTime: 2021-08-31 14:42:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
@@ -15,10 +15,11 @@ width 的取值单位
 
 - px
 - %
-- em & rem
+- em : font-size 中是相对父元素字体的大小，其他属性中是相对本身字体的大小
+- rem : root em
 - vw & vh ：视图宽度或高度的 1/100
 - vmin: vw 与 vh 中的最小值，vmax: vw 与 vh 中的最大值
-- ch:一个 font-family 字体的宽度
+- ch:数字 0 的宽度
 - ex：x-height，一个小写 x 的高度,等于 em 的一半
 
 ## ellipsis
@@ -106,6 +107,8 @@ padding 不能设置负值，margin 可以
 ## linear-gradient
 
 渐变
+
+![角度定义](./../img/linear-angle.png)
 
 ```css
 /* 
@@ -270,14 +273,16 @@ CSS3 中向上兼容，同时也支持单冒号的伪元素
 > !important
 > id 选择器(#)
 > 类选择器(.)
-> 子代选择器(ul>li)
+> 属性选择器(input[type='text'])
+> 子代选择器(ul>li,只选择儿子)
+> 后代选择器(div p,选择所有后代)
 > 兄弟选择器(div+p)
+> 标签选择器(div)
 > 伪类选择器(a:hover)
 > 伪元素选择器(div:before)
-> 标签选择器(div)
 > 通配选择器(\*)
 
-!important > 元素行内内联样式高 > id 选择器 > 类选择器 > 标签选择器
+!important > 元素行内内联样式高 > id 选择器 > 类选择器=伪类选择器=属性选择器 > 标签选择器=伪元素选择器 > 通配选择器=后代选择器=兄弟选择器
 
 ## 可继承属性
 
@@ -376,6 +381,10 @@ line-height 取值：normal|length|number|em|%|inherit
 上面 box 固定为 100px,下面占满剩下屏幕
 
 ```css
+.top {
+  height: 50px;
+}
+
 /* 方案一 */
 .bottom {
   height: calc(100%-100px);

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-01 17:30:10
- * @LastEditTime: 2021-07-27 11:18:30
+ * @LastEditTime: 2021-08-31 16:12:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\css3.md
@@ -33,6 +33,7 @@
 - matrix 矩阵
 
 备注：transform-origin 默认为 center，可以设置变形的基点 transform-origin：top left;
+声明 transform:will-change | translate3d(0,0,0) | translateZ(0),可以开启 GPU 硬件加速模式
 
 ```css
 .box {
