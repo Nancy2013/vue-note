@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-07 10:53:18
- * @LastEditTime: 2021-08-26 17:52:48
+ * @LastEditTime: 2021-09-06 14:49:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\vue-directive.md
@@ -31,7 +31,7 @@
 
 > > v-show
 
-- 总是显示，通过 display 属性控制;
+- 总是渲染，通过 css 属性 display 控制显示;
 - 首次渲染性能消耗大;
 - 需要多次切换时使用;
 
