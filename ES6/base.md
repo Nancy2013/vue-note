@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-11 10:52:55
- * @LastEditTime: 2021-08-19 15:14:14
+ * @LastEditTime: 2021-09-03 17:17:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\base.md
@@ -13,7 +13,25 @@
 
 ## 继承
 
+继承是子类继承父类的属性和方法，避免代码重复
+
+### 原型链继承
+
+### 原型继承
+
+### 寄生继承
+
+### 组合继承
+
+### 寄生组合继承(es6 extends)
+
+### 构造方法继承
+
 ## class
+
+ES6 新语法，增加了 class 关键字，通过 extends 实现继承。class 本质仍然是函数，通过原型链继承。在子类中必须调用 super，获得 this
+
+es5 中，是先创造子类实例对象的 this,然后把父类的属性和方法加到 this 上面，修改它的 prototype 成父类，在构造函数中调用 Parent.call()。而 es6 中，是先把父类的属性和方法加到 this 上面，子类必须通过 super 调用，然后再修改 this。
 
 ## 构造函数
 

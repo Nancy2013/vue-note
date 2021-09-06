@@ -1,11 +1,23 @@
 /*
  * @Author: your name
  * @Date: 2021-06-21 16:52:28
- * @LastEditTime: 2021-08-25 15:10:26
+ * @LastEditTime: 2021-09-01 14:22:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
- * @FilePath: \vue-note\算法\deepClone.js
+ * @FilePath: \vue-note\算法\cloneDeep.js
  */
+// 浅拷贝
+
+const newObj = oldObj;
+
+const newObj = [...oldObj];
+
+const newObj = oldObj.slice();
+
+const newObj = [].concat(oldObj);
+
+const newObj = Object.assign({}, oldObj);
+
 // 深拷贝
 
 /* 
@@ -20,7 +32,7 @@ const newObj = JSON.parse(JSON.stringify(oldObj));
 /* 
 方式二 递归函数
 */
-function deepClone(obj) {
+function cloneDeep(obj) {
   if (typeof obj !== 'object' || obj === null) {
     return obj;
   }
@@ -28,7 +40,7 @@ function deepClone(obj) {
 
   for (let key in obj) {
     if (obj.hasOwnProperty(key)) {
-      copy[key] = deepClone(obj[key]);
+      copy[key] = cloneDeep(obj[key]);
     }
   }
   return copy;

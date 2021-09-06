@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-28 09:39:46
- * @LastEditTime: 2021-08-20 10:57:07
+ * @LastEditTime: 2021-09-01 14:17:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\Array.md
@@ -93,7 +93,7 @@ let ary = [1, [2, [3, [4, 5]]], 6]; // -> [1, 2, 3, 4, 5, 6]
 
 // 方法一 stringfy
 let str = ary.toString();
-ary=ary.split(',').map(item=>+item);
+ary = ary.split(',').map((item) => +item);
 
 // 方法二 扩展运算符+contact
 while (ary.some(Array.isArray)) {
@@ -101,8 +101,7 @@ while (ary.some(Array.isArray)) {
 }
 
 //  方法三 flat
-ary.flat(2;
-
+ary.flat(2);
 ```
 
 ## 数组中的高阶函数
