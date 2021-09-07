@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-26 10:19:49
- * @LastEditTime: 2021-07-17 15:10:48
+ * @LastEditTime: 2021-09-07 11:18:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\webpack.md
@@ -20,8 +20,8 @@
 
 > Loader
 >
-> > Loader 是转换器，把 A 文件转换成 B 文件，可以把 index.less 转换成 index.css
+> > Loader 是转换器，通过链式调用，把 A 文件转换成 B 文件，可以把 index.less 转换成 index.css
 
 > plugin
 >
-> > plugin 是扩展器，丰富了 webpack 本身，针对 loader 之后，webpack 打包的整个过程。它不直接操作文件，而且基于事件机制工作，监听 webpack 打包过程中的节点，并执行广泛的任务
+> > plugin 是扩展器，丰富了 webpack 本身，针对 loader 之后，webpack 打包的整个过程。它不直接操作文件，而且基于事件流机制，监听 webpack 打包过程中的节点，并执行广泛的任务
