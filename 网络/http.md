@@ -1,15 +1,15 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:57:32
- * @LastEditTime: 2021-07-17 14:31:08
+ * @LastEditTime: 2021-09-08 14:10:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\网络\http.md
  -->
 
-## 网络
+# 网络
 
-### http vs https
+## http vs https
 
 | 区别     | http                | https                                     |
 | -------- | ------------------- | ----------------------------------------- |
@@ -20,24 +20,24 @@
 | 收费     | 否                  | CA 证书收费                               |
 | 请求速度 | 快                  | 慢                                        |
 
-### https 请求过程
+## https 请求过程
 
 ![https](./../img/https.png)
 
-### 从浏览器输入 Url 到显示界面的步骤
+## 从浏览器输入 Url 到显示界面的步骤
 
 - DNS 域名解析，发起服务器请求
 - 服务器返回 html、js、css 资源
 - 浏览器语法解析，生成 dom 数据结构树
 - 浏览器渲染页面
 
-### iframe 的缺点
+## iframe 的缺点
 
 - 搜索引擎不能解析 iframe，不利于 SEO
 - iframe 页面会阻塞主页面加载
 - 与主页面共享数据池，浏览器有相同域访问限制
 
-### 网站性能优化方法
+## 网站性能优化方法
 
 - content 方面
   - 减少 http 请求：文件合并、使用雪碧图、base64 编码图片；
@@ -53,7 +53,7 @@
   - 减小 Cookies 大小
   - 资源使用 Gzip 压缩
 
-### 前端 SEO 注意的地方
+## 前端 SEO 注意的地方
 
 - 页面 title、description、keyword 要能描述重点，关键词重复不超过两次；
 - 语义化页面结构
@@ -62,7 +62,7 @@
 - 少用 iframe 标签，iframe 不能检索
 - 提高网页速度，网页的访问速度是 SEO 的一个重要指标
 
-### http 错误码
+## http 错误码
 
 > 3XX:重定向
 >
@@ -87,11 +87,11 @@
 > > 503:服务器无法处理请求，重载或在维护
 > > 504:请求网关超时
 
-### Websocket
+## Websocket
 
 是一种网络传输协议，可以在单个 TCP 连接上进行全双工通信，建立在 OSI 模型的应用层
 
-### get vs put vs post vs delete
+## get vs put vs post vs delete
 
 > get 和 post 都可以查询数据
 >
@@ -104,6 +104,6 @@
 > post 可以修改数据库数据和数据种类，执行类似于 insert
 > delete 是删除数据库数据，类似于数据库的 delete 操作
 
-### options
+## options
 
 options 是 预检请求，看服务器是否支持跨域，得到服务器确认允许后再发送真正的请求(复杂请求才会触发)
