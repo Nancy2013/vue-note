@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2021-08-31 14:42:07
+ * @LastEditTime: 2021-09-09 10:05:32
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
@@ -478,6 +478,7 @@ line-height 取值：normal|length|number|em|%|inherit
 .center {
   /* 行元素 */
   text-align: center;
+  height: 元素高度;
   line-height: 元素高度;
 }
 ```
