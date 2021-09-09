@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-22 09:54:35
- * @LastEditTime: 2021-08-25 14:51:25
+ * @LastEditTime: 2021-09-09 15:40:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\index.js
@@ -58,6 +58,10 @@
 //   console.log(this); // cc被打印了三次, this指向obj
 // }, obj);
 // main.js
-const arr = ['1', '2'];
+let ary = [1, [2, [3, [4, 5]]], 6];
 
-console.log(4 + ['1', '2']);
+while (ary.some(Array.isArray)) {
+  ary = [].concat(...ary);
+}
+
+console.log(ary);

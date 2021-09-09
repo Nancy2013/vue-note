@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-28 09:39:46
- * @LastEditTime: 2021-09-01 14:17:03
+ * @LastEditTime: 2021-09-09 15:15:04
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\Array.md
@@ -47,6 +47,8 @@ Array.slice(start,end);
 [0, 1, 2, 3].slice(0, 2);
 ```
 
+输出结果：`[0, 1]`
+
 ## find
 
 <!-- 返回数组 -->
@@ -59,13 +61,23 @@ Arr.find(e=>e.value>10);
 
 Arr.includes(val);
 
-输出结果：`[0, 1]`
-
 ## copyWithin
 
-<!-- 复制数组的一部分到制定位置，不改变数组长度 -->
+<!-- 复制数组的一部分到特定位置，不改变数组长度 -->
+<!--
+target: 需要复制到的位置
+start: 复制开始的位置
+end: 复制结束的位置,不包括end
+ -->
 
-Arr.copyWithin(val,start,end)
+Arr.copyWithin(target,start,end)
+
+```javascript
+const arr1 = [0, 1, 2, 3, 4];
+const arr2 = arr1.copyWithin(0, 2, 4);
+```
+
+输出结果：[2,3,2,3,4]
 
 ## flat
 
