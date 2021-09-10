@@ -1,14 +1,14 @@
 /*
  * @Author: your name
  * @Date: 2021-08-25 09:48:00
- * @LastEditTime: 2021-08-25 09:55:53
+ * @LastEditTime: 2021-09-10 17:19:53
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\算法\lazy-load.js
  */
 // 图片懒加载
 // 思路
-// 1、首先给图片设置占位图，设置图片的date-src属性
+// 1、首先给图片设置占位图，设置图片的data-src属性
 // 2、获得两个关键值：视图高度(viewHeight)，图片距离视图顶部的高度(scrollHeight)
 // 3、比较两个高度，当视图高度(viewHeight)大于距离顶部高度(scrollHeight)，说明图片出现的视图窗口
 // 4、监控页面滚动事件

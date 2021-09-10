@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-11 15:14:36
- * @LastEditTime: 2021-07-28 14:18:03
+ * @LastEditTime: 2021-09-10 14:29:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\diff.md
@@ -54,7 +54,7 @@
 
 - 新增 Composition Api 接口,更好的逻辑复用和代码组织;
   - setup 没有 this,返回 props 和 context，props 是父组件传递的响应式数据，context 非响应式包括 attr、slot、emit
-  - setup 通过 getCurrentInstance 获得实例，有生命周期 api，onMounted
+  - setup 通过 getCurrentInstance 获得实例，有生命周期 api，onMounted
   - 可以通过 ref、reactive 方法把基本数据类型和对象转换成响应式
   - 还可以通过 watch、computed api 监听数据
 - 重构 Virtual Dom，性能优化
@@ -73,7 +73,7 @@
 >
 > > 是组件选项(data,methods,props)的对象 options
 > > 开发复杂组件，会把一个功能拆分到不同的组件选项
-> > 多个组件存在相同逻辑，会提取到 mixin，存在的问题是命令冲突和数据来源不清晰
+> > 多个组件存在相同逻辑，会提取到 mixins，存在的问题是命令冲突和数据来源不清晰
 
 > Composition Api
 >

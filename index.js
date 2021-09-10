@@ -1,67 +1,68 @@
 /*
  * @Author: your name
- * @Date: 2021-06-22 09:54:35
- * @LastEditTime: 2021-09-09 15:40:50
+ * @Date: 2021-06-22 11:06:22
+ * @LastEditTime: 2021-09-10 16:43:04
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
- * @FilePath: \vue-note\index.js
+ * @FilePath: \vue-note\算法\deepEqual.js
  */
-// async function async1() {
-//   console.log('async1 start');
-//   await async2();
-//   console.log('async1 end');
-// }
-// async function async2() {
-//   console.log('async2');
-// }
-// console.log('script start');
-// setTimeout(function () {
-//   console.log('setTimeout');
-// }, 0);
-// async1();
-// new Promise(function (resolve) {
-//   console.log('promise1');
-//   resolve();
-// }).then(function () {
-//   console.log('promise2');
-// });
-// console.log('script end');
+const obj1 = {
+  name: 'a',
+  age: 1,
+  info: {
+    sex: '女',
+    family: {
+      is: false,
+      peo: {
+        dad: 30,
+        mouther: 30,
+      },
+    },
+  },
+};
 
-// var a = 0;
-// var b = async () => {
-//   a = a + (await 10);
-//   console.log('2', a); // -> '2' 10
-//   a = (await 10) + a;
-//   console.log('3', a); // -> '3' 20
-// };
-// b();
-// a++;
-// console.log('1', a); // -> '1' 1
+const obj2 = {
+  name: 'a',
+  age: 1,
+  info: {
+    sex: '女',
+    family: {
+      is: false,
+      peo: {
+        dad: 31,
+        mouther: 30,
+      },
+    },
+  },
+};
 
-// setTimeout(function () {
-//   console.log(1);
-// }, 0);
-// new Promise(function (resolve, reject) {
-//   console.log(2);
-//   resolve();
-// }).then(function () {
-//   console.log(3);
-// });
-// process.nextTick(function () {
-//   console.log(4);
-// });
-// console.log(5);
-// var array = [1, 3, 5];
-// var obj = { name: 'cc' };
-// var sReturn = array.forEach(function (value, index, array) {
-//   array[index] = value;
-//   console.log(this); // cc被打印了三次, this指向obj
-// }, obj);
-// main.js
-let ary = [1, [2, [3, [4, 5]]], 6];
+function checkObject(obj) {
+  return typeof obj === 'object' && obj !== null;
+}
+function deepEqual(obj1, obj2) {
+  const keys1 = Object.keys(obj1);
+  const keys2 = Object.keys(obj2);
+  if (keys1.length !== keys2.length) {
+    return false;
+  }
 
-while (ary.some(Array.isArray)) {
-  ary = [].concat(...ary);
+  for (let i = 0; i < keys1.length; i++) {
+    const val1 = obj1[keys1[i]];
+    const val2 = obj2[keys1[i]];
+
+    const isObj1 = checkObject(val1);
+    const isObj2 = checkObject(val2);
+    if (isObj1 && isObj2) {
+      return deepEqual(val1, val2);
+    } else {
+      if (val1 !== val2) {
+        console.log('val1: ', val1, ' val2: ', val2);
+        return false;
+      }
+    }
+  }
+
+  return true;
 }
 
-console.log(ary);
+console.log(deepEqual(obj1, obj2));

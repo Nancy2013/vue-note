@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-21 16:52:28
- * @LastEditTime: 2021-09-01 14:22:43
+ * @LastEditTime: 2021-09-10 17:00:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\算法\cloneDeep.js
@@ -32,8 +32,12 @@ const newObj = JSON.parse(JSON.stringify(oldObj));
 /* 
 方式二 递归函数
 */
+function checkObject(obj) {
+  return typeof obj === 'object' && obj !== null;
+}
+
 function cloneDeep(obj) {
-  if (typeof obj !== 'object' || obj === null) {
+  if (!checkObject(obj)) {
     return obj;
   }
   let copy = obj.constructor === Array ? [] : {};

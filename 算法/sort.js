@@ -1,12 +1,12 @@
 /*
  * @Author: your name
  * @Date: 2021-06-21 10:41:15
- * @LastEditTime: 2021-06-21 15:56:21
+ * @LastEditTime: 2021-09-10 15:37:48
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\算法\排序.js
  */
-const data = [2, 3, 4, 1, 9, 3, 5, 6, 8, 8, 0, 7];
+const data = [2, 3, 1, 4, 9, 3, 5, 6, 8, 8, 0, 7];
 // 判断有效性
 const checkArray = (arr) => Array.isArray(arr);
 // 交换
@@ -17,6 +17,7 @@ const swap = (arr, left, right) => {
 };
 
 // 冒泡
+// 每一轮都把最大数值沉入下面，执行length-1轮
 const bubble = (arr) => {
   if (!checkArray(arr)) return;
   for (let i = arr.length - 1; i > 0; i--) {
