@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2021-09-09 10:05:32
+ * @LastEditTime: 2021-10-12 16:53:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
@@ -24,15 +24,29 @@ width 的取值单位
 
 ## ellipsis
 
-文字不换行，超出部分显示省略号
+文字不换行，超出部分显示省略号,
 
 ```css
-.text-ellipsis{
-  display：inline-block；
+/* 只对block元素有效 */
+.ellipsis{
   overflow：hidden；
   text-overflow：ellipsis；
   white-space：no-wrap;
 }
+
+/* flex元素添加省略效果，需要添加以下 */
+
+.flex-box{
+  display:flex;
+}
+
+.flex-item{
+  flex:1;
+  min-width:0;
+}
+
+
+
 
 /* 多行文字 */
 .ellipsis {
