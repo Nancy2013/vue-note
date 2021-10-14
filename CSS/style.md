@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2021-10-12 16:53:52
+ * @LastEditTime: 2021-10-14 10:03:29
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
@@ -396,7 +396,7 @@ line-height 取值：normal|length|number|em|%|inherit
 
 ```css
 .top {
-  height: 50px;
+  height: 100px;
 }
 
 /* 方案一 */
