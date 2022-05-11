@@ -233,7 +233,7 @@ CSS 盒模型由 content、padding、border、margin 组成，标准盒模型与
 - link 支持动态引入，@import 不行
 - link 标签可以添加其他属性，@import 只能引入 css
 - 浏览器解析到 link 标签，会同步加载 css 文件，@import 是等到文档解析完成后加载
-- @import 兼容性不如 link 便签
+- @import 兼容性不如 link 标签
 
 ## 设置元素浮动
 
