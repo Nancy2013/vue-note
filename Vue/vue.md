@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-27 09:19:45
- * @LastEditTime: 2021-08-24 14:59:54
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-05-12 16:49:31
+ * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue.md
  -->
@@ -47,6 +47,12 @@ new Vue({
 
 - 在 webpack 中默认引用的为 runtime-only ,使用 vue-loader 可以把.vue 文件编译为 JavaScript 文件，同时需要 vue-template-compiler 将.vue 中的 template 标签 编译为 render 函数。也可以通过在 webpack 中配置 vue\$加载 vue.esm.js 完整版本
 
+## Vue 实例
+
+- el 与 template 属性的区别
+  - el 与 template 都可以将 Vue 实例挂载到 Dom;
+  - 使用 template 会把 el 挂载的 id 树结构直接替换掉；
+
 ## Vue 渲染过程
 
 template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
@@ -89,12 +95,6 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 - Destroyed，不能访问 this
 - activited : keep-alive 组件专属，组件激活时调用
 - deadctivated : keep-alive 组件专属，组件销毁时调用
-
-## Vue 实例
-
-- el 与 template 属性的区别
-  - el 与 template 都可以将 Vue 实例挂载到 Dom;
-  - 使用 template 会把 el 挂载的 id 树结构直接替换掉；
 
 ## Vue 原型链
 
