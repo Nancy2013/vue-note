@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-01 17:30:10
- * @LastEditTime: 2021-08-31 16:12:07
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-05-12 15:48:41
+ * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\css3.md
 -->
@@ -54,7 +54,7 @@
 }
 ```
 
-## transition
+## transition 过渡
 
 ```css
 .transition {
@@ -107,12 +107,12 @@
 
 ## CSS3 新增伪类
 
-> p:only-child 选择父元素唯一的 p 元素
-> p:nth-child(n) 选择父元素第 n 个 p 元素(2n+1:n 必须放在前面)
-> p:first-of-type 选择父元素的首个 p 元素(last/only)
-> :enabled
-> :disabled 表单禁用状态
-> :checked 单选框或多选框选中状态
+- .father p:only-child 选择父元素唯一的 p 元素
+- .father p:nth-child(n) 选择父元素第 n 个 p 元素(2n+1:n 必须放在前面)
+- .father p:first-of-type 选择父元素的首个 p 元素(last/only)
+- :enabled
+- :disabled 表单禁用状态
+- :checked 单选框或多选框选中状态
 
 ## 页面灰度
 
@@ -127,6 +127,7 @@ body {
 ```css
 /* 方案一 */
 .border {
+  border-width:1px;
   transform: scale(0.5);
 }
 /* 方案二 */
@@ -167,14 +168,14 @@ body {
 }
 ```
 
-## clac 使用
+## calc 使用
 
 ```css
 .div {
   /* 
   + & - 符号两边必须有空格
-  * & / 符号后面必须是数字
-  除号后面不能是0
+  *  乘数中至少有一个是number
+  / 除号后面必须是number,不能是0,100%为父元素宽度
    */
   width: calc(100% - 10px);
   width: calc(10% + 10em);
