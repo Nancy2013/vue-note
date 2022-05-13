@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-11 15:14:36
- * @LastEditTime: 2021-09-10 14:29:41
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-05-13 13:54:54
+ * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\diff.md
 -->
@@ -46,7 +46,7 @@
 
 ## Vue2.0 vs Vue3.0
 
-- 重构响应系统，使用 Proxy 替换 Obje.defineProperty;
+- 重构响应系统，使用 Proxy 替换 Object.defineProperty;
 
   - 可以监测到数组的变化,最多有 13 种拦截方法;
   - 懒执行，监测的目标是对象本身,不是对象的属性,不需要遍历每个属性;

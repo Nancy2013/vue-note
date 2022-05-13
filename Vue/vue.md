@@ -1,13 +1,21 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-27 09:19:45
- * @LastEditTime: 2022-05-12 16:49:31
+ * @LastEditTime: 2022-05-13 10:26:35
  * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue.md
  -->
 
 # Vue
+
+## Vue 的特点
+
+- 简洁
+- 数据驱动:computed 和 watch
+- 代码量小
+- 组件
+- 模板
 
 ## vue 全家桶
 
@@ -109,30 +117,6 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 - 装饰模式
 - 策略模式
 
-## Vue 性能优化
-
-- data 层级不要太深
-- 区别使用 v-if 和 v-show
-- 区别使用 computed 和 watch
-- v-for 与 v-if 不同时使用
-- 使用 v-for 时，添加 key
-- 使用 keep-alive 缓存
-- 图片懒加载、路由懒加载
-- 第三方插件按需引入
-
-Webpack 层面：
-
-- 代码分割，公共代码提取(CommonsChunkPlugin)
-- js、css 文件提取及压缩(Uglifyjs-webpack-plugin)
-- 构建结果输出分析，可视化分析工具(webpack-bundle-analyzer)
-
-其他:
-
-- DNS 预解析，缓存
-- CDN 文件缓存
-- 图片懒加载，雪碧图，图片格式
-- js,css 文件压缩，引入位置，懒加载
-
 ## $set 解决的问题及原理
 
 问题：两种情况下修改 Vue 数据不会触发视图更新
@@ -163,14 +147,6 @@ key 作为节点的唯一 id,主要使用在 vue 虚拟 DOM 新旧节点 diff �
 - 获取子元素的属性
 - 获取子元素的方法
 
-## Vue 的特点
-
-- 简洁
-- 数据驱动:computed 和 watch
-- 代码量小
-- 组件
-- 模板
-
 ## delete 与 Vue.delete
 
 - delete 删除的值变成了 empty/undefined，其他数据键值不变
@@ -183,3 +159,27 @@ key 作为节点的唯一 id,主要使用在 vue 虚拟 DOM 新旧节点 diff �
 - 原生样式使用 .a >>> .b 选择元素
 - 使用 less,sass 预处理器的以上方法不生效，可以通过 .a /deep/ .b 选择元素
 - vue-cli3 下，以上方法都不生效，可以通过.a ::v-deep .b 选择元素
+
+## Vue 性能优化
+
+- data 层级不要太深
+- 区别使用 v-if 和 v-show
+- 区别使用 computed 和 watch
+- v-for 与 v-if 不同时使用
+- 使用 v-for 时，添加 key
+- 使用 keep-alive 缓存
+- 图片懒加载、路由懒加载
+- 第三方插件按需引入
+
+Webpack 层面：
+
+- 代码分割，公共代码提取(CommonsChunkPlugin)
+- js、css 文件提取及压缩(Uglifyjs-webpack-plugin)
+- 构建结果输出分析，可视化分析工具(webpack-bundle-analyzer)
+
+其他:
+
+- DNS 预解析，缓存
+- CDN 文件缓存
+- 图片懒加载，雪碧图，图片格式
+- js,css 文件压缩，引入位置，懒加载
