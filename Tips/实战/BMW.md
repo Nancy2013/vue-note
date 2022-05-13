@@ -7,7 +7,7 @@
  * @FilePath: \vue-note\Tips\实战\BMW.md
 -->
 
-# BMW
+# BMW(宝马)
 
 ## JS
 

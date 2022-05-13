@@ -7,7 +7,7 @@
  * @FilePath: \vue-note\Tips\实战\JK.md
 -->
 
-# JXJK
+# JXJK(建信金科)
 
 ## js
 

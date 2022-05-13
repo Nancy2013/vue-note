@@ -7,7 +7,7 @@
  * @FilePath: \vue-note\Tips\实战\PA.md
 -->
 
-# PingAn
+# PingAn(平安科技)
 
 ## CSS
 
