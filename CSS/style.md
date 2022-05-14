@@ -29,7 +29,7 @@ CSS 盒模型由 content、padding、border、margin 组成，标准盒模型与
 
 ## BFC
 
-块级格式上下文，独立的块级渲染区域，内部有一套渲染规格约束内容布局，且不受外面区域影响
+格式块上下文，独立的块级渲染区域，内部有一套渲染规格约束内容布局，且不受外面区域影响
 
 - position 为 absolute 或 fixed
 - float 为 left 或 right

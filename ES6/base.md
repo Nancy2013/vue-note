@@ -126,10 +126,21 @@ const obj = {
 > > 能准确判断基本数据类型，null 会显示 object
 > > function 能正确显示，其他对象都显示 object
 
+```js
+const a = 1;
+typeof 1; // Number
+```
+
 > instanceof
 >
 > > 对象能正确显示
 > > 基本类型不能显示
+
+```js
+// 判断Stirng 是否在a实例的原型链上
+const a = '1';
+a instanceof String; // ture
+```
 
 > Object.prototype.toString.call
 >
@@ -160,19 +171,13 @@ true:表示捕获 false:表示冒泡，针对的是 safari 浏览器，禁止/�
 
 ## for in vs for of
 
-for...in 是 es5 语法，for...of 是 es6 语法，修复了遍历出原型链上属性的问题
+> for... in 循环遍历 键名 keys
+>
+> for...in 遍历的属性，包括原型链上的属性(去除原型链上的属性，使用 hasOwnPropertys)
 
-> for... in 循环遍历 keys
+> for...of 循环遍历 数组值 values
 >
-> for...in 遍历可枚举的属性，包括原型链上的属性
->
-> 去除原型链上的属性，使用 hasOwnProperty
-
-> for...of 循环遍历 values
->
-> for...of 遍历可迭代的属性
->
-> for...of 不能用于遍历对象
+> for...of 遍历可迭代的属性 ，不能用于遍历对象(因为对象没有可迭代的属性)
 
 ## Object.is() vs == ===
 
