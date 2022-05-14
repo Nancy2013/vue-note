@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-11 10:52:55
- * @LastEditTime: 2021-09-09 14:06:53
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-05-13 11:11:09
+ * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\base.md
 -->
@@ -86,7 +86,7 @@ var obj.fun=fun;
 obj.fun();
 ```
 
-- bind,call,apply,严格模式下,绑定到第一个参数;非严格模式下,null 或 undefined 指向全局对象
+- bind,call,apply,严格模式下,绑定到第一个参数;非严格模式下,null 或 undefined 指向 window
 
 ```js
 const obj = {};
