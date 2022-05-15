@@ -11,11 +11,11 @@
 
 ## 常用的 Loader
 
+- vue-loader 解析和转换.vue 文件，作用是把 html 模板，js 逻辑 ，css 样式,提取出来，交给对应的 loader 处理
 - less-loader 将 less 文件编译成 css
 - css-loader 加载 css 文件，支持文件模块化，压缩
 - style-loader 把 css 文件注入到 JavaScript 文件，并加载到 DOM 结构
 - image-loader 加载并压缩图片
-- vue-loader 解析和转换.vue 文件，作用是把 html 模板，逻辑 js，样式 css,提取出来，交给对应的 loader 处理
 - file-loader | url-loader url-loader 是对 file-loader 的升级，可以设置图片大小的阈值，文件小于阈值返回 base64 格式编码，大于阈值使用 file-loader 复制到对应位置
 - source-map-loader 加载 source map 文件，方便断点调试
 - babel-loader es6 语法转换成 es5
