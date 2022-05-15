@@ -24,4 +24,4 @@
 
 > plugin
 >
-> > plugin 是扩展器，丰富了 webpack 本身，针对 loader 之后，webpack 打包的整个过程。它不直接操作文件，而且基于事件流机制，监听 webpack 打包过程中的节点，并执行广泛的任务
+> > plugin 是扩展器，丰富了 webpack 本身，针对 loader 之后，webpack 打包的整个过程。它不直接操作文件，而且基于事件流机制，监听 webpack 打包过程中的事件钩子，并执行广泛的任务
