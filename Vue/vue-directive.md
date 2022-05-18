@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-07 10:53:18
- * @LastEditTime: 2022-05-17 18:05:50
+ * @LastEditTime: 2022-05-18 11:28:55
  * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\vue-directive.md
@@ -47,16 +47,27 @@
 
 ## 修饰符
 
+> 表单修饰符
+
+- lazy input 输入时不实时更新，光标离开后更新，在 change 事件后同步
+- trim 自动过滤 input 首尾空白字符，中间空格不清理
+- number input 内输入的内容转为数字(数字开头的可以转，字母开头的不可以转)
+
 > 事件修饰符
 
 - stop 阻止事件冒泡，内层 div 事件只在内部处理
 - prevent 阻止标签本身的行为，如 a 标签链接跳转，form 标签提交
 - once 只执行一次
-- capture 改变事件默认冒泡行为，内部 div 触发事件先在外部处理
-- self 只执行 div 自身触发的事件，不响应内部的冒泡事件，冒泡事件可以继续向外触发
-- passive 滚动立即执行，而不是等待 onScroll 执行完成，提升移动端性能
+- capture 改变事件默认冒泡行为，事件机制从包含元素的顶层执行，内部 div 触发事件先在外部处理
+- self 只执行自身元素绑定的事件，不响应内部的冒泡事件，冒泡事件可以继续向外触发
+- passive 滚动行为立即触发，而不是等待 onScroll 完成，提升移动端性能
+- native 将 vue 组件转换成普通 html 标签，监听组件根标签上的方法
+- sync 实现子组件与父组件之间双向绑定(子组件可以更改父组件数据，没有明显的数据来源不推荐，建议使用$emit 方式更新)
 
-> 按键修饰符
+> > v-on:click.prevent.self VS v-on:click.self.prevent
+> > 串联修饰符，执行顺序从左往右，前者禁止所有点击事件，可执行冒泡的事件；后者只禁止自身点击事件
+
+> > 按键修饰符
 
 - enter
 - tab
