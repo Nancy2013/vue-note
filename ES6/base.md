@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-11 10:52:55
- * @LastEditTime: 2022-05-13 11:11:09
+ * @LastEditTime: 2022-05-18 16:05:45
  * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\base.md
@@ -139,7 +139,7 @@ typeof 1; // Number
 ```js
 // 判断Stirng 是否在a实例的原型链上
 const a = '1';
-a instanceof String; // ture
+a instanceof String; // false
 ```
 
 > Object.prototype.toString.call
