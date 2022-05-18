@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-11 10:52:55
- * @LastEditTime: 2022-05-18 16:05:45
+ * @LastEditTime: 2022-05-18 16:49:02
  * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\base.md
@@ -145,6 +145,12 @@ a instanceof String; // false
 > Object.prototype.toString.call
 >
 > > 基本类型和对象都能正确显示
+
+```js
+// 使用Object原型链上的toString，而不是Array的toString
+const a = [1];
+Object.prototype.toString.call(a); // '[object Array]'
+```
 
 ## addEventListener 的第三个参数
 

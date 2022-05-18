@@ -1,68 +1,15 @@
 /*
- * @Author: your name
- * @Date: 2021-06-22 11:06:22
- * @LastEditTime: 2021-09-10 16:43:04
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \vue-note\算法\deepEqual.js
+ * @Author: Juliette.Wang nannan.wang@broadlink.com.cn
+ * @Date: 2022-04-12 14:03:52
+ * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
+ * @LastEditTime: 2022-05-18 17:07:24
+ * @FilePath: \vue-note\index.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
-const obj1 = {
-  name: 'a',
-  age: 1,
-  info: {
-    sex: '女',
-    family: {
-      is: false,
-      peo: {
-        dad: 30,
-        mouther: 30,
-      },
-    },
-  },
-};
+let ary = [1, [2, [3, [4, 5]]], 6];
 
-const obj2 = {
-  name: 'a',
-  age: 1,
-  info: {
-    sex: '女',
-    family: {
-      is: false,
-      peo: {
-        dad: 31,
-        mouther: 30,
-      },
-    },
-  },
-};
-
-function checkObject(obj) {
-  return typeof obj === 'object' && obj !== null;
-}
-function deepEqual(obj1, obj2) {
-  const keys1 = Object.keys(obj1);
-  const keys2 = Object.keys(obj2);
-  if (keys1.length !== keys2.length) {
-    return false;
-  }
-
-  for (let i = 0; i < keys1.length; i++) {
-    const val1 = obj1[keys1[i]];
-    const val2 = obj2[keys1[i]];
-
-    const isObj1 = checkObject(val1);
-    const isObj2 = checkObject(val2);
-    if (isObj1 && isObj2) {
-      return deepEqual(val1, val2);
-    } else {
-      if (val1 !== val2) {
-        console.log('val1: ', val1, ' val2: ', val2);
-        return false;
-      }
-    }
-  }
-
-  return true;
+while (ary.some(Array.isArray)) {
+  ary = [].concat(...ary);
 }
 
-console.log(deepEqual(obj1, obj2));
+console.log(ary);
