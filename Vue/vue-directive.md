@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-07 10:53:18
- * @LastEditTime: 2022-05-18 11:28:55
+ * @LastEditTime: 2022-05-18 13:58:27
  * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\vue-directive.md
@@ -84,10 +84,13 @@
 - shift
 - ctrl
 - meta
-- exact(精确修饰符才触发)
+- exact(控制由精确的系统修饰符组合触发，不限制其他常规修饰符)
 
 > 鼠标修饰符
 
 - right
 - left
 - middle
+
+> > 系统修饰键 VS 常规修饰键
+> > 监听 keyup 时，系统修饰键不能单独使用，常规修饰键可以；系统修饰键按住条件下，释放其他按键才能有效。v-on:keyup.ctrl，释放 ctrl 键时无效，可以把系统修改为普通键 v-on:keyup.17，为有效
