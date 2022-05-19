@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2021-04-29 09:17:04
- * @LastEditTime: 2021-06-28 14:51:06
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-05-19 16:39:39
+ * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\eventloop.md
 -->
@@ -29,17 +29,17 @@
 ## 微任务
 
 - process.nextTick
-- promise
+- Promise.then catch finally
 - Object.observe
 
 ## 执行顺序
 
 ![eventloop](./../img/eventloop.gif)
 
-> 1. 全局代码压入执行栈执行(宏任务);
+> 1. 先执行同步代码(宏任务)；
 > 2. 将异步宏任务 setTimeout 压入 macrotask 队列，promise.then 压入 microtask 队列;
 > 3. 执行 console,输出 end;
-> 4. 执行 promise 回调，输出 promise1,产生新的微任务并压入 microtask 队列;
+> 4. 同步代码全部执行完毕，执行 promise 回调，输出 promise1,产生新的微任务并压入 microtask 队列;
 > 5. 继续执行微任务，执行 promise 回调，输出 promise2;(nextTick 早于其他所有微任务)
 > 6. 微任务全部执行完毕，有 UI 渲染时会执行更新，然后开始新一轮宏任务执行 setTimeout 回调;
 
