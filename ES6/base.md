@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-11 10:52:55
- * @LastEditTime: 2022-05-18 16:49:02
+ * @LastEditTime: 2022-05-20 14:32:35
  * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\base.md
@@ -89,6 +89,9 @@ obj.fun();
 - bind,call,apply,严格模式下,绑定到第一个参数;非严格模式下,null 或 undefined 指向 window
 
 ```js
+// call(obj,...array)
+// apply(obj,array)
+// call的参数是个列表，apply第二个参数是数组
 const obj = {};
 function fun() {
   console.log(this);
