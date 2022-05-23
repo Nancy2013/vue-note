@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2021-08-25 09:48:00
- * @LastEditTime: 2021-09-10 17:19:53
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-05-23 14:57:56
+ * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\算法\lazy-load.js
  */
@@ -45,7 +45,7 @@ function lazyload() {
 const imgs = document.getElementsByTagName('img');
 // 获取可视区域的高度
 const viewHeight = window.innerHeight || document.documentElement.clientHeight;
-// num用于统计当前显示到了哪一张图片，避免每次都从第一张图片开始检查是否露出
+// count用于统计当前显示到了哪一张图片，避免每次都从第一张图片开始检查是否露出
 let count = 0;
 function lazyload() {
   for (let i = count; i < imgs.length; i++) {
