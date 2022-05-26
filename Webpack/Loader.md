@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2020-08-10 09:13:57
- * @LastEditTime: 2021-07-17 15:38:16
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-05-25 16:40:00
+ * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Webpack\loader.md
 -->
@@ -13,8 +13,8 @@
 
 - vue-loader 解析和转换.vue 文件，作用是把 html 模板，js 逻辑 ，css 样式,提取出来，交给对应的 loader 处理
 - less-loader 将 less 文件编译成 css
-- css-loader 加载 css 文件，支持文件模块化，压缩
-- style-loader 把 css 文件注入到 JavaScript 文件，并加载到 DOM 结构
+- css-loader 加载 css 文件，分析@import 和 url()，引用 css 文件与对应的资源
+- style-loader 将 css 代码以<style>标签的形式插入到 html 中，并加载到 DOM 结构
 - image-loader 加载并压缩图片
 - file-loader | url-loader url-loader 是对 file-loader 的升级，可以设置图片大小的阈值，文件小于阈值返回 base64 格式编码，大于阈值使用 file-loader 复制到对应位置
 - source-map-loader 加载 source map 文件，方便断点调试
