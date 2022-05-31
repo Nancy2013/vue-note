@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-11 10:52:55
- * @LastEditTime: 2022-05-20 14:32:35
+ * @LastEditTime: 2022-05-31 11:23:49
  * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\base.md
@@ -10,6 +10,28 @@
 # 基础点
 
 数据类型、运算、对象、Function、继承、闭包、this、作用域、原型链、事件、RegExp、JSON、Ajax、DOM、BOM、内存泄漏、跨域、异步装载、模板引擎、前端 MVC、路由、模块化、Canvas、ECMAScript
+
+## 基本数据类型
+
+- String
+- Number
+- Undefined
+- Null
+- Boolean
+- Symbol (命名独一无二的变量)
+- Bigint
+- Object
+  - Array
+  - Date
+  - Function
+  - Regex
+
+### undefined vs null
+
+- undefined 与 null 都是基本数据类型
+- undefined 代表未定义，null 代表空对象
+- typeof null 为 object
+- 使用弱等号返回 true，使用强等号返回 false
 
 ## 继承
 
