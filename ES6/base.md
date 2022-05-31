@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-11 10:52:55
- * @LastEditTime: 2022-05-31 11:23:49
+ * @LastEditTime: 2022-05-31 14:05:25
  * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\base.md
@@ -18,7 +18,7 @@
 - Undefined
 - Null
 - Boolean
-- Symbol (命名独一无二的变量)
+- Symbol (可以用来表示独一无二的变量，防止命名冲突)
 - Bigint
 - Object
   - Array
@@ -112,13 +112,16 @@ obj.fun();
 
 ```js
 // call(obj,...array)
+// bind(obj,...array)
 // apply(obj,array)
-// call的参数是个列表，apply第二个参数是数组
-const obj = {};
-function fun() {
+// call，bind的参数是个列表，apply第二个参数是数组
+const obj = {
+  value: 1,
+};
+function fun(name, age) {
   console.log(this);
 }
-var funObj = fun.bind(obj);
+var funObj = fun.bind(obj, 'Jon', 20);
 funObj();
 ```
 
@@ -259,10 +262,6 @@ true + true; // 规则2：2
 - 箭头函数
 - 字符串模板
 - for...of
-
-## Symbol 的作用
-
-可以用来表示独一无二的变量，防止命名冲突
 
 ## 如何编写高性能 JS
 
