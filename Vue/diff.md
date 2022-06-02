@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-11 15:14:36
- * @LastEditTime: 2022-05-13 13:54:54
+ * @LastEditTime: 2022-06-02 11:06:58
  * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\diff.md
@@ -53,14 +53,18 @@
   - 可直接实现对象的增加/删除
 
 - 新增 Composition Api 接口,更好的逻辑复用和代码组织;
+
   - setup 没有 this,返回 props 和 context，props 是父组件传递的响应式数据，context 非响应式包括 attr、slot、emit
   - setup 通过 getCurrentInstance 获得实例，有生命周期 api，onMounted
   - 可以通过 ref、reactive 方法把基本数据类型和对象转换成响应式
   - 还可以通过 watch、computed api 监听数据
+
 - 重构 Virtual Dom，性能优化
+
   - 静态标记 模板编译优化,标记静态节点，virtual dom diff 过程会跳过这些节点
   - 静态提升 函数中的静态变量提升到函数外面，再次调用函数时不会重新声明
   - 事件缓存 默认情况下事件被认为是动态变量，但是正常情况下视图更新前后的事件没有发生变化，不需要追踪它的变化，vue3 做了这方面的优化
+
 - 支持 Fragment(多个根节点)，支持 Protal(在 dom 其他部分渲染组件内容)
 - 代码结构调整,更便于 Tree shaking, 没有使用到的模块都不会被打包，体积更小;
 - 使用 Typescript 替换 Flow;
