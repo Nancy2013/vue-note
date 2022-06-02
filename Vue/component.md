@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-25 10:53:46
- * @LastEditTime: 2021-08-26 16:57:10
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-06-02 14:15:09
+ * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\组件.md
  -->
@@ -59,11 +59,11 @@
 ```html
 <!-- todo 作用域插槽 -->
 <div>
-  <slot v-for="item in items">{{item}}</slot>
+  <slot v-for="item in items" v-bind:user="item">{{item}}</slot>
 </div>
 
 <Todo>
-  <template v-slot:default="slotProps"> {{slotProps.item}} </template>
+  <template v-slot:default="slotProps"> {{slotProps.user}} </template>
 </Todo>
 ```
 
