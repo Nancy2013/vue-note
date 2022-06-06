@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-11 10:52:55
- * @LastEditTime: 2022-05-31 14:05:25
+ * @LastEditTime: 2022-06-06 14:23:48
  * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\ES6\base.md
@@ -191,6 +191,11 @@ true:表示捕获 false:表示冒泡，针对的是 safari 浏览器，禁止/�
 捕获阶段：从 window 发出，自上而下
 目标阶段：真正的目标阶段是处理事件的阶段
 冒泡阶段：自下而上，冒泡到 window
+
+### 事件流阻止
+
+- preventDefault 取消事件对象的默认动作和继续传播
+- stopPropagation 阻止事件冒泡
 
 ## var vs let vs const
 
