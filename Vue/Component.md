@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-25 10:53:46
- * @LastEditTime: 2022-06-02 14:15:09
+ * @LastEditTime: 2022-06-09 14:15:56
  * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\组件.md
@@ -69,7 +69,8 @@
 
 ## 组件缓存
 
-使用 keep-alive 组件可以缓存不活跃的路由组件，保留组件状态而不是销毁它们，从而避免重新渲染。
+使用 keep-alive 组件可以缓存不活跃的路由组件，缓存组件的 VNode,保留组件状态而不是销毁它们，命中缓存时直接恢复从而避免重新渲染。
+使用 LRU(last recently used)算法根据数据访问的历史记录来淘汰数据，最近访问过的数据，将来被访问到的概率也高(墨菲定律)
 
 - 使用后被缓存的组件会多出来两个生命钩子
   - activated：组件被激活时调用，调用顺序组件 mounted -> activated -> beforeRouterEnter 的 next 回调

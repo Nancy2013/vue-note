@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-27 09:19:45
- * @LastEditTime: 2022-05-13 10:26:35
+ * @LastEditTime: 2022-06-09 14:04:32
  * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue.md
@@ -150,7 +150,7 @@ key 作为节点的唯一 id,主要使用在 vue 虚拟 DOM 新旧节点 diff �
 ## delete 与 Vue.delete
 
 - delete 删除的值变成了 empty/undefined，其他数据键值不变
-- Vue.delete 直接删除值，其他数据键值变化
+- Vue.delete 直接删除值，其他数据键值变化，通过 Vue.delte 可以监测到数据变化
 
 ## 样式穿透
 
