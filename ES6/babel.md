@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-05 13:59:29
- * @LastEditTime: 2022-06-09 17:51:26
+ * @LastEditTime: 2022-06-10 09:16:51
  * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\Babel.md
@@ -35,6 +35,6 @@
 > babel 的编译过程分为三个阶段：parsing、transforming、generating
 >
 > - 载入 es6
-> - 编译生成 AST 抽象树
-> - 对 AST 抽象树进行遍历编译，生成新的抽象树
+> - babylon 解析生成 AST 抽象树
+> - babel-traverse 对 AST 抽象树进行遍历编译，生成新的抽象树
 > - 通过 babel-generate 生成 es5 代码
