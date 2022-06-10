@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-05 13:59:29
- * @LastEditTime: 2022-06-10 09:16:51
+ * @LastEditTime: 2022-06-10 14:51:43
  * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\Babel.md
@@ -37,4 +37,15 @@
 > - 载入 es6
 > - babylon 解析生成 AST 抽象树
 > - babel-traverse 对 AST 抽象树进行遍历编译，生成新的抽象树
-> - 通过 babel-generate 生成 es5 代码
+> - 通过 babel-generator 生成 es5 代码
+
+## 使用 babel 副作用
+
+> 打包速度慢
+>
+> - 缩小搜索范围，通过配置 module，include/exclude，减少搜索范围
+> - 配置 cacheDirectory: true,缓存编译结果，避免重新编译
+>
+>   打包体积大
+>
+> - babel-loader 对一些公共方法，会使用比较小的辅助代码，比如\_extend,会在所有需要它的文件中引入，导致打包后的体积过大，可以使用 plugin-transform-runtime 和 babel-runtime 开启复用
