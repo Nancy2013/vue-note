@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 09:36:25
- * @LastEditTime: 2022-06-10 14:28:16
+ * @LastEditTime: 2022-06-13 11:29:38
  * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Webpack\plugins.md
@@ -18,7 +18,7 @@
 - mini-css-extract-plugin 分离 css 文件，将 css 文件提取为独立文件(webpack4 及以上提供)
 - extra-text-webpack-plugin 分离 css 文件(webpack3 提供)
 - webpack-bundle-analyzer 可视化输出文件的体积
-- common-chunk-plugin 代码分割(split-chunks-plugin 代码分割)
+- commons-chunk-plugin 代码分割(split-chunks-plugin 代码分割)
 - copy-webpack-plugin 拷贝资源
 - define-plugin 定义全局常量
 
