@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-07 10:53:18
- * @LastEditTime: 2022-05-18 13:58:27
+ * @LastEditTime: 2022-06-24 10:58:28
  * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\Vue\vue-directive.md
@@ -61,13 +61,13 @@
 - capture 改变事件默认冒泡行为，事件机制从包含元素的顶层执行，内部 div 触发事件先在外部处理
 - self 只执行自身元素绑定的事件，不响应内部的冒泡事件，冒泡事件可以继续向外触发
 - passive 滚动行为立即触发，而不是等待 onScroll 完成，提升移动端性能
-- native 将 vue 组件转换成普通 html 标签，监听组件根标签上的方法
+- native 将 vue 组件转换成普通 html 标签，监听组件根标签上的方法，普通 html 标签没有作用
 - sync 实现子组件与父组件之间双向绑定(子组件可以更改父组件数据，没有明显的数据来源不推荐，建议使用$emit 方式更新)
 
 > > v-on:click.prevent.self VS v-on:click.self.prevent
 > > 串联修饰符，执行顺序从左往右，前者禁止所有点击事件，可执行冒泡的事件；后者只禁止自身点击事件
 
-> > 按键修饰符
+> > 按键修饰符(键盘)
 
 - enter
 - tab
@@ -86,7 +86,14 @@
 - meta
 - exact(控制由精确的系统修饰符组合触发，不限制其他常规修饰符)
 
-> 鼠标修饰符
+```html
+<!-- 只能按ctrl，不能按其他系统修饰符键 -->
+<button type="text" @click.ctrl.exact="shout(4)">ok</button>
+<!-- 可以按enter+其他键，不能按系统修饰符键 -->
+<input type="text" @keydown.enter.exact="shout('我被触发了')" />
+```
+
+> 鼠标修饰符(点击)
 
 - right
 - left
