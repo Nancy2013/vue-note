@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-04 14:47:11
- * @LastEditTime: 2022-05-12 15:50:40
+ * @LastEditTime: 2022-07-22 15:08:45
  * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
  * @FilePath: \vue-note\CSS\style.md
@@ -448,7 +448,7 @@ line-height 取值：normal|length|number|em|%|inherit
 
 ## a 标签的伪类状态顺序
 
-LVHA
+LVHA (LoVe HAte 爱恨原则)
 
 ```css
 a:link {
