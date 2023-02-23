@@ -32,22 +32,22 @@
   - runtime-only 是运行时版本，compiler 有编译功能；
   - runtime-compiler 版本中的 vue 实例：
 
-  ```javascript
-  new Vue({
-    el: '#app',
-    components: {
-      App,
-    },
-    template: '<App/>',
-  });
-  ```
-
-runtime-only 版本中 vue 实例：
+  runtime-only 版本中 vue 实例：
 
 ```javascript
 new Vue({
   el: '#app',
   render: (h) => h(App),
+});
+```
+
+```javascript
+new Vue({
+  el: '#app',
+  components: {
+    App,
+  },
+  template: '<App/>',
 });
 ```
 
@@ -59,21 +59,12 @@ new Vue({
 
 - el 与 template 属性的区别
   - el 与 template 都可以将 Vue 实例挂载到 Dom;
-  - 使用 template 会把 el 挂载的 id 树结构直接替换掉；
+  - 使用 template 会把 Vue 实例挂载的 id 树结构直接替换掉；
 
 ## Vue 渲染过程
 
 template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 ![vue-render](./../img/vue-render.png)
-
-## 响应式原理
-
-![响应式](./../img/response.png)
-
-- 将对象作为 Vue 实例的 data 对象的 property
-- Object.defineProperty 遍历 data 属性，生成对应的 getter/setter 方法
-- 每个组件实例对应一个 watcher,渲染时会生成每个 property 的记录依赖
-- 当 property 进行 getter/setter 操作时，会进行通知变更，通知组件重新渲染
 
 ## 编译原理
 
@@ -90,6 +81,15 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 > generate:生成代码
 >
 > > 把 AST 抽象语法树编译成函数
+
+## 响应式原理
+
+![响应式](./../img/response.png)
+
+- 将对象作为 Vue 实例的 data 对象的 property
+- Object.defineProperty 遍历 data 属性，生成对应的 getter/setter 方法
+- 每个组件实例对应一个 watcher,渲染时会生成每个 property 的记录依赖
+- 当 property 进行 getter/setter 操作时，会进行通知变更，通知组件重新渲染
 
 ## 生命周期
 
@@ -122,7 +122,7 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 问题：两种情况下修改 Vue 数据不会触发视图更新
 1、Vue 实例创建后，给实例新增属性；
 2、通过数组下标直接修改数组值；
-JavaScript 对象赋值给 data 后，初始化实例时，Object.defineProperty 会遍历属性，并转换为 get/set 方法。对于 data 中不存在的属性，没有这个过程因此无法检测到，数据不是响应式的。
+JavaScript 对象赋值给 data 后，初始化实例时，Object.defineProperty 会遍历属性，并转换为 getter/setter 方法。对于 data 中不存在的属性，没有这个过程因此无法检测到，数据不是响应式的。
 
 原理：
 1、当添加不存在的属性时，先对属性进行响应式追踪，会触发 Observer 的 dep 收集的 watcher 去更新
@@ -139,7 +139,7 @@ extend 是子类构造器，参数是包含组件选项的对象，也是 Vue �
 
 ## key 值的作用
 
-key 作为节点的唯一 id,主要使用在 vue 虚拟 DOM 新旧节点 diff 中,用来查找节点。使用 key,使 diff 操作更准确和迅速。不使用 key,vue 会使用最大限度减少动态元素，就地修改或复用相同类型组件的算法。
+key 作为节点的唯一 id,主要使用在 vue 虚拟 DOM 新旧节点 diff 中,用来查找节点。使用 key,使 diff 操作更准确和迅速。不使用 key,vue 会使用最大限度减少 DOM 移动，就地修改或复用相同类型组件的算法。
 
 ## ref 的作用
 
@@ -150,7 +150,7 @@ key 作为节点的唯一 id,主要使用在 vue 虚拟 DOM 新旧节点 diff �
 ## delete 与 Vue.delete
 
 - delete 删除的值变成了 empty/undefined，其他数据键值不变
-- Vue.delete 直接删除值，其他数据键值变化，通过 Vue.delte 可以监测到数据变化
+- Vue.delete 直接删除值，其他数据键值变化，通过 Vue.delete 可以监测到数据变化
 
 ## 样式穿透
 
