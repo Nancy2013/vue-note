@@ -87,7 +87,7 @@
 - exact(控制由精确的系统修饰符组合触发，不限制其他常规修饰符)
 
 ```html
-<!-- 只能按ctrl，不能按其他系统修饰符键 -->
+<!-- 可以按ctrl+其他键，不能按其他系统修饰符键 -->
 <button type="text" @click.ctrl.exact="shout(4)">ok</button>
 <!-- 可以按enter+其他键，不能按系统修饰符键 -->
 <input type="text" @keydown.enter.exact="shout('我被触发了')" />
