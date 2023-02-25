@@ -87,8 +87,9 @@
 ## Vue hook vs React hook
 
 - react hook 每次更新都会执行，vue setup 只执行一次
-- react hook 更新时，需要调用 hook 的赋值函数，vue 可以直接赋值
 - react hook 只能在顶层调用，不能放在条件语句，react hook 是按照声明顺序调用链式结构存储，vue 可以放在条件语句无调用顺序要求
+- react hook 更新时，需要调用 hook 的赋值函数，昂贵的计算需要使用 useMemo,而这需要传入正确的依赖数组。vue 可以直接赋值，vue 响应式系统自动收集计算属性和侦听器的依赖，无需手动声明依赖；
+- react hook 默认情况下，传给子组件的事件处理函数会导致子组件不必要的更新，并需要显示调用 useCallback 优化。vue 细颗粒的响应式系统确保在绝大多数情况下组件只执行必要的更新，不需要手动缓存回调函数避免不必要的组件更新；
 
 ## Vue3 响应式原理
 
