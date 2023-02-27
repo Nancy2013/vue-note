@@ -36,18 +36,29 @@ ElementUI install 方法
 
 ```js
 const install = function (Vue, opts = {}) {
-  // 语言国际化
-  locale.use(opts.locale);
-  locale.i18n(opts.i18n);
+  // 挂载全局方法或属性
   // 挂载全局组件
   // components是ElementUI的组件数组，里面有Dialog、Input之类的组件
   components.forEach((component) => {
     Vue.component(component.name, component);
   });
-  // 挂载全局方法
+
+  // 挂载实例方法
   Vue.prototype.$loading = Loading.service;
   Vue.prototype.$message = Message;
   Vue.prototype.$confirm = MessageBox.confirm;
+
+  // 挂载全局资源
+  // 语言国际化
+  locale.use(opts.locale);
+  locale.i18n(opts.i18n);
+  // 添加指令
+  Vue.directive('v-focus', {
+    bind(el, binding, vnode, oldVnode) {
+      // 逻辑...
+    },
+  });
+
   // 自定义参数
   Vue.prototype.$ELEMENT = {
     size: opts.size || '',

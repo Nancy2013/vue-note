@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-06-09 14:04:32
  * @LastEditors: Juliette.Wang nannan.wang@broadlink.com.cn
  * @Description: In User Settings Edit
- * @FilePath: \vue-note\Vue.md
+ * @FilePath: \Vue-note\Vue.md
  -->
 
 # Vue
@@ -17,12 +17,12 @@
 - 组件
 - 模板
 
-## vue 全家桶
+## Vue 全家桶
 
-> vue
-> vue-router
-> vuex
-> and design vue | element UI |vant
+> Vue
+> Vue-router
+> Vuex
+> and design Vue | element UI |vant
 > axiso
 
 ## 版本介绍
@@ -30,9 +30,9 @@
 - runtime-only 与 runtime-compile 版本的区别
 
   - runtime-only 是运行时版本，compiler 有编译功能；
-  - runtime-compiler 版本中的 vue 实例：
+  - runtime-compiler 版本中的 Vue 实例：
 
-  runtime-only 版本中 vue 实例：
+  runtime-only 版本中 Vue 实例：
 
 ```javascript
 new Vue({
@@ -53,7 +53,7 @@ new Vue({
 
 可以发现 runtime-only 中只支持 render 函数，而 compiler 支持 template 标签；
 
-- 在 webpack 中默认引用的为 runtime-only ,使用 vue-loader 可以把.vue 文件编译为 JavaScript 文件，同时需要 vue-template-compiler 将.vue 中的 template 标签 编译为 render 函数。也可以通过在 webpack 中配置 vue\$加载 vue.esm.js 完整版本
+- 在 webpack 中默认引用的为 runtime-only ,使用 Vue-loader 可以把.Vue 文件编译为 JavaScript 文件，同时需要 Vue-template-compiler 将.Vue 中的 template 标签 编译为 render 函数。也可以通过在 webpack 中配置 Vue\$加载 Vue.esm.js 完整版本
 
 ## Vue 实例
 
@@ -64,7 +64,7 @@ new Vue({
 ## Vue 渲染过程
 
 template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
-![vue-render](./../img/vue-render.png)
+![Vue-render](./../img/Vue-render.png)
 
 ## 编译原理
 
@@ -76,7 +76,7 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 >
 > optimize:优化抽象树
 >
-> > vue 是响应式，其中一些节点渲染后不会再变化，可以将静态节点标记出来，虚拟 DOM diff 过程可以直接跳过
+> > Vue 是响应式，其中一些节点渲染后不会再变化，可以将静态节点标记出来，虚拟 DOM diff 过程可以直接跳过
 >
 > generate:生成代码
 >
@@ -119,6 +119,7 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 
 ## $set 解决的问题及原理
 
+s
 问题：两种情况下修改 Vue 数据不会触发视图更新
 1、Vue 实例创建后，给实例新增属性；
 2、通过数组下标直接修改数组值；
@@ -133,13 +134,19 @@ JavaScript 对象赋值给 data 后，初始化实例时，Object.defineProperty
 nextTick 回调函数推迟到下次 DOM 更新完成后执行，在回调函数中可以得到更新后的数据。
 原理为：使用异步执行回调函数
 
+异步更新队列
+
+- Vue 在更新 DOM 时是异步执行的，只要检测到数据变化，Vue 会开启一个队列，并缓冲在同一事件循环中发生的所有数据变更。
+- 如果同一个 watcher 被多次触发，只会被推入到队列中一次，这种在缓冲时去除重复数据能避免不必要的计算和 DOM 操作。
+- 然后在下一个事件循环的 tick 中，Vue 刷新队列执行去除重复数据的实际工作，Vue 在内部对异步队列尝试使用原生的 Promise.then,MutationObserver，setImmediate，如果环境不支持，则会采用 settimeout 代替。
+
 ## Vue.extend 的原理
 
 extend 是子类构造器，参数是包含组件选项的对象，也是 Vue 组件的核心 Api，实现思路是通过原型继承返回 Vue 子类，并通过 mergeOptions 方法把传入的 options 和父类的 options 合并
 
 ## key 值的作用
 
-key 作为节点的唯一 id,主要使用在 vue 虚拟 DOM 新旧节点 diff 中,用来查找节点。使用 key,使 diff 操作更准确和迅速。不使用 key,vue 会使用最大限度减少 DOM 移动，就地修改或复用相同类型组件的算法。
+key 作为节点的唯一 id,主要使用在 Vue 虚拟 DOM 新旧节点 diff 中,用来查找节点。使用 key,使 diff 操作更准确和迅速。不使用 key,Vue 会使用最大限度减少 DOM 移动，就地修改或复用相同类型组件的算法。
 
 ## ref 的作用
 
@@ -158,7 +165,7 @@ key 作为节点的唯一 id,主要使用在 vue 虚拟 DOM 新旧节点 diff �
 
 - 原生样式使用 .a >>> .b 选择元素
 - 使用 less,sass 预处理器的以上方法不生效，可以通过 .a /deep/ .b 选择元素
-- vue-cli3 下，以上方法都不生效，可以通过.a ::v-deep .b 选择元素
+- Vue-cli3 下，以上方法都不生效，可以通过.a ::v-deep .b 选择元素
 
 ## Vue 性能优化
 
