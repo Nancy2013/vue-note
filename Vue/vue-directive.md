@@ -35,6 +35,23 @@
 - 首次渲染性能消耗大;
 - 需要多次切换时使用;
 
+## 自定义组件的 model
+
+```js
+Vue.component('base-checkbox', {
+  model: {
+    prop: 'checked',
+    event: 'change',
+  },
+  props: {
+    checked: Boolean,
+  },
+});
+
+// 使用，当调佣change更新checked值时，lovingVue会同步更新
+<base-checkbox v-model='lovingVue'></base-checkbox>;
+```
+
 ## v-cloak
 
 界面在加载时会出现闪烁，在元素上添加 v-cloak 指令，可以让元素在编译完成后显示。可以隐藏大括号语法，直到实例准备好

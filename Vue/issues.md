@@ -39,6 +39,14 @@ toRefs 与 reactive 的区别
 
 ## $attrs 和$listeners 作用
 
+$attrs
+
+包含了父作用域不作为 props 被识别，但是能被获取的属性(不包含 class 和 style)，可以通过 v-bind="$attrs"传递给子组件
+
+$listeners
+
+包含了父作用域中的 v-on 事件监听器(不包含.native 修饰器的),可以通过 v-on="$listeners"传递给子组件
+
 ## vue set 的原理
 
 ## vue3.0 中 diff 算法的优化
@@ -50,3 +58,5 @@ toRefs 与 reactive 的区别
 ## vue nextTrik 原理
 
 ## css 防止全局污染
+
+## DOM 原生事件与 Vue 自定义组件自定义事件的区别
