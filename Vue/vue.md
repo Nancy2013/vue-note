@@ -109,7 +109,7 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 - Updated
 - beforeDestroy
 - Destroyed，不能访问 this
-- activited : keep-alive 组件专属，组件激活时调用
+- activated : keep-alive 组件专属，组件激活时调用
 - deadctivated : keep-alive 组件专属，组件销毁时调用
 
 ## Vue 原型链
@@ -127,7 +127,6 @@ template --> ast(抽象语法树) --> render --> VDom --> 真实 Dom --> 页面
 
 ## $set 解决的问题及原理
 
-s
 问题：两种情况下修改 Vue 数据不会触发视图更新
 1、Vue 实例创建后，给实例新增属性；
 2、通过数组下标直接修改数组值；
@@ -154,7 +153,7 @@ extend 是子类构造器，参数是包含组件选项的对象，也是 Vue �
 
 ## key 值的作用
 
-key 作为节点的唯一 id,主要使用在 Vue 虚拟 DOM 新旧节点 diff 中,用来查找节点。Vue 默认采用就地更新策略，不使用 key,Vue 会最大限度减少 DOM 移动，就地修改或复用相同类型组件的。使用 key,使 diff 操作更准确和迅速。
+key 作为节点的唯一 id,主要使用在 Vue 虚拟 DOM 新旧节点 diff 中,用来查找节点。Vue 默认采用就地更新策略，不使用 key,Vue 会最大限度减少 DOM 移动，就地修改或复用相同类型组件。使用 key,使 diff 操作更准确和迅速。
 
 ## ref 的作用
 
