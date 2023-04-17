@@ -55,7 +55,7 @@ $listeners
 
 ## vue use
 
-## vue nextTrik 原理
+## vue nextTick 原理
 
 ## css 防止全局污染
 
