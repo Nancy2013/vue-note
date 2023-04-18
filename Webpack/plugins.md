@@ -16,10 +16,8 @@
 - clean-webpack-plugin 清理目录
 - copy-webpack-plugin 拷贝资源
 - optimize-css-assets-webpack-plugin 压缩 css
-- extra-text-webpack-plugin 分离 css 文件(webpack3 提供)
 - mini-css-extract-plugin 分离 css 文件，将 css 文件提取为独立文件(webpack4 及以上提供)
 - commons-chunk-plugin 代码分割(split-chunks-plugin 代码分割)
-- define-plugin 定义全局常量
 - webpack-bundle-analyzer 可视化输出文件的体积
 
 ## 提高效率的 plugin
