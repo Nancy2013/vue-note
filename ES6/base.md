@@ -18,13 +18,13 @@
 - Undefined
 - Null
 - Boolean
-- Symbol (可以用来表示独一无二的变量，防止命名冲突)
-- Bigint
 - Object
   - Array
   - Date
   - Function
   - Regex
+- Symbol (可以用来表示独一无二的变量，防止命名冲突)
+- Bigint
 
 ### undefined vs null
 
@@ -270,7 +270,7 @@ true + true; // 规则2：2
 
 ## 如何编写高性能 JS
 
-- 使用严格编码格式，‘use strict’
+- 使用严格编码模式，‘use strict’
 - js 在文档最后加载，使用异步加载
 - 代码压缩，减少 HTTP 请求
 - 变量声明，setTimeout 参数为函数，少用闭包
