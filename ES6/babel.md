@@ -46,6 +46,6 @@
 > - 缩小搜索范围，通过配置 module，include/exclude，减少搜索范围
 > - 配置 cacheDirectory: true,缓存编译结果，避免重新编译
 >
->   打包体积大
+> 打包体积大
 >
 > - babel-loader 对一些公共方法，会使用比较小的辅助代码，比如\_extend,会在所有需要它的文件中引入，导致打包后的体积过大，可以使用 plugin-transform-runtime 和 babel-runtime 开启复用
