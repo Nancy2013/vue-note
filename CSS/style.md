@@ -548,7 +548,7 @@ p {
 > > 减少频繁使用 style，改为使用 class
 > > 对 DOM 的操作，合并使用批量操作
 > > 减少频繁读取引起回流的属性，使用缓存
-> > 使用 visibility:none 代替 display:none,前者是重绘，后者是回流
+> > 使用 visibility:hidden 代替 display:none,前者是重绘，后者是回流
 > > 不使用 table 布局
 
 ## 提升 CSS 性能的方法
