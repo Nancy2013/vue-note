@@ -74,7 +74,7 @@
 重复次数
  */
 .box {
-  animation: spin 2s linear infinite;
+  animation: spin 2s linear 0 infinite;
 }
 @keyframes spin {
   0% {
