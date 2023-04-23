@@ -9,8 +9,8 @@
 // 图片懒加载
 // 思路
 // 1、首先给图片设置占位图，设置图片的data-src属性
-// 2、获得两个关键值：视图高度(viewHeight)，图片距离视图顶部的高度(scrollHeight)
-// 3、比较两个高度，当视图高度(viewHeight)大于距离顶部高度(scrollHeight)，说明图片出现的视图窗口
+// 2、获得关键值：视图高度(viewHeight)，滚动条高度(scrollTop)，图片距离视图顶部的高度(offsetTop)
+// 3、比较两个高度，当视图高度(viewHeight)+滚动条高度(scrollTop)，大于距离顶部高度(offsetTop)，说明图片出现的视图窗口
 // 4、监控页面滚动事件
 // 5、使用节流函数提高性能
 
