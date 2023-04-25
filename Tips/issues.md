@@ -60,6 +60,12 @@ function looseBody() {
 难点：1、点击 item 圆点弹出 tooltip 提示框，当提示框下面覆盖其他 item 圆点时，点击提示框，会出现穿透点击；
 PC 端没有复现，只会在移动端出现，需要配置 Echart 的属性 enterable:true
 
-难点：2、点击 tooltip 后，PC 端圆点的高亮状态及 tooltip 会同步隐藏，而移动端圆点高亮状态和 tooltip 未隐藏，而点击折线上的遮罩图层 tooltip 隐藏
+难点：2、点击 tooltip 后，PC 端圆点的高亮状态及 tooltip 会同步隐藏，而移动端圆点显示高亮状态和 tooltip 不隐藏，点击折线上的遮罩图层 tooltip 才隐藏
 问题：移动端没有 hover 事件，是通过点击触发的，再次点击才会隐藏。点击遮罩图层触发了 tooltip 的 mouseleave
-解决：点击 tooltip 之后，手动派发圆点取消高亮和 tooltip 事件，而官方的 tooltip 隐藏的 dispatch 事件不起作用，使用的 hack 解决方法是，通过 Echart 的 DOM 找到 node 节点，修改 style display 为 none
+解决：点击 tooltip 之后，手动派发圆点取消高亮和 tooltip 隐藏事件，而官方的 tooltip 隐藏的 dispatch 事件不起作用，使用的 hack 解决方法是，通过 DOM 找到 Echart 的 node 节点，修改 style display 为 none
+
+## Slider
+
+难点：通过滑动条下发设备亮度，滑动条随手指滑动，或等待设备状态更新过程出现抖动
+问题：手指暂停的位置是期望的设备亮度，下发指令后设备状态返回需要一定时间，通过轮询查询设备状态，此时查询到的是设备之前旧的状态，滑动条会先跳动回到之前值，等待返回最新值后显示期待亮度
+解决：设置下发控制标志位，监听手指开始滑动及停止滑动事件，并设置标志位，在 slider 组件内添加监听，在控制期间及手指滑动期间不更新 slider 状态
