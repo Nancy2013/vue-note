@@ -331,7 +331,7 @@ line-height 取值：normal|length|number|em|%|inherit
 }
 /* 父元素设置overflow */
 .fatherBox {
-  overflow: hidden | auto;
+  overflow: hidden | auto;(只要不是默认属性都可以)
 }
 /* 浮动元素后面的元素设置清除 */
 .footer {

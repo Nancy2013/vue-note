@@ -26,6 +26,14 @@ const newObj = Object.assign({}, oldObj);
 1、会忽略undefined，sysbol属性
 2、不能序列化函数属性
 3、不能解决循环引用对象
+let a={
+  b:1,
+  c:{
+    d:2
+  }
+}
+a.b=a.c;
+a.c.d=b;
 */
 const newObj = JSON.parse(JSON.stringify(oldObj));
 
