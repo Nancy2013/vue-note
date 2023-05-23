@@ -39,7 +39,7 @@
 - slot 分为默认插槽和具名插槽，v-slot:default、v-slot:header,独占默认插槽时可以省略 default；
 - v-slot 需要在 template 标签上使用，只有出现独占默认插槽时，才可以将 v-slot 直接添加在其他标签上；
 - slot 作用域插槽，可以将插槽数据传递到父组件使用,v-slot:default="data"，要在父组件中使用 data.name；
-- slot 解构插槽，v-slot:default="{data}";
+- slot 解构插槽，v-slot:default="{name}";
 - slot 语法糖，#,eg:#default、#header、#footer;
 - 动态参数名，v-slot:[dynamicAttribute]，真正属性名为 dynamicAttribute 的值；
 
@@ -83,3 +83,11 @@
 
 provide：父组件提供
 inject：子组件使用
+
+## 混入
+
+- Mixin 混入提供了一种非常灵活的方式，来分发 Vue 组件的可复用功能，一个混入对象可以包含任意组件选项。
+- 当组件使用混入对象时，所有混入对象的选项会混合到这个组件本身的选项。
+- 当混入和组件含有同名选项时，数据对象类型会递归合并，发生冲突时以组件数据优先。
+- 同名钩子函数会合并为一个数组，都会调用，并且混入对象的钩子在组件自身钩子之前执行。
+- 值为对象的选项，会被合并为一个对象，两个对象的键名冲突时，取组件的键值对。
