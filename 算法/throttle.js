@@ -13,7 +13,7 @@
 const _throttle = (func, wait = 50) => {
   let lasttime = 0;
 
-  return function (...args) {
+  return function () {
     const now = new Date();
     // 将当前时间和上一次执行函数时间对比
     // 如果差值大于设置的等待时间就执行函数
