@@ -17,7 +17,7 @@ const _debounce = (func, wait = 100) => {
   // 如果已经设定过定时器了就清空上一次的定时器
   // 开始一个新的定时器，延迟执行用户传入的方法
 
-  return function (...args) {
+  return function () {
     if (timer) clearTimeout(timer);
     timer = setTimeout(() => {
       func.apply(this, args);
