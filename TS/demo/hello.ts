@@ -1,3 +1,12 @@
-console.log('Hello TS!');
-let age:number=18;
-console.log('age',age);
+let person:{
+    name:string
+    age:number
+    greet:(name:string)=>void
+}={
+    name:'jack',
+    age:18,
+    greet(name){},
+}
+
+console.log('person',person);
+
