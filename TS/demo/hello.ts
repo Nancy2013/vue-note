@@ -10,3 +10,10 @@ let person:{
 
 console.log('person',person);
 
+interface Props{
+    id:string
+    children:number[]
+  }
+  
+type PartialProps=Partial<Props>
+
