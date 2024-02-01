@@ -127,4 +127,50 @@ class Dog extends Animal{
     };
 
 }
+
+const dog=new Dog();
+
+// dog.move() // 在实例对象中不能访问
 ```
+
+```js
+// private 私有类型只在当前类中可以访问，在实例对象及子类中不可以访问
+class Animal{
+    private move(){
+        console.log('Move along');
+    }
+
+    run(){
+        // 可以访问
+        this.move();
+    };
+
+}
+
+class Dog extends Animal{
+      back(){
+          this.run(); // 可以访问
+          this.move(); // private方法不可以访问
+      }
+}
+```
+
+### 只读修饰符 readonly
+
+```js
+class Person{
+    // 设置默认值，readonly只能修饰属性，不能修饰方法
+    // 设置默认值，不指定类型只赋初始值时，age类型会固定为初始值字面量类型
+    readonly age:number=18
+    constructor(age:number{
+        this.age=age; // 只读修饰符只能在构造函数中赋值
+    }
+
+    // 错误演示
+    // setAge(){
+    //     this.age=20; // 不能执行，不能修改只读属性
+    // }
+}
+```
+
+readonly 可以用在 interface 接口或者对象类型内部，表示只读属性
